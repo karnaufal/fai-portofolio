@@ -85,36 +85,52 @@ export default function AboutPage() {
             </section>
 
             {/* SECTION 3: Bio & Philosophy (image_13.png) */}
-            {/* Kembali ke background putih, snap-start biar presisi */}
             <section className="relative flex h-screen w-full snap-start items-center justify-center bg-white p-10 md:p-24 overflow-hidden">
-                {/* Angka '1998' Raksasa di Background (image_13.png) */}
-                <div className="absolute -left-16 top-1/2 -translate-y-1/2 text-[25rem] font-black text-zinc-50 select-none opacity-60 z-0">
+
+                {/* Angka '1998' Raksasa di Background */}
+                <div className="absolute -left-16 top-1/2 -translate-y-1/2 text-[20rem] md:text-[25rem] font-black text-zinc-50 select-none z-0">
                     1998
                 </div>
 
-                <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-16 h-full items-center max-w-7xl">
-                    {/* Teks Bio Panjang */}
-                    <div className="space-y-10 text-xl font-light leading-relaxed text-zinc-800">
-                        <p>Banyak orang beranggapan mimpinya untuk membangun kota ikonik dengan landscape terindah di dunia
-                            adalah omong kosong. Namun bagi F.R. Zufikar, mimpi mempunyai ruangnya sendiri. Di dalam 'Piecita' atau sebuah
-                            kamar sempit serupa lemari di sudut kota Bandung —sepi dan perenungan adalah kawan setianya. Bermodalkan imajinasi
-                            dan serat kayu balsa, ia mengukir detail demi detail mahakarya yang mustahil bagi orang lain. —Di ruang
-                            yang membatasi gerak fisik inilah, imajinasinya justru terbang tanpa batas, ia bertekad untuk membuktikan
-                            jika mimpi besar bisa lahir dari tempat yang paling bersahaja.</p>
-                        <p className="text-sm tracking-widest uppercase text-black font-medium">Lahir di Bandung pada 8 April 1998</p>
+                <div className="relative z-10 flex flex-col justify-between h-[70vh] w-full max-w-7xl">
+
+                    {/* Teks Bio Panjang (Ditaruh di Kiri Atas) */}
+                    <div className="max-w-2xl space-y-8 text-lg md:text-xl font-light leading-relaxed text-zinc-800">
+                        <p>
+                            Banyak orang beranggapan mimpinya untuk membangun kota ikonik dengan landscape terindah di dunia
+                            adalah omong kosong. Namun bagi <span className="font-semibold text-black">F.R. Zulfikar, mimpi mempunyai ruangnya sendiri.</span> Di dalam &apos;Piecita&apos; atau sebuah
+                            kamar sempit serupa lemari di sudut kota Bandung —sepi dan perenungan adalah kawan setianya.
+                            Bermodalkan imajinasi dan serat kayu balsa, ia mengukir detail demi detail mahakarya yang mustahil bagi orang lain.
+                        </p>
+                        <p>
+                            —Di ruang yang membatasi gerak fisik inilah, imajinasinya justru terbang tanpa batas, ia bertekad untuk membuktikan
+                            jika mimpi besar bisa lahir dari tempat yang paling bersahaja.
+                        </p>
+                        <p className="text-sm tracking-[0.3em] uppercase text-zinc-400 font-medium">
+                            Lahir di Bandung pada 8 April 1998
+                        </p>
                     </div>
 
-                    {/* Tanda Tangan & Jabatan */}
-                    <div className="flex flex-col items-center md:items-end text-right space-y-4 mt-20 md:mt-0">
-                        <Image src="/signature.png" alt="Signature" width={200} height={80} className="grayscale opacity-80" />
-                        <p>
-                            “walaupun dia jalannya lambat. Tapi kura-kura
-                            pasti akan sampai ke tujuan.
-                        </p>
-                        <div className="h-[1px] w-32 bg-black opacity-20 mt-4"></div>
-                        <p className="text-xl font-medium tracking-wide">F. R. Zulfikar</p>
-                        <p className="text-sm text-zinc-500 tracking-wider">Chairman, Omaira Limited</p>
+                    {/* Tanda Tangan & Jabatan (Ditaruh di Kanan Bawah) */}
+                    <div className="self-end flex flex-col items-end text-right space-y-6">
+
+                        <div className="max-w-xs space-y-4 italic text-zinc-500 font-light">
+                            <p className="text-lg leading-relaxed">
+                                &quot;walaupun dia jalannya lambat. Tapi kura-kura pasti akan sampai ke tujuan.&quot;
+                            </p>
+                            {/* Garis signature mungil */}
+                            <div className="flex justify-end">
+                                <Image src="/signature.png" alt="Signature" width={180} height={60} className="grayscale opacity-90" />
+                            </div>
+                        </div>
+
+                        <div className="space-y-1">
+                            <div className="h-[1px] w-48 bg-black/10 mb-4 ml-auto"></div>
+                            <p className="text-2xl font-medium tracking-wide text-black">F. R. Zulfikar</p>
+                            <p className="text-sm text-zinc-400 tracking-[0.2em] uppercase">Chairman, Omaira Limited</p>
+                        </div>
                     </div>
+
                 </div>
             </section>
 
