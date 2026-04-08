@@ -85,18 +85,16 @@ export default function AboutPage() {
             </section>
 
             {/* SECTION 4: Bio & Philosophy (Adjusted Layout) */}
-            <section className="relative flex h-screen w-full snap-start items-center justify-center bg-white p-10 md:p-24 overflow-hidden">
+            <section className="relative flex h-screen w-full snap-start items-center justify-center bg-white p-10 md:px-24 md:pb-8 md:pt-24 overflow-hidden">
 
                 {/* Angka '1998' Raksasa di Background */}
                 <div className="absolute -left-16 top-1/2 -translate-y-1/2 text-[20rem] md:text-[25rem] font-black text-zinc-50 select-none z-0">
                     1998
                 </div>
 
-                {/* Gunakan justify-center untuk naruh bio di tengah/bawah sesuai revisi, 
-        tapi tetap beri space buat ttd di bawahnya */}
-                <div className="relative z-10 flex flex-col justify-between h-full w-full max-w-7xl py-12">
+                <div className="relative z-10 flex flex-col h-full w-full max-w-7xl">
 
-                    {/* Teks Bio Panjang (Sekarang posisinya lebih turun/fleksibel) */}
+                    {/* Teks Bio Panjang (Area Tengah) */}
                     <div className="mt-auto max-w-3xl space-y-8 text-lg md:text-xl font-light leading-relaxed text-zinc-800">
                         <p>
                             Banyak orang beranggapan mimpinya untuk membangun kota ikonik dengan landscape terindah di dunia
@@ -113,9 +111,9 @@ export default function AboutPage() {
                         </p>
                     </div>
 
-                    {/* Tanda Tangan & Jabatan (Diberi margin bottom agar tidak mepet footer) */}
-                    <div className="self-end flex flex-col items-end text-right space-y-6 mb-12 md:mb-20">
-
+                    {/* Tanda Tangan & Jabatan (Area Kanan Bawah) */}
+                    {/* mb-12 ditambahin biar gak nabrak garis footer legal */}
+                    <div className="self-end flex flex-col items-end text-right space-y-6 mt-12 mb-12 md:mb-16">
                         <div className="max-w-xs space-y-4 italic text-zinc-500 font-light">
                             <p className="text-lg leading-relaxed">
                                 &quot;walaupun dia jalannya lambat. Tapi kura-kura pasti akan sampai ke tujuan.&quot;
@@ -132,11 +130,28 @@ export default function AboutPage() {
                         </div>
                     </div>
 
+                    {/* FOOTER LEGAL (Nempel di Paling Bawah Section Putih) */}
+                    <div className="w-full pt-8 border-t border-zinc-100 mt-auto">
+                        <div className="flex flex-col md:flex-row justify-between items-center gap-6 text-[10px] tracking-[0.2em] uppercase text-zinc-400 font-medium pb-4">
+
+                            {/* Sisi Kiri: Language Selector */}
+                            <div className="flex items-center gap-2 group cursor-pointer">
+                                <span className="text-sm">🌐</span>
+                                <span className="group-hover:text-black transition-colors">International: English</span>
+                            </div>
+
+                            {/* Sisi Kanan: Legal Links */}
+                            <div className="flex gap-8">
+                                <a href="#" className="hover:text-black transition-colors">Terms of use</a>
+                                <a href="#" className="hover:text-black transition-colors">Privacy notice</a>
+                                <a href="#" className="hover:text-black transition-colors">Cookies</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
 
-            {/* SECTION 4: SCROLL HIDDEN FOOTER (image_14.png) */}
-            {/* Ini efek "Discover" yang lu mau jir. Dia pake background image dan fixed positioning */}
+            {/* SECTION 5: SCROLL HIDDEN FOOTER (image_14.png) */}
             <section className="relative h-[80vh] w-full snap-start overflow-hidden flex items-center justify-center p-10 text-center">
 
                 {/* Background Image Fixed (buat efek scroll hidden/parallax) */}
@@ -163,6 +178,6 @@ export default function AboutPage() {
                 </div>
             </section>
 
-        </main>
+        </main >
     );
 }
