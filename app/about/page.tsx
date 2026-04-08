@@ -95,13 +95,22 @@ export default function AboutPage() {
                 <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-16 h-full items-center max-w-7xl">
                     {/* Teks Bio Panjang */}
                     <div className="space-y-10 text-xl font-light leading-relaxed text-zinc-800">
-                        <p>Banyak orang beranggapan mimpinya... omong kosong.</p>
+                        <p>Banyak orang beranggapan mimpinya untuk membangun kota ikonik dengan landscape terindah di dunia
+                            adalah omong kosong. Namun bagi F.R. Zufikar, mimpi mempunyai ruangnya sendiri. Di dalam 'Piecita' atau sebuah
+                            kamar sempit serupa lemari di sudut kota Bandung —sepi dan perenungan adalah kawan setianya. Bermodalkan imajinasi
+                            dan serat kayu balsa, ia mengukir detail demi detail mahakarya yang mustahil bagi orang lain. —Di ruang
+                            yang membatasi gerak fisik inilah, imajinasinya justru terbang tanpa batas, ia bertekad untuk membuktikan
+                            jika mimpi besar bisa lahir dari tempat yang paling bersahaja.</p>
                         <p className="text-sm tracking-widest uppercase text-black font-medium">Lahir di Bandung pada 8 April 1998</p>
                     </div>
 
                     {/* Tanda Tangan & Jabatan */}
                     <div className="flex flex-col items-center md:items-end text-right space-y-4 mt-20 md:mt-0">
                         <Image src="/signature.png" alt="Signature" width={200} height={80} className="grayscale opacity-80" />
+                        <p>
+                            “walaupun dia jalannya lambat. Tapi kura-kura
+                            pasti akan sampai ke tujuan.
+                        </p>
                         <div className="h-[1px] w-32 bg-black opacity-20 mt-4"></div>
                         <p className="text-xl font-medium tracking-wide">F. R. Zulfikar</p>
                         <p className="text-sm text-zinc-500 tracking-wider">Chairman, Omaira Limited</p>
