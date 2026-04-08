@@ -112,7 +112,17 @@ export default function AboutPage() {
                                 &quot;walaupun dia jalannya lambat. Tapi kura-kura pasti akan sampai ke tujuan.&quot;
                             </p>
                             <div className="flex justify-end">
-                                <Image src="/signature.png" alt="Signature" width={180} height={60} className="grayscale opacity-90" />
+                                {/* Container harus punya ukuran pasti kalau mau pakai fill secara stabil */}
+                                <div className="relative w-[180px] h-[60px]">
+                                    <Image
+                                        src="/signature.png"
+                                        alt="Signature"
+                                        fill
+                                        sizes="180px" // Kasih tahu browser lebarnya fix 180px
+                                        className="grayscale opacity-90 object-contain"
+                                        priority // Tambahkan ini karena signature biasanya bagian penting dari branding
+                                    />
+                                </div>
                             </div>
                         </div>
                         <div className="space-y-1">
