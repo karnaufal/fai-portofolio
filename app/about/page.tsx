@@ -84,7 +84,7 @@ export default function AboutPage() {
                 </div>
             </section>
 
-            {/* SECTION 3: Bio & Philosophy (image_13.png) */}
+            {/* SECTION 4: Bio & Philosophy (Adjusted Layout) */}
             <section className="relative flex h-screen w-full snap-start items-center justify-center bg-white p-10 md:p-24 overflow-hidden">
 
                 {/* Angka '1998' Raksasa di Background */}
@@ -92,10 +92,12 @@ export default function AboutPage() {
                     1998
                 </div>
 
-                <div className="relative z-10 flex flex-col justify-between h-[70vh] w-full max-w-7xl">
+                {/* Gunakan justify-center untuk naruh bio di tengah/bawah sesuai revisi, 
+        tapi tetap beri space buat ttd di bawahnya */}
+                <div className="relative z-10 flex flex-col justify-between h-full w-full max-w-7xl py-12">
 
-                    {/* Teks Bio Panjang (Ditaruh di Kiri Atas) */}
-                    <div className="max-w-2xl space-y-8 text-lg md:text-xl font-light leading-relaxed text-zinc-800">
+                    {/* Teks Bio Panjang (Sekarang posisinya lebih turun/fleksibel) */}
+                    <div className="mt-auto max-w-3xl space-y-8 text-lg md:text-xl font-light leading-relaxed text-zinc-800">
                         <p>
                             Banyak orang beranggapan mimpinya untuk membangun kota ikonik dengan landscape terindah di dunia
                             adalah omong kosong. Namun bagi <span className="font-semibold text-black">F.R. Zulfikar, mimpi mempunyai ruangnya sendiri.</span> Di dalam &apos;Piecita&apos; atau sebuah
@@ -111,14 +113,13 @@ export default function AboutPage() {
                         </p>
                     </div>
 
-                    {/* Tanda Tangan & Jabatan (Ditaruh di Kanan Bawah) */}
-                    <div className="self-end flex flex-col items-end text-right space-y-6">
+                    {/* Tanda Tangan & Jabatan (Diberi margin bottom agar tidak mepet footer) */}
+                    <div className="self-end flex flex-col items-end text-right space-y-6 mb-12 md:mb-20">
 
                         <div className="max-w-xs space-y-4 italic text-zinc-500 font-light">
                             <p className="text-lg leading-relaxed">
                                 &quot;walaupun dia jalannya lambat. Tapi kura-kura pasti akan sampai ke tujuan.&quot;
                             </p>
-                            {/* Garis signature mungil */}
                             <div className="flex justify-end">
                                 <Image src="/signature.png" alt="Signature" width={180} height={60} className="grayscale opacity-90" />
                             </div>
