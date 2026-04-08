@@ -23,7 +23,7 @@ export default function Home() {
         <div className="relative z-10 flex flex-col items-center gap-12 px-10 w-full max-w-7xl">
           {/* Tanda Tangan / Logo Fr. Zulfikar */}
           <div className="text-3xl font-extralight tracking-[0.3em] text-zinc-200">
-            Fr. zulfikar
+            Fr. Zulfikar
           </div>
 
           <div className="h-[1px] w-full bg-white/20"></div>
@@ -43,6 +43,8 @@ export default function Home() {
             fill
             className="object-cover grayscale"
           />
+          {/* Overlay minimalis sesuai blueprint Figma */}
+          <div className="absolute inset-0 bg-black/10 backdrop-blur-[2px]"></div>
         </div>
 
         <div className="relative z-10 flex w-full max-w-7xl flex-col items-center px-10">
