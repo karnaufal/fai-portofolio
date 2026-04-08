@@ -36,31 +36,28 @@ export default function AboutPage() {
                 </div>
             </section>
 
-            {/* SECTION 2: Editorial Portrait (Pindahan dari Section 1 sebelumnya) */}
+            {/* SECTION 2: Editorial Portrait Intro */}
             <section className="relative flex h-screen w-full snap-start items-center justify-center bg-white p-10 md:p-24 overflow-hidden">
-                <div className="grid h-full grid-cols-1 md:grid-cols-12 gap-10 items-center max-w-7xl">
-                    <div className="md:col-span-6 relative h-[70vh] w-full">
-                        <div className="relative h-full w-full bg-zinc-100 shadow-sm overflow-hidden rounded-sm">
-                            <Image
-                                src="/portrait-main.jpg"
-                                alt="F.R. Zulfikar Portrait"
-                                fill
-                                className="object-cover grayscale hover:grayscale-0 transition-all duration-700"
-                            />
-                        </div>
+                <div className="flex flex-col items-center justify-center max-w-4xl text-center space-y-12">
+
+                    {/* Judul Utama Center */}
+                    <h2 className="text-4xl md:text-6xl font-light italic tracking-tight leading-tight text-zinc-900">
+                        Seorang anak yang ingin menciptakan landscape terindah di dunia.
+                    </h2>
+
+                    {/* Garis pemisah tipis biar makin estetik (Optional, tapi cakep) */}
+                    <div className="h-[1px] w-20 bg-zinc-200"></div>
+
+                    {/* Isi Konten Center */}
+                    <div className="space-y-8 text-zinc-600 font-light leading-relaxed">
+                        <p className="text-lg md:text-xl max-w-2xl mx-auto">
+                            &quot;Saya meyakini bahwa saat saya membidikkan busur visioner ke arah bintang... saya sedang membawa sebuah sumber ideal yang misterius.&quot;
+                        </p>
+                        <p className="text-xs tracking-[0.4em] uppercase font-medium text-black">
+                            — F. R. Zulfikar, Principal Indonesia.
+                        </p>
                     </div>
 
-                    <div className="md:col-span-6 text-center md:text-left space-y-10">
-                        <h2 className="text-4xl md:text-5xl font-light italic tracking-tight leading-tight text-zinc-900">
-                            Seorang anak yang ingin menciptakan landscape terindah di dunia.
-                        </h2>
-                        <div className="space-y-6 text-zinc-600 font-light leading-relaxed">
-                            <p>&quot;Saya meyakini bahwa saat saya membidikkan busur visioner...&quot;</p>
-                            <p className="text-xs tracking-[0.3em] uppercase font-medium text-black">
-                                — F. R. Zulfikar, Principal Indonesia.
-                            </p>
-                        </div>
-                    </div>
                 </div>
             </section>
 
