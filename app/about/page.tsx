@@ -18,14 +18,14 @@ export default function AboutPage() {
         const cards = gsap.utils.toArray(".parallax-card");
         cards.forEach((card: any, i) => {
             gsap.to(card, {
-                // Foto 1 naik dikit, Foto 2 (tengah) hampir diem, Foto 3 meluncur cepet
-                y: i === 0 ? -100 : i === 1 ? -40 : -180,
+                // Foto 1 gerak standar, Foto 2 gerak lambat, Foto 3 (tengah) gerak paling cepet
+                y: i === 0 ? -60 : i === 1 ? -40 : -120,
                 ease: "none",
                 scrollTrigger: {
                     trigger: card,
                     start: "top bottom",
                     end: "bottom top",
-                    scrub: 1.2,
+                    scrub: 1.5,
                 }
             });
         });
