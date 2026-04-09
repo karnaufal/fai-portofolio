@@ -95,43 +95,55 @@ export default function AboutPage() {
                 </div>
             </section>
 
-            {/* SECTION 4: Bio & Philosophy - Full BG Image with Content Flow */}
+            {/* SECTION 4: Bio & Philosophy - The 'Piecita' Narrative */}
             <section className="relative min-h-screen w-full bg-white overflow-hidden flex flex-col">
 
-                {/* Full BG Person Container (Setengah layar atas atau full tergantung selera) */}
-                <div className="relative h-[80vh] w-full overflow-hidden">
+                {/* Full BG Person Container */}
+                <div className="relative h-[85vh] w-full overflow-hidden">
                     <Image
-                        src="/person-4.png" // Ganti dengan path foto full body lu
+                        src="/person-4.png"
                         alt="F. R. Zulfikar Portrait"
                         fill
                         className="object-cover object-top"
                         priority
                     />
-                    {/* Overlay gradient agar transisi ke deskripsi di bawah lebih smooth */}
+                    {/* Gradient overlay buat transisi teks yang lebih smooth */}
                     <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent"></div>
 
-                    {/* Watermark Tahun (Tetap ada tapi di atas foto) */}
+                    {/* Watermark Tahun */}
                     <div className="absolute -left-16 bottom-10 text-[15rem] md:text-[20rem] font-black text-black/5 select-none z-0">
                         1998
                     </div>
                 </div>
 
-                {/* Content Area (Di bawah foto) */}
-                <div className="relative z-10 flex flex-col w-full max-w-7xl mx-auto px-10 md:px-24 py-20 space-y-24">
+                {/* Content Area */}
+                <div className="relative z-10 flex flex-col w-full max-w-7xl mx-auto px-10 md:px-24 py-20">
 
-                    {/* Deskripsi */}
-                    <div className="max-w-3xl space-y-8 text-xl md:text-2xl font-light leading-relaxed text-zinc-800">
-                        <p>
-                            Banyak orang beranggapan mimpinya adalah omong kosong. Namun bagi <span className="font-semibold text-black">F.R. Zulfikar, mimpi mempunyai ruangnya sendiri.</span>
-                        </p>
-                        <p className="text-base text-zinc-500 max-w-2xl">
-                            Dedikasi terhadap detail bukan sekadar pilihan teknis, melainkan filosofi hidup yang membawa setiap goresan desain menuju kesempurnaan yang abadi.
-                        </p>
+                    {/* Deskripsi Narasi 'Piecita' */}
+                    <div className="max-w-4xl space-y-10">
+                        <div className="space-y-6 text-xl md:text-2xl font-light leading-relaxed text-zinc-800">
+                            <p>
+                                Banyak orang beranggapan mimpinya untuk membangun kota ikonik dengan landscape terindah di dunia adalah omong kosong. Namun bagi <span className="font-semibold text-black">F.R. Zulfikar, mimpi mempunyai ruangnya sendiri.</span>
+                            </p>
+                            <p>
+                                Di dalam &apos;Piecita&apos; atau sebuah kamar sempit serupa lemari di sudut kota Bandung —sepi dan perenungan adalah kawan setianya. Bermodalkan imajinasi dan serat kayu balsa, ia mengukir detail demi detail mahakarya yang mustahil bagi orang lain.
+                            </p>
+                            <p>
+                                Di ruang yang membatasi gerak fisik inilah, imajinasinya justru terbang tanpa batas, ia bertekad untuk membuktikan jika mimpi besar bisa lahir dari tempat yang paling bersahaja.
+                            </p>
+                        </div>
+
+                        {/* Tempat & Tanggal Lahir */}
+                        <div className="pt-4">
+                            <p className="text-sm tracking-[0.4em] uppercase text-zinc-400 font-medium">
+                                Lahir di Bandung pada 8 April 1998
+                            </p>
+                        </div>
                     </div>
 
                     {/* Quotes, Signature, & Name (Aligned Right) */}
-                    <div className="self-end flex flex-col items-end text-right space-y-8 max-w-md">
-                        <div className="italic text-zinc-500 font-light space-y-4">
+                    <div className="self-end flex flex-col items-end text-right space-y-8 mt-24 max-w-md">
+                        <div className="italic text-zinc-500 font-light space-y-6">
                             <p className="text-xl md:text-2xl leading-relaxed">
                                 &quot;Walaupun dia jalannya lambat. Tapi kura-kura pasti akan sampai ke tujuan.&quot;
                             </p>
@@ -156,7 +168,7 @@ export default function AboutPage() {
                     </div>
 
                     {/* Formal Footer */}
-                    <div className="w-full pt-12 border-t border-zinc-100 mt-20">
+                    <div className="w-full pt-16 border-t border-zinc-100 mt-32">
                         <div className="flex flex-col md:flex-row justify-between items-center gap-8 text-[10px] tracking-[0.4em] uppercase text-zinc-400 font-semibold pb-10">
                             <div className="flex items-center gap-3 group cursor-pointer">
                                 <span className="text-lg">🌐</span>
