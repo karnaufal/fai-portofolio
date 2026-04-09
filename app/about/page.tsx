@@ -77,11 +77,11 @@ export default function AboutPage() {
                     {/* Long Quote: Styling lebih halus & lebar */}
                     <div className="space-y-10">
                         <p className="text-zinc-400 font-light leading-relaxed text-base md:text-xl max-w-4xl mx-auto italic px-4">
-                            &quot;Saya meyakini bahwa saat saya membidikkan busur visioner ke arah bintang dan membiarkan diri melayang di atas <span className="text-zinc-800 font-medium">sayap mimpi</span> menuju tujuan yang tak biasa—di situlah, dalam dahaga akan kesempurnaan dan pemberontakan terhadap banalitas, saya sedang mengalirkan sebuah mata air idealisme yang misterius.&quot;
+                            &quot;Saya meyakini bahwa saat saya membidikkan busur visioner ke arah bintang dan membiarkan diri melayang di atas sayap mimpi menuju tujuan yang tak biasa—di situlah, dalam dahaga akan kesempurnaan dan pemberontakan terhadap banalitas, saya sedang mengalirkan sebuah mata air idealisme yang misterius.&quot;
                         </p>
 
                         {/* Author Attribution */}
-                        <p className="text-[10px] md:text-xs tracking-[0.4em] uppercase font-semibold text-zinc-800">
+                        <p className="text-[10px] md:text-xs tracking-[0.4em] capitalized font-semibold text-zinc-800">
                             — F. R. Zulfikar, Principal Indonesia.
                         </p>
                     </div>
