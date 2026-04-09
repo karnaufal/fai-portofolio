@@ -95,42 +95,77 @@ export default function AboutPage() {
                 </div>
             </section>
 
-            {/* SECTION 4: Bio & Philosophy (HAPUS snap-start) */}
-            <section className="relative flex h-screen w-full items-center justify-center bg-white p-10 md:px-24 md:pb-8 md:pt-24 overflow-hidden">
-                <div className="absolute -left-16 top-1/2 -translate-y-1/2 text-[20rem] md:text-[25rem] font-black text-zinc-50 select-none z-0">
-                    1998
+            {/* SECTION 4: Bio & Philosophy - Full BG Image with Content Flow */}
+            <section className="relative min-h-screen w-full bg-white overflow-hidden flex flex-col">
+
+                {/* Full BG Person Container (Setengah layar atas atau full tergantung selera) */}
+                <div className="relative h-[80vh] w-full overflow-hidden">
+                    <Image
+                        src="/person-4.png" // Ganti dengan path foto full body lu
+                        alt="F. R. Zulfikar Portrait"
+                        fill
+                        className="object-cover object-top"
+                        priority
+                    />
+                    {/* Overlay gradient agar transisi ke deskripsi di bawah lebih smooth */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent"></div>
+
+                    {/* Watermark Tahun (Tetap ada tapi di atas foto) */}
+                    <div className="absolute -left-16 bottom-10 text-[15rem] md:text-[20rem] font-black text-black/5 select-none z-0">
+                        1998
+                    </div>
                 </div>
 
-                <div className="relative z-10 flex flex-col h-full w-full max-w-7xl">
-                    <div className="mt-auto max-w-3xl space-y-8 text-lg md:text-xl font-light leading-relaxed text-zinc-800">
+                {/* Content Area (Di bawah foto) */}
+                <div className="relative z-10 flex flex-col w-full max-w-7xl mx-auto px-10 md:px-24 py-20 space-y-24">
+
+                    {/* Deskripsi */}
+                    <div className="max-w-3xl space-y-8 text-xl md:text-2xl font-light leading-relaxed text-zinc-800">
                         <p>
                             Banyak orang beranggapan mimpinya adalah omong kosong. Namun bagi <span className="font-semibold text-black">F.R. Zulfikar, mimpi mempunyai ruangnya sendiri.</span>
                         </p>
+                        <p className="text-base text-zinc-500 max-w-2xl">
+                            Dedikasi terhadap detail bukan sekadar pilihan teknis, melainkan filosofi hidup yang membawa setiap goresan desain menuju kesempurnaan yang abadi.
+                        </p>
                     </div>
 
-                    <div className="self-end flex flex-col items-end text-right space-y-6 mt-12 mb-12 md:mb-16">
-                        <div className="relative w-[180px] h-[60px]">
-                            <Image
-                                src="/signature.png"
-                                alt="Signature"
-                                fill
-                                sizes="180px"
-                                className="grayscale opacity-90 object-contain"
-                                priority
-                            />
+                    {/* Quotes, Signature, & Name (Aligned Right) */}
+                    <div className="self-end flex flex-col items-end text-right space-y-8 max-w-md">
+                        <div className="italic text-zinc-500 font-light space-y-4">
+                            <p className="text-xl md:text-2xl leading-relaxed">
+                                &quot;Walaupun dia jalannya lambat. Tapi kura-kura pasti akan sampai ke tujuan.&quot;
+                            </p>
+                            <div className="flex justify-end">
+                                <div className="relative w-[200px] h-[80px]">
+                                    <Image
+                                        src="/signature.png"
+                                        alt="Signature"
+                                        fill
+                                        sizes="200px"
+                                        className="grayscale opacity-90 object-contain"
+                                    />
+                                </div>
+                            </div>
                         </div>
+
                         <div className="space-y-1">
-                            <p className="text-2xl font-medium tracking-wide text-black">F. R. Zulfikar</p>
-                            <p className="text-sm text-zinc-400 tracking-[0.2em] uppercase">Chairman, Omaira Limited</p>
+                            <div className="h-[1px] w-48 bg-black/10 mb-6 ml-auto"></div>
+                            <p className="text-3xl font-medium tracking-wide text-black uppercase">F. R. Zulfikar</p>
+                            <p className="text-sm text-zinc-400 tracking-[0.3em] uppercase">Chairman, Omaira Limited</p>
                         </div>
                     </div>
 
-                    <div className="w-full pt-8 border-t border-zinc-100 mt-auto">
-                        <div className="flex flex-col md:flex-row justify-between items-center gap-6 text-[10px] tracking-[0.2em] uppercase text-zinc-400 font-medium pb-4">
-                            <span>International: English</span>
-                            <div className="flex gap-8">
+                    {/* Formal Footer */}
+                    <div className="w-full pt-12 border-t border-zinc-100 mt-20">
+                        <div className="flex flex-col md:flex-row justify-between items-center gap-8 text-[10px] tracking-[0.4em] uppercase text-zinc-400 font-semibold pb-10">
+                            <div className="flex items-center gap-3 group cursor-pointer">
+                                <span className="text-lg">🌐</span>
+                                <span className="group-hover:text-black transition-colors">International: English</span>
+                            </div>
+                            <div className="flex gap-10">
                                 <a href="#" className="hover:text-black transition-colors">Terms of use</a>
                                 <a href="#" className="hover:text-black transition-colors">Privacy notice</a>
+                                <a href="#" className="hover:text-black transition-colors">Cookies</a>
                             </div>
                         </div>
                     </div>
