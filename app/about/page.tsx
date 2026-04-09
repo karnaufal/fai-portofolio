@@ -125,11 +125,6 @@ export default function AboutPage() {
                     />
                     {/* Gradient overlay buat transisi teks yang lebih smooth */}
                     <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent"></div>
-
-                    {/* Watermark Tahun */}
-                    <div className="absolute -left-16 bottom-10 text-[15rem] md:text-[20rem] font-black text-black/5 select-none z-0">
-                        1998
-                    </div>
                 </div>
 
                 {/* Content Area */}
@@ -137,7 +132,7 @@ export default function AboutPage() {
 
                     {/* Deskripsi Narasi 'Piecita' */}
                     <div className="max-w-4xl space-y-10">
-                        <div className="space-y-6 text-xl md:text-2xl font-light leading-relaxed text-zinc-800">
+                        <div className="space-y-6 text-xl md:text-1xl font-light leading-relaxed text-zinc-800">
                             <p>
                                 Banyak orang beranggapan mimpinya untuk membangun kota ikonik dengan landscape terindah di dunia adalah omong kosong. Namun bagi <span className="font-semibold text-black">F.R. Zulfikar, mimpi mempunyai ruangnya sendiri.</span>
                             </p>
@@ -151,7 +146,7 @@ export default function AboutPage() {
 
                         {/* Tempat & Tanggal Lahir */}
                         <div className="pt-4">
-                            <p className="text-sm tracking-[0.4em] uppercase text-zinc-400 font-medium">
+                            <p className="text-sm tracking-[0.4em] sentence case text-zinc-400 font-medium">
                                 Lahir di Bandung pada 8 April 1998
                             </p>
                         </div>
@@ -160,7 +155,7 @@ export default function AboutPage() {
                     {/* Quotes, Signature, & Name (Aligned Right) */}
                     <div className="self-end flex flex-col items-end text-right space-y-8 mt-24 max-w-md">
                         <div className="italic text-zinc-500 font-light space-y-6">
-                            <p className="text-xl md:text-2xl leading-relaxed">
+                            <p className="text-xl md:text-1xl leading-relaxed">
                                 &quot;Walaupun dia jalannya lambat. Tapi kura-kura pasti akan sampai ke tujuan.&quot;
                             </p>
                             <div className="flex justify-end">
@@ -178,14 +173,14 @@ export default function AboutPage() {
 
                         <div className="space-y-1">
                             <div className="h-[1px] w-48 bg-black/10 mb-6 ml-auto"></div>
-                            <p className="text-3xl font-medium tracking-wide text-black uppercase">F. R. Zulfikar</p>
+                            <p className="text-2xl font-medium tracking-wide text-black uppercase">F. R. Zulfikar</p>
                             <p className="text-sm text-zinc-400 tracking-[0.3em] uppercase">Chairman, Omaira Limited</p>
                         </div>
                     </div>
 
                     {/* Formal Footer */}
                     <div className="w-full pt-16 border-t border-zinc-100 mt-32">
-                        <div className="flex flex-col md:flex-row justify-between items-center gap-8 text-[10px] tracking-[0.4em] uppercase text-zinc-400 font-semibold pb-10">
+                        <div className="flex flex-col md:flex-row justify-between items-center gap-8 text-[10px] tracking-[0.4em] capitalized text-zinc-400 font-semibold pb-10">
                             <div className="flex items-center gap-3 group cursor-pointer">
                                 <span className="text-lg">🌐</span>
                                 <span className="group-hover:text-black transition-colors">International: English</span>
