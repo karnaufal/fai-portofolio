@@ -64,7 +64,7 @@ export default function AboutPage() {
                     <div className="mt-12 h-[1px] w-32 bg-gradient-to-r from-transparent via-white/50 to-transparent mx-auto"></div>
                 </div>
             </section>
-            
+
             {/* SECTION 2: Editorial Portrait Intro - Updated with Full Quote */}
             <section className="relative flex h-screen w-full items-center justify-center bg-white p-10 md:p-24 overflow-hidden border-b border-zinc-50">
                 <div className="flex flex-col items-center justify-center max-w-5xl text-center space-y-16">
@@ -200,23 +200,52 @@ export default function AboutPage() {
                 </div>
             </section>
 
-            {/* SECTION 5: DISCOVER FOOTER (HAPUS snap-start) */}
+            {/* SECTION 5: DISCOVER FOOTER (Samain Persis Figma) */}
             <section className="relative h-[80vh] w-full overflow-hidden flex items-center justify-center p-10 text-center">
                 <div className="absolute inset-0 z-0">
                     <Image
                         src="/bg-perpetual.png"
-                        alt="Perpetual"
+                        alt="Perpetual Initiatives Background"
                         fill
                         className="object-cover fixed top-0"
                         style={{ transform: 'translateZ(-1px)' }}
                     />
-                    <div className="absolute inset-0 bg-black/30"></div>
+                    {/* Overlay hitam tipis biar teks tetap kontras tapi BG tetep cerah */}
+                    <div className="absolute inset-0 bg-black/20"></div>
                 </div>
-                <h2 className="relative z-10 text-5xl md:text-7xl font-bold text-white">
-                    Discover our Perpetual Initiatives
-                </h2>
-            </section>
 
+                <div className="relative z-10 flex flex-col items-center space-y-4">
+                    {/* Font dibuat font-medium atau font-semibold, jangan terlalu tebal biar dapet luxury feel-nya */}
+                    <h2 className="text-4xl md:text-6xl font-semibold tracking-tight text-white">
+                        Discover our Perpetual Initiatives
+                    </h2>
+
+                    {/* Link dengan icon kecil di sampingnya sesuai gambar */}
+                    <a
+                        href="https://discoveryomaira.com"
+                        target="_blank"
+                        className="flex items-center gap-2 text-white/90 hover:text-white text-base md:text-lg transition-all group"
+                    >
+                        <span className="font-light tracking-wide">Visit discoveryomaira.com</span>
+                        {/* Icon kotak kecil/arrow sesuai figma */}
+                        <svg
+                            width="14"
+                            height="14"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            className="opacity-70 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all"
+                        >
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                            <polyline points="15 3 21 3 21 9" />
+                            <line x1="10" y1="14" x2="21" y2="3" />
+                        </svg>
+                    </a>
+                </div>
+            </section>
         </main >
     );
 }
