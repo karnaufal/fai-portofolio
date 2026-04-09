@@ -55,21 +55,27 @@ export default function AboutPage() {
                 </div>
             </section>
 
-            {/* SECTION 2: Editorial Portrait Intro (HAPUS snap-start) */}
-            <section className="relative flex h-screen w-full items-center justify-center bg-white p-10 md:p-24 overflow-hidden">
-                <div className="flex flex-col items-center justify-center max-w-4xl text-center space-y-12">
-                    <h2 className="text-4xl md:text-6xl font-light italic tracking-tight leading-tight text-zinc-900">
-                        Seorang anak yang ingin menciptakan landscape terindah di dunia.
+            {/* SECTION 2: Editorial Portrait Intro - Updated with Full Quote */}
+            <section className="relative flex h-screen w-full items-center justify-center bg-white p-10 md:p-24 overflow-hidden border-b border-zinc-50">
+                <div className="flex flex-col items-center justify-center max-w-5xl text-center space-y-16">
+
+                    {/* Title: Lebih besar & italic */}
+                    <h2 className="text-4xl md:text-7xl font-light italic tracking-tight leading-[1.2] text-zinc-900">
+                        Seorang anak yang ingin menciptakan <br className="hidden md:block" /> landscape terindah di dunia.
                     </h2>
-                    <div className="h-[1px] w-20 bg-zinc-200"></div>
-                    <div className="space-y-8 text-zinc-600 font-light leading-relaxed">
-                        <p className="text-lg md:text-xl max-w-2xl mx-auto">
-                            &quot;Saya meyakini bahwa saat saya membidikkan busur visioner ke arah bintang... saya sedang membawa sebuah sumber ideal yang misterius.&quot;
+
+                    {/* Long Quote: Styling lebih halus & lebar */}
+                    <div className="space-y-10">
+                        <p className="text-zinc-400 font-light leading-relaxed text-base md:text-xl max-w-4xl mx-auto italic px-4">
+                            &quot;Saya meyakini bahwa saat saya membidikkan busur visioner ke arah bintang dan membiarkan diri melayang di atas <span className="text-zinc-800 font-medium">sayap mimpi</span> menuju tujuan yang tak biasa—di situlah, dalam dahaga akan kesempurnaan dan pemberontakan terhadap banalitas, saya sedang mengalirkan sebuah mata air idealisme yang misterius.&quot;
                         </p>
-                        <p className="text-xs tracking-[0.4em] uppercase font-medium text-black">
+
+                        {/* Author Attribution */}
+                        <p className="text-[10px] md:text-xs tracking-[0.4em] uppercase font-semibold text-zinc-800">
                             — F. R. Zulfikar, Principal Indonesia.
                         </p>
                     </div>
+
                 </div>
             </section>
 
