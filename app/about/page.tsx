@@ -15,18 +15,20 @@ export default function AboutPage() {
     const container = useRef(null);
 
     useGSAP(() => {
-        // Efek Parallax buat tiap card
+        ScrollTrigger.refresh();
         const cards = gsap.utils.toArray(".parallax-card");
 
         cards.forEach((card: any, i) => {
             gsap.to(card, {
-                y: i === 0 ? -30 : i === 1 ? -60 : -90,
+                // Gambar 1 kita kasih dorongan 'y' yang berbeda biar keliatan gerak
+                y: i === 0 ? -60 : i === 1 ? -100 : -150,
                 ease: "none",
                 scrollTrigger: {
                     trigger: card,
-                    start: "top bottom",
+                    // "top 80%" artinya animasi mulai pas bagian atas card nyentuh 80% tinggi layar
+                    start: "top 80%",
                     end: "bottom top",
-                    scrub: true,
+                    scrub: 1,
                 }
             });
         });
@@ -78,13 +80,13 @@ export default function AboutPage() {
             <section className="relative min-h-screen w-full bg-[#F5F5F5] p-10 md:p-24 flex flex-col items-center justify-center overflow-hidden">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-12 w-full max-w-7xl items-start">
                     <div className="parallax-card group relative aspect-[3/4] overflow-hidden bg-zinc-200">
-                        <Image src="/person-1.png" alt="1" fill sizes="33vw" className="object-cover" />
+                        <Image src="/person-1.png" alt="1" fill sizes="33vw" className="object-cover grayscale" />
                     </div>
                     <div className="parallax-card group relative aspect-[3/4] overflow-hidden bg-zinc-200 md:mt-20">
                         <Image src="/person-2.png" alt="2" fill sizes="33vw" className="object-cover grayscale" />
                     </div>
                     <div className="parallax-card group relative aspect-[3/4] overflow-hidden bg-zinc-200 md:mt-40">
-                        <Image src="/person-3.png" alt="3" fill sizes="33vw" className="object-cover" />
+                        <Image src="/person-3.png" alt="3" fill sizes="33vw" className="object-cover grayscale" />
                     </div>
                 </div>
             </section>
