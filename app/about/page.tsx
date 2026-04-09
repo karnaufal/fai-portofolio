@@ -70,7 +70,7 @@ export default function AboutPage() {
                 <div className="flex flex-col items-center justify-center max-w-5xl text-center space-y-16">
 
                     {/* Title: Lebih besar & italic */}
-                    <h2 className="text-4xl md:text-7xl font-light italic tracking-tight leading-[1.2] text-zinc-900">
+                    <h2 className="text-2xl md:text-5xl font-light italic tracking-tight leading-[1.2] text-zinc-900">
                         Seorang anak yang ingin menciptakan <br className="hidden md:block" /> landscape terindah di dunia.
                     </h2>
 
@@ -246,6 +246,7 @@ export default function AboutPage() {
                     </a>
                 </div>
             </section>
+
         </main >
     );
 }
