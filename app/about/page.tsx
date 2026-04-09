@@ -15,20 +15,17 @@ export default function AboutPage() {
     const container = useRef(null);
 
     useGSAP(() => {
-        ScrollTrigger.refresh();
         const cards = gsap.utils.toArray(".parallax-card");
-
         cards.forEach((card: any, i) => {
             gsap.to(card, {
-                // Gambar 1 kita kasih dorongan 'y' yang berbeda biar keliatan gerak
-                y: i === 0 ? -60 : i === 1 ? -100 : -150,
+                // Foto 1 naik dikit, Foto 2 (tengah) hampir diem, Foto 3 meluncur cepet
+                y: i === 0 ? -100 : i === 1 ? -40 : -180,
                 ease: "none",
                 scrollTrigger: {
                     trigger: card,
-                    // "top 80%" artinya animasi mulai pas bagian atas card nyentuh 80% tinggi layar
-                    start: "top 80%",
+                    start: "top bottom",
                     end: "bottom top",
-                    scrub: 1,
+                    scrub: 1.2,
                 }
             });
         });
@@ -76,18 +73,25 @@ export default function AboutPage() {
                 </div>
             </section>
 
-            {/* SECTION 3: Parallax Grid (HAPUS snap-start) */}
-            <section className="relative min-h-screen w-full bg-[#F5F5F5] p-10 md:p-24 flex flex-col items-center justify-center overflow-hidden">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-12 w-full max-w-7xl items-start">
-                    <div className="parallax-card group relative aspect-[3/4] overflow-hidden bg-zinc-200">
-                        <Image src="/person-1.png" alt="1" fill sizes="33vw" className="object-cover grayscale" />
+            {/* SECTION 3: Custom Overlap (Foto 2 & 3 Bertabrakan) */}
+            <section className="relative min-h-[160vh] w-full bg-[#F5F5F5] py-32 overflow-hidden">
+                <div className="relative w-full h-full max-w-[1400px] mx-auto">
+
+                    {/* Foto 1: Normal (Gak Overlapping) */}
+                    <div className="parallax-card relative z-10 w-[45%] aspect-[4/5] overflow-hidden bg-zinc-200 ml-10 md:ml-20 shadow-lg">
+                        <Image src="/person-1.png" alt="1" fill sizes="50vw" className="object-cover" />
                     </div>
-                    <div className="parallax-card group relative aspect-[3/4] overflow-hidden bg-zinc-200 md:mt-20">
-                        <Image src="/person-2.png" alt="2" fill sizes="33vw" className="object-cover grayscale" />
+
+                    {/* Foto 2: Mepet ke Luar (Right Bleed) */}
+                    <div className="parallax-card absolute right-[-5%] top-[25%] z-20 w-[60%] md:w-[50%] aspect-[16/10] overflow-hidden bg-zinc-300 shadow-2xl">
+                        <Image src="/person-2.png" alt="2" fill sizes="60vw" className="object-cover grayscale" />
                     </div>
-                    <div className="parallax-card group relative aspect-[3/4] overflow-hidden bg-zinc-200 md:mt-40">
-                        <Image src="/person-3.png" alt="3" fill sizes="33vw" className="object-cover grayscale" />
+
+                    {/* Foto 3: Centered & Overlapping Foto 2 */}
+                    <div className="parallax-card absolute left-1/2 -translate-x-1/2 top-[55%] z-30 w-[50%] md:w-[40%] aspect-[3/4] overflow-hidden bg-zinc-400 shadow-2xl">
+                        <Image src="/person-3.png" alt="3" fill sizes="40vw" className="object-cover" />
                     </div>
+
                 </div>
             </section>
 
