@@ -32,29 +32,39 @@ export default function AboutPage() {
     }, { scope: container });
 
     return (
-        // HAPUS snap-y snap-mandatory, ganti overflow-y-scroll jadi default
+
         <main ref={container} className="relative w-full bg-white font-sans text-black antialiased">
 
-            {/* SECTION 1: Cinematic Hero (HAPUS snap-start) */}
-            <section className="relative h-screen w-full overflow-hidden flex items-center justify-center bg-black">
+            {/* SECTION 1: Cinematic Hero - Updated Styling */}
+            <section className="relative h-screen w-full snap-start overflow-hidden flex items-center justify-center bg-black">
                 <div className="absolute inset-0 z-0">
                     <Image
                         src="/bg-art-detail.png"
                         alt="Art of Detail Background"
                         fill
-                        className="object-cover opacity-80"
+                        className="object-cover opacity-60" // Kurangi opacity dikit biar teks makin pop
                         priority
                     />
                 </div>
 
-                <div className="relative z-10 text-center">
-                    <h1 className="text-6xl md:text-9xl font-extralight tracking-[0.2em] text-white uppercase mix-blend-difference">
-                        Art of Detail
+                <div className="relative z-10 text-center select-none">
+                    <h1 className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 text-white mix-blend-difference">
+                        {/* "ART OF" - Sans Serif Clean */}
+                        <span className="text-5xl md:text-8xl font-light tracking-[0.3em] uppercase">
+                            Art of
+                        </span>
+
+                        {/* "Detail" - Cursive/Script */}
+                        <span className="text-7xl md:text-9xl font-normal lowercase md:-ml-12 mt-2 md:mt-0 italic tracking-normal font-serif text-white/90">
+                            Detail
+                        </span>
                     </h1>
-                    <div className="mt-8 h-[1px] w-24 bg-white/40 mx-auto"></div>
+
+                    {/* Garis pemisah yang lebih tipis dan elegan */}
+                    <div className="mt-12 h-[1px] w-32 bg-gradient-to-r from-transparent via-white/50 to-transparent mx-auto"></div>
                 </div>
             </section>
-
+            
             {/* SECTION 2: Editorial Portrait Intro - Updated with Full Quote */}
             <section className="relative flex h-screen w-full items-center justify-center bg-white p-10 md:p-24 overflow-hidden border-b border-zinc-50">
                 <div className="flex flex-col items-center justify-center max-w-5xl text-center space-y-16">
