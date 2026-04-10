@@ -33,22 +33,24 @@ export default function Home() {
                 className="object-contain brightness-0 invert"
               />
             </div>
-            <div className="h-[1px] w-full bg-white/20"></div>
+            {/* Garis Horizontal - Putih Solid */}
+            <div className="h-[1px] w-full bg-white opacity-100"></div>
           </div>
 
-          {/* 2. CENTER AREA: The Headline (Beneran di Tengah Layar) */}
+          {/* 2. CENTER AREA: The Headline */}
           <div className="flex-1 flex items-center justify-center w-full">
             <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-light uppercase text-white/90 whitespace-nowrap tracking-normal">
               Timeless Interpretation of Art and Masterpieces
             </h1>
           </div>
 
-          {/* 3. BOTTOM AREA: Vertical Line */}
-          <div className="h-20 w-[1px] bg-white/20"></div>
+          {/* 3. BOTTOM AREA: Vertical Line - Tembus ke Bawah */}
+          {/* Menghilangkan pb-10 di container dan pake h-32 atau lebih biar tembus border section */}
+          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 h-40 w-[1px] bg-white opacity-100"></div>
 
         </div>
       </section>
-      
+
       {/* SECTION 2: Navigation Hub (image_420403.jpg) */}
       <section className="relative flex h-screen w-full snap-start items-center justify-center bg-black">
         <div className="absolute inset-0 z-0 opacity-50">
