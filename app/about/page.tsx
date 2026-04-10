@@ -5,6 +5,7 @@ import Image from "next/image";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import { Search, Menu } from "lucide-react";
 
 // Registrasi plugin
 if (typeof window !== "undefined") {
@@ -35,34 +36,70 @@ export default function AboutPage() {
 
         <main ref={container} className="relative w-full bg-white font-sans text-black antialiased">
 
-            {/* SECTION 1: Cinematic Hero - Updated Styling */}
+            {/* SECTION 1: Cinematic Hero */}
             <section className="relative h-screen w-full snap-start overflow-hidden flex items-center justify-center bg-black">
+
+                {/* BACKGROUND IMAGE */}
                 <div className="absolute inset-0 z-0">
                     <Image
                         src="/bg-art-detail.png"
                         alt="Art of Detail Background"
                         fill
-                        className="object-cover opacity-60" // Kurangi opacity dikit biar teks makin pop
+                        className="object-cover opacity-70"
                         priority
                     />
+                    <div className="absolute inset-0 bg-black/20"></div>
                 </div>
 
-                <div className="relative z-10 text-center select-none">
-                    <h1 className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 text-white mix-blend-difference">
+                {/* TOP NAVIGATION (Menu & Search) */}
+                <nav className="absolute top-0 inset-x-0 z-20 flex justify-between items-center px-8 py-8 text-white">
+                    <div className="flex items-center gap-3 cursor-pointer group">
+                        <Menu size={20} className="stroke-1" />
+                        <span className="text-xs uppercase tracking-[0.2em] font-light group-hover:opacity-70 transition-opacity">Menu</span>
+                    </div>
+
+                    {/* SIGNATURE TOP CENTER */}
+                    <div className="absolute left-1/2 -translate-x-1/2 top-8">
+                        <Image
+                            src="/signature-frz-1.png"
+                            alt="Fr. Zulfikar Signature"
+                            width={100}
+                            height={40}
+                            className="object-contain brightness-0 invert opacity-90"
+                        />
+                    </div>
+
+                    <div className="flex items-center gap-3 cursor-pointer group">
+                        <span className="text-xs uppercase tracking-[0.2em] font-light group-hover:opacity-70 transition-opacity">Search</span>
+                        <Search size={20} className="stroke-1" />
+                    </div>
+                </nav>
+
+                {/* CENTER CONTENT: ART OF DETAIL - Clean Horizontal Layout */}
+                <div className="relative z-10 select-none w-full px-4 flex justify-center">
+                    <div className="flex items-center gap-6 md:gap-10">
+
                         {/* "ART OF" - Sans Serif Clean */}
-                        <span className="text-5xl md:text-8xl font-light tracking-[0.3em] uppercase">
+                        <h1 className="text-4xl md:text-7xl lg:text-8xl font-light tracking-[0.2em] uppercase text-white leading-none whitespace-nowrap">
                             Art of
-                        </span>
+                        </h1>
 
-                        {/* "Detail" - Cursive/Script */}
-                        <span className="text-7xl md:text-9xl font-normal lowercase md:-ml-12 mt-2 md:mt-0 italic tracking-normal font-serif text-white/90">
-                            Detail
-                        </span>
-                    </h1>
+                        {/* "Detail" PNG - Sejajar di Samping (No Overlap) */}
+                        <div className="flex-shrink-0">
+                            <Image
+                                src="/detail.png"
+                                alt="Detail Script"
+                                width={350}
+                                height={150}
+                                className="object-contain brightness-0 invert opacity-95"
+                            />
+                        </div>
 
-                    {/* Garis pemisah yang lebih tipis dan elegan */}
-                    <div className="mt-12 h-[1px] w-32 bg-gradient-to-r from-transparent via-white/50 to-transparent mx-auto"></div>
+                    </div>
                 </div>
+
+                {/* BOTTOM DECORATION (Garis vertikal tipis sesuai gaya sebelumnya) */}
+                <div className="absolute bottom-0 left-1/2 -translate-x-1/2 h-24 w-[1px] bg-white opacity-40"></div>
             </section>
 
             {/* SECTION 2: Editorial Portrait Intro - Updated with Full Quote */}
