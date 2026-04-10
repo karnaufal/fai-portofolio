@@ -6,34 +6,49 @@ export default function Home() {
   return (
     <main className="h-screen overflow-y-scroll snap-y snap-mandatory bg-black font-sans text-white antialiased">
 
-      {/* SECTION 1: Masterpiece Header (image_4203e5.jpg) */}
-      <section className="relative flex h-screen w-full snap-start items-center justify-center overflow-hidden">
+      {/* SECTION 1: Masterpiece Header - Perfect Center Adjustment */}
+      <section className="relative flex h-screen w-full snap-start flex-col items-center overflow-hidden bg-black">
         <div className="absolute inset-0 z-0">
           <Image
             src="/bg-flower-blur.png"
             alt="Artistic flower background"
             fill
-            className="object-cover"
+            className="object-cover opacity-60"
             priority
           />
-          {/* Overlay minimalis sesuai blueprint Figma */}
-          <div className="absolute inset-0 bg-black/10 backdrop-blur-[2px]"></div>
+          <div className="absolute inset-0 bg-black/10 backdrop-blur-[1px]"></div>
         </div>
 
-        <div className="relative z-10 flex flex-col items-center gap-12 px-10 w-full max-w-7xl">
-          {/* Tanda Tangan / Logo Fr. Zulfikar */}
-          <div className="text-3xl font-extralight tracking-[0.3em] text-zinc-200">
-            Fr. Zulfikar
+        {/* MAIN CONTENT CONTAINER */}
+        <div className="relative z-10 flex flex-col items-center w-full h-full max-w-7xl px-12 md:px-20 pt-16 pb-10">
+
+          {/* 1. TOP AREA: Signature & Line */}
+          <div className="w-full flex flex-col items-center">
+            <div className="mb-12 opacity-95">
+              <Image
+                src="/signature-frz.png"
+                alt="Fr. Zulfikar Signature"
+                width={120}
+                height={70}
+                className="object-contain brightness-0 invert"
+              />
+            </div>
+            <div className="h-[1px] w-full bg-white/20"></div>
           </div>
 
-          <div className="h-[1px] w-full bg-white/20"></div>
+          {/* 2. CENTER AREA: The Headline (Beneran di Tengah Layar) */}
+          <div className="flex-1 flex items-center justify-center w-full">
+            <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-light uppercase text-white/90 whitespace-nowrap tracking-normal">
+              Timeless Interpretation of Art and Masterpieces
+            </h1>
+          </div>
 
-          <h1 className="text-center text-3xl font-light tracking-[0.2em] leading-tight uppercase text-white sm:text-5xl md:text-6xl">
-            Timeless Interpretation of Art and Masterpieces
-          </h1>
+          {/* 3. BOTTOM AREA: Vertical Line */}
+          <div className="h-20 w-[1px] bg-white/20"></div>
+
         </div>
       </section>
-
+      
       {/* SECTION 2: Navigation Hub (image_420403.jpg) */}
       <section className="relative flex h-screen w-full snap-start items-center justify-center bg-black">
         <div className="absolute inset-0 z-0 opacity-50">
