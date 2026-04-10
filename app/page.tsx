@@ -13,7 +13,7 @@ export default function Home() {
             src="/bg-flower-blur.png"
             alt="Artistic flower background"
             fill
-            className="object-cover opacity-60"
+            className="object-cover opacity-60 blur"
             priority
           />
           <div className="absolute inset-0 bg-black/10 backdrop-blur-[1px]"></div>
