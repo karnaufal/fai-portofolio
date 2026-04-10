@@ -241,44 +241,48 @@ export default function AboutPage() {
                 </div>
             </section>
 
-            {/* SECTION 5: DISCOVER FOOTER (Samain Persis Figma) */}
-            <section className="relative h-[80vh] w-full overflow-hidden flex items-center justify-center p-10 text-center">
+            {/* SECTION 5: DISCOVER FOOTER (Rolex Inspired Layout) */}
+            <section className="relative h-[40vh] md:h-[50vh] w-full overflow-hidden flex items-center justify-center text-center">
+                {/* Background Image Container */}
                 <div className="absolute inset-0 z-0">
                     <Image
                         src="/bg-perpetual.png"
                         alt="Perpetual Initiatives Background"
                         fill
-                        className="object-cover fixed top-0"
-                        style={{ transform: 'translateZ(-1px)' }}
+                        priority
+                        className="object-cover"
                     />
-                    {/* Overlay hitam tipis biar teks tetap kontras tapi BG tetep cerah */}
-                    <div className="absolute inset-0 bg-black/20"></div>
+                    {/* Overlay Rolex Style: Gradasi Gelap di Pinggir (Vignette) */}
+                    <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/40"></div>
+                    <div className="absolute inset-0 bg-black/10"></div>
                 </div>
 
-                <div className="relative z-10 flex flex-col items-center space-y-4">
-                    {/* Font dibuat font-medium atau font-semibold, jangan terlalu tebal biar dapet luxury feel-nya */}
-                    <h2 className="text-4xl md:text-6xl font-semibold tracking-tight text-white">
+                {/* Content Area */}
+                <div className="relative z-10 flex flex-col items-center space-y-6 px-6">
+                    {/* Font dibuat lebih rapat trackingnya tapi tetep clean */}
+                    <h2 className="text-3xl md:text-5xl font-medium tracking-tight text-white drop-shadow-lg">
                         Discover our Perpetual Initiatives
                     </h2>
 
-                    {/* Link dengan icon kecil di sampingnya sesuai gambar */}
+                    {/* Link dengan styling yang lebih subtle */}
                     <a
                         href="https://discoveryomaira.com"
                         target="_blank"
-                        className="flex items-center gap-2 text-white/90 hover:text-white text-base md:text-lg transition-all group"
+                        className="flex items-center gap-2.5 text-white/90 hover:text-white transition-all group"
                     >
-                        <span className="font-light tracking-wide">Visit discoveryomaira.com</span>
-                        {/* Icon kotak kecil/arrow sesuai figma */}
+                        <span className="text-sm md:text-base font-light tracking-widest capitalized border-b border-transparent group-hover:border-white/50 pb-0.5 transition-all">
+                            Visit discoveryomaira.com
+                        </span>
                         <svg
-                            width="14"
-                            height="14"
+                            width="12"
+                            height="12"
                             viewBox="0 0 24 24"
                             fill="none"
                             stroke="currentColor"
-                            strokeWidth="2"
+                            strokeWidth="2.5"
                             strokeLinecap="round"
                             strokeLinejoin="round"
-                            className="opacity-70 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all"
+                            className="opacity-80 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300"
                         >
                             <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
                             <polyline points="15 3 21 3 21 9" />
