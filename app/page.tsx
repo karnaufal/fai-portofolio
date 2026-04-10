@@ -95,10 +95,28 @@ export default function Home() {
               &quot;F. R. Zulfikar adalah seorang anak laki-laki yang ingin menciptakan landscape terindah di dunia.&quot;
             </p>
 
-            <div className="mt-16 flex flex-col items-center gap-4">
-              <div className="text-sm tracking-[0.4em] uppercase text-zinc-500">F. R. Zulfikar</div>
-              {/* Garis bawah tanda tangan dari Figma */}
-              <div className="h-[1px] w-48 bg-white/30"></div>
+            <div className="mt-20 flex flex-col items-center">
+              {/* CONTAINER SIGNATURE & TEXT OVERLAY */}
+              <div className="relative flex items-center justify-center mb-10 h-32 w-full max-w-lg mx-auto">
+
+                {/* 1. Signature PNG - The Oversized, Artful Background */}
+                <div className="absolute inset-0 z-0 flex items-center justify-center">
+                  <Image
+                    src="/signature-1.png"
+                    alt="Fr. Zulfikar Signature"
+                    width={250}
+                    height={80}
+                    className="object-contain brightness-0 invert opacity-70"
+                  />
+                </div>
+
+                {/* 2. Nama Teks - The Precise Baseline */}
+                <div className="relative z-10 w-full text-left">
+                  <h3 className="text-xl font-light tracking-[0.3em] capitalized text-white leading-none whitespace-nowrap">
+                    F. R. Zulfikar
+                  </h3>
+                </div>
+              </div>
             </div>
           </div>
         </div>
