@@ -30,6 +30,7 @@ export default function Home() {
                 alt="Fr. Zulfikar Signature"
                 width={120}
                 height={70}
+                style={{ width: 'auto', height: 'auto' }}
                 className="object-contain brightness-0 invert"
               />
             </div>
@@ -106,6 +107,7 @@ export default function Home() {
                     alt="Fr. Zulfikar Signature"
                     width={250}
                     height={80}
+                    // style={{ width: 'auto', height: 'auto' }}
                     className="object-contain brightness-0 invert opacity-70"
                   />
                 </div>

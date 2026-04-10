@@ -19,7 +19,6 @@ export default function AboutPage() {
         const cards = gsap.utils.toArray(".parallax-card");
         cards.forEach((card: any, i) => {
             gsap.to(card, {
-                // Foto 1 gerak standar, Foto 2 gerak lambat, Foto 3 (tengah) gerak paling cepet
                 y: i === 0 ? -60 : i === 1 ? -40 : -120,
                 ease: "none",
                 scrollTrigger: {
@@ -65,6 +64,7 @@ export default function AboutPage() {
                             alt="Fr. Zulfikar Signature"
                             width={100}
                             height={40}
+                            style={{ width: '110px', height: 'auto' }}
                             className="object-contain brightness-0 invert opacity-90"
                         />
                     </div>
@@ -91,14 +91,16 @@ export default function AboutPage() {
                                 alt="Detail Script"
                                 width={350}
                                 height={150}
-                                className="object-contain brightness-0 invert opacity-95"
+                                priority
+                                style={{ height: 'auto' }}
+                                className="object-contain brightness-0 invert opacity-95 w-auto"
                             />
                         </div>
 
                     </div>
                 </div>
 
-                {/* BOTTOM DECORATION (Garis vertikal tipis sesuai gaya sebelumnya) */}
+                {/* BOTTOM DECORATION  */}
                 <div className="absolute bottom-0 left-1/2 -translate-x-1/2 h-24 w-[1px] bg-white opacity-40"></div>
             </section>
 
