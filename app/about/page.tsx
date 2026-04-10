@@ -162,72 +162,79 @@ export default function AboutPage() {
                         className="object-cover object-top"
                         priority
                     />
-                    {/* Gradient overlay buat transisi teks yang lebih smooth */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent"></div>
                 </div>
 
-                {/* Content Area */}
-                <div className="relative z-10 flex flex-col w-full max-w-7xl mx-auto px-10 md:px-24 py-20">
+                {/* Container Utama */}
+                <div className="relative z-10 flex flex-col w-full py-20">
 
-                    {/* Deskripsi Narasi 'Piecita' */}
-                    <div className="max-w-4xl space-y-10">
-                        <div className="space-y-6 text-xl md:text-1xl font-light leading-relaxed text-zinc-800">
-                            <p>
-                                Banyak orang beranggapan mimpinya untuk membangun kota ikonik dengan landscape terindah di dunia adalah omong kosong. Namun bagi <span className="font-semibold text-black">F.R. Zulfikar, mimpi mempunyai ruangnya sendiri.</span>
-                            </p>
-                            <p>
-                                Di dalam &apos;Piecita&apos; atau sebuah kamar sempit serupa lemari di sudut kota Bandung —sepi dan perenungan adalah kawan setianya. Bermodalkan imajinasi dan serat kayu balsa, ia mengukir detail demi detail mahakarya yang mustahil bagi orang lain.
-                            </p>
-                            <p>
-                                Di ruang yang membatasi gerak fisik inilah, imajinasinya justru terbang tanpa batas, ia bertekad untuk membuktikan jika mimpi besar bisa lahir dari tempat yang paling bersahaja.
-                            </p>
-                        </div>
+                    {/* 1. Bagian Deskripsi - Elegant Reading Size */}
+                    <div className="w-full max-w-7xl px-10 md:px-24">
+                        <div className="max-w-2xl space-y-10">
+                            {/* Pakai text-base ke text-lg biar kerasa personal dan nyaman */}
+                            <div className="space-y-6 text-base md:text-[18px] font-light leading-relaxed text-zinc-700/90 tracking-wide">
+                                <p>
+                                    Banyak orang beranggapan mimpinya untuk membangun kota ikonik dengan landscape terindah di dunia adalah omong kosong. Namun bagi <span className="font-medium text-black">F.R. Zulfikar, mimpi mempunyai ruangnya sendiri.</span>
+                                </p>
+                                <p>
+                                    Di dalam &apos;Piecita&apos; atau sebuah kamar sempit serupa lemari di sudut kota Bandung —sepi dan perenungan adalah kawan setianya. Bermodalkan imajinasi dan serat kayu balsa, ia mengukir detail demi detail mahakarya yang mustahil bagi orang lain.
+                                </p>
+                                <p>
+                                    Di ruang yang membatasi gerak fisik inilah, imajinasinya justru terbang tanpa batas, ia bertekad untuk membuktikan jika mimpi besar bisa lahir dari tempat yang paling bersahaja.
+                                </p>
+                            </div>
 
-                        {/* Tempat & Tanggal Lahir */}
-                        <div className="pt-4">
-                            <p className="text-sm tracking-[0.4em] sentence case text-zinc-400 font-medium">
-                                Lahir di Bandung pada 8 April 1998
-                            </p>
+                            <div className="pt-2">
+                                <p className="text-[10px] md:text-[11px] tracking-[0.4em] sentence case text-zinc-400 font-medium">
+                                    Lahir di Bandung pada 8 April 1998
+                                </p>
+                            </div>
                         </div>
                     </div>
 
-                    {/* Quotes, Signature, & Name (Aligned Right) */}
-                    <div className="self-end flex flex-col items-end text-right space-y-8 mt-24 max-w-md">
-                        <div className="italic text-zinc-500 font-light space-y-6">
-                            <p className="text-xl md:text-1xl leading-relaxed">
-                                &quot;Walaupun dia jalannya lambat. Tapi kura-kura pasti akan sampai ke tujuan.&quot;
-                            </p>
-                            <div className="flex justify-end">
-                                <div className="relative w-[200px] h-[80px]">
+                    {/* 2. Bagian Quotes - Subdued & Sophisticated */}
+                    <div className="w-full flex justify-end mt-32 md:mt-40 px-10 md:px-24">
+                        <div className="flex flex-col items-end text-right space-y-10 max-w-lg">
+                            <div className="italic text-zinc-500 font-light space-y-8">
+                                {/* Quote pake text-lg biar tetep dapet poin utamanya */}
+                                <p className="text-base md:text-lg leading-relaxed max-w-sm ml-auto opacity-90">
+                                    &quot;Walaupun dia jalannya lambat. Tapi kura-kura pasti akan sampai ke tujuan.&quot;
+                                </p>
+
+                                <div className="flex justify-end pr-2">
                                     <Image
                                         src="/signature.png"
                                         alt="Signature"
-                                        fill
-                                        sizes="200px"
-                                        className="grayscale opacity-90 object-contain"
+                                        width={160} // Sedikit diperkecil biar lebih classy
+                                        height={60}
+                                        style={{ width: 'auto', height: 'auto' }}
+                                        priority
+                                        className="grayscale opacity-70 object-contain"
                                     />
                                 </div>
                             </div>
-                        </div>
 
-                        <div className="space-y-1">
-                            <div className="h-[1px] w-48 bg-black/10 mb-6 ml-auto"></div>
-                            <p className="text-2xl font-medium tracking-wide text-black uppercase">F. R. Zulfikar</p>
-                            <p className="text-sm text-zinc-400 tracking-[0.3em] uppercase">Chairman, Omaira Limited</p>
+                            <div className="space-y-1">
+                                <div className="h-[1px] w-24 bg-black/10 mb-6 ml-auto"></div>
+                                {/* Nama naik dikit tapi gak over (text-xl) */}
+                                <p className="text-lg md:text-xl font-medium tracking-[0.15em] text-black uppercase">F. R. Zulfikar</p>
+                                <p className="text-[9px] md:text-[10px] text-zinc-400 tracking-[0.5em] uppercase">Chairman, Omaira Limited</p>
+                            </div>
                         </div>
                     </div>
 
-                    {/* Formal Footer */}
-                    <div className="w-full pt-16 border-t border-zinc-100 mt-32">
-                        <div className="flex flex-col md:flex-row justify-between items-center gap-8 text-[10px] tracking-[0.4em] capitalized text-zinc-400 font-semibold pb-10">
-                            <div className="flex items-center gap-3 group cursor-pointer">
-                                <span className="text-lg">🌐</span>
-                                <span className="group-hover:text-black transition-colors">International: English</span>
-                            </div>
-                            <div className="flex gap-10">
-                                <a href="#" className="hover:text-black transition-colors">Terms of use</a>
-                                <a href="#" className="hover:text-black transition-colors">Privacy notice</a>
-                                <a href="#" className="hover:text-black transition-colors">Cookies</a>
+                    {/* 3. Formal Footer - Minimalist Fine Print */}
+                    <div className="w-full max-w-7xl mx-auto px-10 md:px-24 mt-40">
+                        <div className="pt-10 border-t border-zinc-100 pb-10">
+                            <div className="flex flex-col md:flex-row justify-between items-center gap-8 text-[9px] md:text-[10px] tracking-[0.3em] capitalized text-zinc-400 font-medium">
+                                <div className="flex items-center gap-4 group cursor-pointer">
+                                    <span className="text-sm grayscale group-hover:grayscale-0 transition-all">🌐</span>
+                                    <span className="group-hover:text-zinc-800 transition-colors">International: English</span>
+                                </div>
+                                <div className="flex flex-wrap justify-center gap-8 md:gap-12 opacity-80">
+                                    <a href="#" className="hover:text-black transition-colors">Terms of use</a>
+                                    <a href="#" className="hover:text-black transition-colors">Privacy notice</a>
+                                    <a href="#" className="hover:text-black transition-colors">Cookies</a>
+                                </div>
                             </div>
                         </div>
                     </div>
