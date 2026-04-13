@@ -80,7 +80,7 @@ export default function AboutPage() {
                     <div className="flex items-center gap-6 md:gap-10">
 
                         {/* "ART OF" - Sans Serif Clean */}
-                        <h1 className="text-4xl md:text-7xl lg:text-8xl font-light tracking-[0.2em] uppercase text-white leading-none whitespace-nowrap">
+                        <h1 className="text-4xl md:text-7xl lg:text-8xl font-light uppercase text-white leading-none whitespace-nowrap">
                             Art of
                         </h1>
 
@@ -225,19 +225,28 @@ export default function AboutPage() {
                         </div>
                     </div>
 
-                    {/* 3. Formal Footer - Minimalist Fine Print */}
+                    {/* 3. Formal Footer - Minimalist Fine Print (Figma Reference) */}
                     <div className="w-full max-w-7xl mx-auto px-10 md:px-24 mt-40">
-                        <div className="pt-10 border-t border-zinc-100 pb-10">
-                            <div className="flex flex-col md:flex-row justify-between items-center gap-8 text-[9px] md:text-[10px] tracking-[0.3em] capitalized text-zinc-400 font-medium">
-                                <div className="flex items-center gap-4 group cursor-pointer">
-                                    <span className="text-sm grayscale group-hover:grayscale-0 transition-all">🌐</span>
-                                    <span className="group-hover:text-zinc-800 transition-colors">International: English</span>
+                        <div className="pt-10 border-t border-zinc-200 pb-20">
+                            <div className="flex flex-col gap-12 text-[10px] md:text-[11px] text-zinc-800 font-normal">
+
+                                {/* 1. Language Picker - Tetap di Kiri */}
+                                <div className="flex items-center gap-3 group cursor-pointer w-fit">
+                                    <span className="text-base grayscale group-hover:grayscale-0 transition-all">🌐</span>
+                                    <span className="tracking-wide group-hover:underline decoration-zinc-300 underline-offset-4 transition-all">
+                                        International: English
+                                    </span>
                                 </div>
-                                <div className="flex flex-wrap justify-center gap-8 md:gap-12 opacity-80">
+
+                                {/* 2. Legal Links - Center Aligned & Darker Text */}
+                                <div className="flex flex-wrap justify-center items-center gap-x-4 md:gap-x-6 text-zinc-600">
                                     <a href="#" className="hover:text-black transition-colors">Terms of use</a>
+                                    <span className="text-zinc-300 font-light">-</span>
                                     <a href="#" className="hover:text-black transition-colors">Privacy notice</a>
+                                    <span className="text-zinc-300 font-light">-</span>
                                     <a href="#" className="hover:text-black transition-colors">Cookies</a>
                                 </div>
+
                             </div>
                         </div>
                     </div>
