@@ -109,18 +109,18 @@ export default function AboutPage() {
                 <div className="flex flex-col items-center justify-center max-w-5xl text-center space-y-16">
 
                     {/* Title: Lebih besar & italic */}
-                    <h2 className="text-2xl md:text-5xl font-light italic tracking-tight leading-[1.2] text-zinc-900">
+                    <h2 className="text-2xl md:text-5xl font-normal italic tracking-tight leading-[1.2] text-zinc-900">
                         Seorang anak yang ingin menciptakan <br className="hidden md:block" /> landscape terindah di dunia.
                     </h2>
 
                     {/* Long Quote: Styling lebih halus & lebar */}
                     <div className="space-y-10">
-                        <p className="text-zinc-400 font-light leading-relaxed text-base md:text-xl max-w-4xl mx-auto italic px-4">
+                        <p className="text-zinc-500 font-semi-bold leading-relaxed text-base md:text-xl max-w-4xl mx-auto italic px-4">
                             &quot;Saya meyakini bahwa saat saya membidikkan busur visioner ke arah bintang dan membiarkan diri melayang di atas sayap mimpi menuju tujuan yang tak biasa—di situlah, dalam dahaga akan kesempurnaan dan pemberontakan terhadap banalitas, saya sedang mengalirkan sebuah mata air idealisme yang misterius.&quot;
                         </p>
 
                         {/* Author Attribution */}
-                        <p className="text-[10px] md:text-xs tracking-[0.4em] capitalized font-semibold text-zinc-800">
+                        <p className="text-[10px] md:text-xs capitalized font-semibold text-zinc-800">
                             — F. R. Zulfikar, Principal Indonesia.
                         </p>
                     </div>
