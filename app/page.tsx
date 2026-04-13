@@ -52,75 +52,82 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SECTION 2: Navigation Hub (image_420403.jpg) */}
-      <section className="relative flex h-screen w-full snap-start items-center justify-center bg-black">
-        <div className="absolute inset-0 z-0 opacity-50">
+      {/* SECTION 2: Navigation Hub - Figma Exact Match (Absolute Bottom) */}
+      <section className="relative flex h-screen w-full snap-start items-center justify-center bg-black overflow-hidden">
+
+        {/* Background & Overlay */}
+        <div className="absolute inset-0 z-0">
           <Image
             src="/bg-siluet.png"
             alt="Silhouette background"
             fill
-            className="object-cover grayscale"
+            className="object-cover grayscale opacity-30"
           />
-          {/* Overlay minimalis sesuai blueprint Figma */}
-          <div className="absolute inset-0 bg-black/10 backdrop-blur-[2px]"></div>
+          {/* Gradasi gelap ke bawah biar teks quote lebih kebaca */}
+          <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/40 to-black/80"></div>
         </div>
 
-        <div className="relative z-10 flex w-full max-w-7xl flex-col items-center px-10">
+        {/* 1. MAIN NAVIGATION - DEAD CENTER LAYAR */}
+        {/* Karena section-nya items-center & justify-center, div ini otomatis ngunci persis di tengah layar */}
+        <div className="relative z-10 flex items-center justify-center gap-x-12 md:gap-x-20">
+          <Link href="/about" className="group">
+            <h2 className="text-sm md:text-base font-light tracking-[0.25em] text-white transition-all group-hover:opacity-70 uppercase whitespace-nowrap">
+              About Us
+            </h2>
+          </Link>
 
-          <div className="flex w-full flex-col md:flex-row items-center justify-center gap-12 md:gap-20 text-center">
-            <Link href="/about" className="group">
-              <h2 className="text-4xl font-extralight tracking-widest text-zinc-400 transition-colors group-hover:text-white uppercase">
-                About Us
-              </h2>
-            </Link>
+          {/* Divider - Sangat Tipis (Sesuai Figma) */}
+          <div className="h-6 w-[1px] bg-white/10"></div>
 
-            <div className="hidden md:block h-16 w-[1px] bg-white/20"></div>
+          <Link href="/initiative" className="group">
+            <h2 className="text-sm md:text-base font-light tracking-[0.25em] text-white transition-all group-hover:opacity-70 uppercase whitespace-nowrap">
+              Initiative
+            </h2>
+          </Link>
 
-            <Link href="/initiative" className="group">
-              <h2 className="text-4xl font-extralight tracking-widest text-zinc-400 transition-colors group-hover:text-white uppercase">
-                Initiative
-              </h2>
-            </Link>
+          <div className="h-6 w-[1px] bg-white/10"></div>
 
-            <div className="hidden md:block h-16 w-[1px] bg-white/20"></div>
+          <Link href="/foundation" className="group">
+            <h2 className="text-sm md:text-base font-light tracking-[0.25em] text-white transition-all group-hover:opacity-70 uppercase whitespace-nowrap">
+              Foundation
+            </h2>
+          </Link>
+        </div>
 
-            <Link href="/foundation" className="group">
-              <h2 className="text-4xl font-extralight tracking-widest text-zinc-400 transition-colors group-hover:text-white uppercase">
-                Foundation
-              </h2>
-            </Link>
+        {/* 2 & 3. QUOTE & SIGNATURE - ABSOLUTE BOTTOM */}
+        {/* Pakai absolute bottom-[15vh] biar dia selalu stay di area bawah tanpa narik/ngedorong Navigasi */}
+        <div className="absolute bottom-[10vh] md:bottom-[15vh] z-10 flex flex-col items-center w-full px-6">
+
+          {/* Central Quote - Jarak tipis ke Signature */}
+          <div className="text-center mb-6">
+            {/* Teks "memciptakan" gue samain persis ketikannya kayak di screenshot Figma lu */}
+            <p className="text-[13px] md:text-sm font-serif italic tracking-[0.05em] text-zinc-300/90 leading-relaxed">
+              F. R. Zulfikar adalah seorang anak laki-laki yang ingin memciptakan <br className="hidden md:block" />
+              landscape terindah di dunia.
+            </p>
           </div>
 
-          <div className="mt-40 max-w-2xl text-center">
-            <p className="text-xl font-extralight tracking-widest text-zinc-300 italic leading-relaxed">
-              &quot;F. R. Zulfikar adalah seorang anak laki-laki yang ingin menciptakan landscape terindah di dunia.&quot;
-            </p>
-
-            <div className="mt-20 flex flex-col items-center">
-              {/* CONTAINER SIGNATURE & TEXT OVERLAY */}
-              <div className="relative flex items-center justify-center mb-10 h-32 w-full max-w-lg mx-auto">
-
-                {/* 1. Signature PNG - The Oversized, Artful Background */}
-                <div className="absolute inset-0 z-0 flex items-center justify-center">
-                  <Image
-                    src="/signature-1.png"
-                    alt="Fr. Zulfikar Signature"
-                    width={250}
-                    height={80}
-                    // style={{ width: 'auto', height: 'auto' }}
-                    className="object-contain brightness-0 invert opacity-70"
-                  />
-                </div>
-
-                {/* 2. Nama Teks - The Precise Baseline */}
-                <div className="relative z-10 w-full text-left">
-                  <h3 className="text-xl font-light tracking-[0.3em] capitalized text-white leading-none whitespace-nowrap">
-                    F. R. Zulfikar
-                  </h3>
-                </div>
+          {/* Signature - Skala diperkecil & Compact */}
+          <div className="relative flex flex-col items-center justify-center w-full">
+            <div className="relative h-16 w-48 md:w-56 flex items-center justify-center">
+              {/* Signature PNG */}
+              <div className="absolute inset-0 z-0 flex items-center justify-center">
+                <Image
+                  src="/signature-1.png"
+                  alt="Signature"
+                  fill
+                  className="object-contain brightness-0 invert opacity-70"
+                />
+              </div>
+              {/* 2. Nama Teks - The Precise Baseline */}
+              <div className="relative z-10 w-full text-left">
+                <h3 className="text-xl font-light tracking-[0.3em] capitalized text-white leading-none whitespace-nowrap">
+                  F. R. Zulfikar
+                </h3>
               </div>
             </div>
           </div>
+
         </div>
       </section>
 
