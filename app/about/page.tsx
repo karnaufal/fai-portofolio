@@ -169,17 +169,14 @@ export default function AboutPage() {
 
                     {/* 1. Bagian Deskripsi - Elegant Reading Size */}
                     <div className="w-full max-w-7xl px-10 md:px-24">
-                        <div className="max-w-2xl space-y-10">
-                            {/* Pakai text-base ke text-lg biar kerasa personal dan nyaman */}
-                            <div className="space-y-6 text-base md:text-[18px] font-light leading-relaxed text-zinc-700/90 tracking-wide">
+                        <div className="max-w-3xl space-y-10">
+                            <div className="text-base md:text-[18px] font-light leading-relaxed text-zinc-700/90 tracking-wide text-justify md:text-left">
                                 <p>
-                                    Banyak orang beranggapan mimpinya untuk membangun kota ikonik dengan landscape terindah di dunia adalah omong kosong. Namun bagi <span className="font-medium text-black">F.R. Zulfikar, mimpi mempunyai ruangnya sendiri.</span>
-                                </p>
-                                <p>
-                                    Di dalam &apos;Piecita&apos; atau sebuah kamar sempit serupa lemari di sudut kota Bandung —sepi dan perenungan adalah kawan setianya. Bermodalkan imajinasi dan serat kayu balsa, ia mengukir detail demi detail mahakarya yang mustahil bagi orang lain.
-                                </p>
-                                <p>
-                                    Di ruang yang membatasi gerak fisik inilah, imajinasinya justru terbang tanpa batas, ia bertekad untuk membuktikan jika mimpi besar bisa lahir dari tempat yang paling bersahaja.
+                                    Bagi orang lain, mimpinya adalah kemustahilan. Tetapi bagi <span className="font-medium text-black">F.R. Zulfikar</span>, itu adalah sebuah janji.
+                                    Di &apos;Piecita&apos;, sebuah kamar kecilnya, ia merajut rencana besar untuk membangun kota ikonik yang belum pernah dibayangkan manusia.
+                                    Di tengah kepungan dinding sempit, ia berteman dengan sepi, mengubah keterbatasan menjadi bahan bakar kreativitas.
+                                    Dengan kayu balsa di tangannya, ia menyusun detail mahakarya yang menantang batas akal. Ia sedang menulis ulang sejarahnya sendiri:
+                                    bahwa dari ruang yang paling sesak sekalipun, seseorang bisa melahirkan visi yang akan mengubah wajah dunia.
                                 </p>
                             </div>
 
@@ -191,33 +188,39 @@ export default function AboutPage() {
                         </div>
                     </div>
 
-                    {/* 2. Bagian Quotes - Subdued & Sophisticated */}
+                    {/* 2. Bagian Quotes - Right Aligned Container with Left Aligned Content (Persis Referensi) */}
                     <div className="w-full flex justify-end mt-32 md:mt-40 px-10 md:px-24">
-                        <div className="flex flex-col items-end text-right space-y-10 max-w-lg">
-                            <div className="italic text-zinc-500 font-light space-y-8">
-                                {/* Quote pake text-lg biar tetep dapet poin utamanya */}
-                                <p className="text-base md:text-lg leading-relaxed max-w-sm ml-auto opacity-90">
-                                    &quot;Walaupun dia jalannya lambat. Tapi kura-kura pasti akan sampai ke tujuan.&quot;
+                        {/* ml-auto buat dorong blok ke kanan, tapi items-start bikin isinya rata kiri */}
+                        <div className="flex flex-col items-start text-left space-y-12 max-w-xl ml-auto">
+                            <div className="italic text-zinc-500 font-light">
+                                {/* Quote 2 Baris sesuai referensi */}
+                                <p className="text-lg md:text-xl leading-relaxed opacity-90">
+                                    &quot;..bagi saya, ini bukan sekadar profesi;<br />
+                                    ini adalah manifestasi dari sebuah visi yang sedang saya perjuangkan&quot;
                                 </p>
-
-                                <div className="flex justify-end pr-2">
-                                    <Image
-                                        src="/signature.png"
-                                        alt="Signature"
-                                        width={160} // Sedikit diperkecil biar lebih classy
-                                        height={60}
-                                        style={{ width: 'auto', height: 'auto' }}
-                                        priority
-                                        className="grayscale opacity-70 object-contain"
-                                    />
-                                </div>
                             </div>
 
+                            {/* Signature - Rata Kiri di dalam blok kanan */}
+                            <div className="flex justify-start">
+                                <Image
+                                    src="/signature.png"
+                                    alt="Signature"
+                                    width={180}
+                                    height={70}
+                                    style={{ width: 'auto', height: 'auto' }}
+                                    priority
+                                    className="grayscale opacity-80 object-contain -ml-2"
+                                />
+                            </div>
+
+                            {/* Name & Title Section - Rata Kiri di dalam blok kanan */}
                             <div className="space-y-1">
-                                <div className="h-[1px] w-24 bg-black/10 mb-6 ml-auto"></div>
-                                {/* Nama naik dikit tapi gak over (text-xl) */}
-                                <p className="text-lg md:text-xl font-medium tracking-[0.15em] text-black uppercase">F. R. Zulfikar</p>
-                                <p className="text-[9px] md:text-[10px] text-zinc-400 tracking-[0.5em] uppercase">Chairman, Omaira Limited</p>
+                                <p className="text-xl md:text-2xl font-normal text-black">
+                                    F. R. Zulfikar
+                                </p>
+                                <p className="text-[10px] md:text-[11px] text-zinc-400 font-medium tracking-wider">
+                                    Founder and Chairman, Omaira Limited
+                                </p>
                             </div>
                         </div>
                     </div>
