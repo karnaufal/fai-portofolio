@@ -225,12 +225,12 @@ export default function AboutPage() {
                         </div>
                     </div>
 
-                    {/* 3. Formal Footer - Minimalist Fine Print (Final Polish) */}
-                    <div className="w-full max-w-7xl mx-auto px-10 md:px-24 mt-40">
-                        <div className="pt-12 border-t border-zinc-100 pb-24">
-                            <div className="flex flex-col gap-16 text-[10px] md:text-[11px] font-normal">
+                    {/* 3. Formal Footer - Minimalist Fine Print (Gapless & Compact) */}
+                    <div className="w-full max-w-8xl mx-auto px-10 md:px-24 mt-40">
+                        <div className="pt-8 border-t border-zinc-100 pt -12 pb-12">
+                            <div className="flex flex-col gap-8 text-[10px] md:text-[11px] font-normal"> {/* gap-16 dikecilin jadi gap-8 */}
 
-                                {/* 1. Language Picker - High Contrast on Hover */}
+                                {/* 1. Language Picker */}
                                 <div className="flex items-center gap-3 group cursor-pointer w-fit">
                                     <span className="text-base grayscale group-hover:grayscale-0 transition-all duration-500">🌐</span>
                                     <span className="tracking-[0.15em] capitalized text-zinc-800 group-hover:text-black transition-colors">
@@ -238,17 +238,17 @@ export default function AboutPage() {
                                     </span>
                                 </div>
 
-                                {/* 2. Legal Links - Clean & Minimalist */}
+                                {/* 2. Legal Links - Centered, Capitalized, Semi-bold */}
                                 <div className="flex flex-wrap justify-center items-center gap-x-6 md:gap-x-8 text-zinc-500">
-                                    <a href="#" className="hover:text-black tracking-widest capitalized transition-all duration-300">
+                                    <a href="#" className="hover:text-black tracking-widest capitalize font-semibold transition-all duration-300">
                                         Terms of use
                                     </a>
                                     <span className="text-zinc-500 font-extralight">|</span>
-                                    <a href="#" className="hover:text-black tracking-widest capitalized transition-all duration-300">
+                                    <a href="#" className="hover:text-black tracking-widest capitalize font-semibold transition-all duration-300">
                                         Privacy notice
                                     </a>
                                     <span className="text-zinc-500 font-extralight">|</span>
-                                    <a href="#" className="hover:text-black tracking-widest capitalized transition-all duration-300">
+                                    <a href="#" className="hover:text-black tracking-widest capitalize font-semibold transition-all duration-300">
                                         Cookies
                                     </a>
                                 </div>
