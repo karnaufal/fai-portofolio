@@ -54,7 +54,7 @@ export default function AboutPage() {
                 <nav className="absolute top-0 inset-x-0 z-20 flex justify-between items-center px-8 py-8 text-white">
                     <div className="flex items-center gap-3 cursor-pointer group">
                         <Menu size={20} className="stroke-1" />
-                        <span className="text-xs uppercase tracking-[0.2em] font-light group-hover:opacity-70 transition-opacity">Menu</span>
+                        <span className="text-xs capitalized tracking-[0.2em] font-light group-hover:opacity-70 transition-opacity">Menu</span>
                     </div>
 
                     {/* SIGNATURE TOP CENTER */}
@@ -62,15 +62,15 @@ export default function AboutPage() {
                         <Image
                             src="/signature-frz-1.png"
                             alt="Fr. Zulfikar Signature"
-                            width={100}
-                            height={40}
+                            width={70}
+                            height={30}
                             style={{ width: '110px', height: 'auto' }}
                             className="object-contain brightness-0 invert opacity-90"
                         />
                     </div>
 
                     <div className="flex items-center gap-3 cursor-pointer group">
-                        <span className="text-xs uppercase tracking-[0.2em] font-light group-hover:opacity-70 transition-opacity">Search</span>
+                        <span className="text-xs capitalized tracking-[0.2em] font-light group-hover:opacity-70 transition-opacity">Search</span>
                         <Search size={20} className="stroke-1" />
                     </div>
                 </nav>
@@ -80,7 +80,7 @@ export default function AboutPage() {
                     <div className="flex items-center gap-6 md:gap-10">
 
                         {/* "ART OF" - Sans Serif Clean */}
-                        <h1 className="text-4xl md:text-7xl lg:text-8xl font-light uppercase text-white leading-none whitespace-nowrap">
+                        <h1 className="text-2xl md:text-5xl lg:text-6xl font-light uppercase text-white leading-none whitespace-nowrap">
                             Art of
                         </h1>
 
