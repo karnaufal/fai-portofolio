@@ -24,7 +24,7 @@ export default function Home() {
 
           {/* 1. TOP AREA: Signature & Line */}
           <div className="w-full flex flex-col items-center">
-            <div className="mb-12 opacity-95">
+            <div className="mb-6 opacity-95">
               <Image
                 src="/signature-frz.png"
                 alt="Fr. Zulfikar Signature"
@@ -32,6 +32,7 @@ export default function Home() {
                 height={70}
                 style={{ width: 'auto', height: 'auto' }}
                 className="object-contain brightness-0 invert"
+                priority
               />
             </div>
             {/* Garis Horizontal - Putih Solid */}
