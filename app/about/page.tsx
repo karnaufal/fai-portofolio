@@ -169,8 +169,8 @@ export default function AboutPage() {
 
                     {/* 1. Bagian Deskripsi - Elegant Reading Size */}
                     <div className="w-full max-w-7xl px-10 md:px-24">
-                        <div className="max-w-3xl space-y-12"> {/* Space-y naik ke 12 biar lebih lega */}
-                            <div className="text-base md:text-[20px] font-light leading-[1.8] text-zinc-700/90 tracking-wide text-justify md:text-left">
+                        <div className="max-w-3xl space-y-10"> {/* Space-y naik ke 12 biar lebih lega */}
+                            <div className="text-sm md:text-[20px] font-light leading-[1.3] text-zinc-700/90 text-justify md:text-left">
                                 <p>
                                     &quot;Bagi orang lain, mimpinya adalah kemustahilan. Tetapi bagi <span className="font-medium text-black">F.R. Zulfikar</span>, itu adalah sebuah janji.
                                     Di &apos;Piecita&apos;, sebuah kamar kecilnya, ia merajut rencana besar untuk membangun kota ikonik yang belum pernah dibayangkan manusia.
@@ -182,7 +182,7 @@ export default function AboutPage() {
 
                             <div className="pt-2">
                                 {/* Ukuran font dibikin lebih kecil & tracking lebih jauh buat kesan premium */}
-                                <p className="text-[9px] md:text-[10px] tracking-[0.5em] sentence case text-zinc-500 font-medium">
+                                <p className="text-[9px] md:text-[10px] tracking-[0.5em] sentence case text-zinc-500 font-semi-bold">
                                     Lahir di Bandung pada 8 April 1998
                                 </p>
                             </div>
@@ -194,7 +194,7 @@ export default function AboutPage() {
                         <div className="flex flex-col items-start text-left space-y-10 max-w-xl ml-auto">
                             <div className="italic text-zinc-500 font-light">
                                 {/* Quote size diturunin dikit biar lebih subtle & elegant */}
-                                <p className="text-base md:text-[17px] leading-[1.7] opacity-80">
+                                <p className="text-base md:text-[17px] leading-[1.3] opacity-80">
                                     &quot;..bagi saya, ini bukan sekadar profesi;<br />
                                     ini adalah manifestasi dari sebuah visi yang sedang saya perjuangkan&quot;
                                 </p>
