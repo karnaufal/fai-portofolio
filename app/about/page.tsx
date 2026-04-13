@@ -182,7 +182,7 @@ export default function AboutPage() {
 
                             <div className="pt-2">
                                 {/* Ukuran font dibikin lebih kecil & tracking lebih jauh buat kesan premium */}
-                                <p className="text-[9px] md:text-[10px] tracking-[0.5em] uppercase text-zinc-400 font-medium">
+                                <p className="text-[9px] md:text-[10px] tracking-[0.5em] sentence case text-zinc-500 font-medium">
                                     Lahir di Bandung pada 8 April 1998
                                 </p>
                             </div>
@@ -225,26 +225,32 @@ export default function AboutPage() {
                         </div>
                     </div>
 
-                    {/* 3. Formal Footer - Minimalist Fine Print (Figma Reference) */}
+                    {/* 3. Formal Footer - Minimalist Fine Print (Final Polish) */}
                     <div className="w-full max-w-7xl mx-auto px-10 md:px-24 mt-40">
-                        <div className="pt-10 border-t border-zinc-200 pb-20">
-                            <div className="flex flex-col gap-12 text-[10px] md:text-[11px] text-zinc-800 font-normal">
+                        <div className="pt-12 border-t border-zinc-100 pb-24">
+                            <div className="flex flex-col gap-16 text-[10px] md:text-[11px] font-normal">
 
-                                {/* 1. Language Picker - Tetap di Kiri */}
+                                {/* 1. Language Picker - High Contrast on Hover */}
                                 <div className="flex items-center gap-3 group cursor-pointer w-fit">
-                                    <span className="text-base grayscale group-hover:grayscale-0 transition-all">🌐</span>
-                                    <span className="tracking-wide group-hover:underline decoration-zinc-300 underline-offset-4 transition-all">
+                                    <span className="text-base grayscale group-hover:grayscale-0 transition-all duration-500">🌐</span>
+                                    <span className="tracking-[0.15em] capitalized text-zinc-800 group-hover:text-black transition-colors">
                                         International: English
                                     </span>
                                 </div>
 
-                                {/* 2. Legal Links - Center Aligned & Darker Text */}
-                                <div className="flex flex-wrap justify-center items-center gap-x-4 md:gap-x-6 text-zinc-600">
-                                    <a href="#" className="hover:text-black transition-colors">Terms of use</a>
-                                    <span className="text-zinc-300 font-light">-</span>
-                                    <a href="#" className="hover:text-black transition-colors">Privacy notice</a>
-                                    <span className="text-zinc-300 font-light">-</span>
-                                    <a href="#" className="hover:text-black transition-colors">Cookies</a>
+                                {/* 2. Legal Links - Clean & Minimalist */}
+                                <div className="flex flex-wrap justify-center items-center gap-x-6 md:gap-x-8 text-zinc-500">
+                                    <a href="#" className="hover:text-black tracking-widest capitalized transition-all duration-300">
+                                        Terms of use
+                                    </a>
+                                    <span className="text-zinc-500 font-extralight">|</span>
+                                    <a href="#" className="hover:text-black tracking-widest capitalized transition-all duration-300">
+                                        Privacy notice
+                                    </a>
+                                    <span className="text-zinc-500 font-extralight">|</span>
+                                    <a href="#" className="hover:text-black tracking-widest capitalized transition-all duration-300">
+                                        Cookies
+                                    </a>
                                 </div>
 
                             </div>
