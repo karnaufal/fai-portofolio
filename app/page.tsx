@@ -47,8 +47,7 @@ export default function Home() {
           </div>
 
           {/* 3. BOTTOM AREA: Vertical Line - Tembus ke Bawah */}
-          {/* Menghilangkan pb-10 di container dan pake h-32 atau lebih biar tembus border section */}
-          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 h-40 w-[1px] bg-white opacity-100"></div>
+          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 h-24 w-[1px] bg-white opacity-100"></div>
 
         </div>
       </section>
