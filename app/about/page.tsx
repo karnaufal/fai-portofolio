@@ -226,28 +226,28 @@ export default function AboutPage() {
                     </div>
 
                     {/* 3. Formal Footer - Minimalist Fine Print (Gapless & Compact) */}
-                    <div className="w-full max-w-8xl mx-auto px-10 md:px-24 mt-40">
-                        <div className="pt-8 border-t border-zinc-100 pt -12 pb-12">
-                            <div className="flex flex-col gap-8 text-[10px] md:text-[11px] font-normal"> {/* gap-16 dikecilin jadi gap-8 */}
+                    <div className="w-full max-w-8xl mx-auto px-20 md:px-24 mt-40">
+                        <div className="pt-2 border-t border-zinc-200">
+                            <div className="flex flex-col gap-2 text-[10px] md:text-[11px] font-normal">
 
                                 {/* 1. Language Picker */}
                                 <div className="flex items-center gap-3 group cursor-pointer w-fit">
                                     <span className="text-base grayscale group-hover:grayscale-0 transition-all duration-500">🌐</span>
-                                    <span className="tracking-[0.15em] capitalized text-zinc-800 group-hover:text-black transition-colors">
+                                    <span className="capitalized text-zinc-800 group-hover:text-black transition-colors">
                                         International: English
                                     </span>
                                 </div>
 
                                 {/* 2. Legal Links - Centered, Capitalized, Semi-bold */}
-                                <div className="flex flex-wrap justify-center items-center gap-x-6 md:gap-x-8 text-zinc-500">
+                                <div className="flex flex-wrap justify-center items-center gap-x-2 md:gap-x-4 text-zinc-700">
                                     <a href="#" className="hover:text-black tracking-widest capitalize font-semibold transition-all duration-300">
                                         Terms of use
                                     </a>
-                                    <span className="text-zinc-500 font-extralight">|</span>
+                                    <span className="text-zinc-700 font-extralight">|</span>
                                     <a href="#" className="hover:text-black tracking-widest capitalize font-semibold transition-all duration-300">
                                         Privacy notice
                                     </a>
-                                    <span className="text-zinc-500 font-extralight">|</span>
+                                    <span className="text-zinc-700 font-extralight">|</span>
                                     <a href="#" className="hover:text-black tracking-widest capitalize font-semibold transition-all duration-300">
                                         Cookies
                                     </a>
