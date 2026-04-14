@@ -180,10 +180,10 @@ export default function AboutPage() {
                                 </p>
                             </div>
 
-                            <div className="pt-2">
+                            <div className="pt-0">
                                 {/* Ukuran font dibikin lebih kecil & tracking lebih jauh buat kesan premium */}
-                                <p className="text-[9px] md:text-[10px] tracking-[0.5em] sentence case text-zinc-500 font-semi-bold">
-                                    Lahir di Bandung pada 8 April 1998
+                                <p className="text-[11px] md:text-[12px] sentence case text-zinc-700 font-semi-bold">
+                                    Lahir di Bandung pada 8 April 1998.
                                 </p>
                             </div>
                         </div>
