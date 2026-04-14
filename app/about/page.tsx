@@ -169,7 +169,7 @@ export default function AboutPage() {
 
                     {/* 1. Bagian Deskripsi - Elegant Reading Size */}
                     <div className="w-full max-w-7xl px-10 md:px-24">
-                        <div className="max-w-3xl space-y-10"> {/* Space-y naik ke 12 biar lebih lega */}
+                        <div className="max-w-3xl space-y-10"> 
                             <div className="text-xs md:text-[16px] font-light leading-[1.3] text-zinc-700/90 text-justify md:text-left">
                                 <p>
                                     &quot;Bagi orang lain, mimpinya adalah kemustahilan. Tetapi bagi <span className="font-medium text-black">F.R. Zulfikar</span>, itu adalah sebuah janji.

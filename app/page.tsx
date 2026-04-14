@@ -71,7 +71,7 @@ export default function Home() {
         {/* Karena section-nya items-center & justify-center, div ini otomatis ngunci persis di tengah layar */}
         <div className="relative z-10 flex items-center justify-center gap-x-12 md:gap-x-20">
           <Link href="/about" className="group">
-            <h2 className="text-sm md:text-base xl:text-xl font-light text-white transition-all group-hover:opacity-70 uppercase whitespace-nowrap">
+            <h2 className="text-base md:text-xl xl:text-2xl font-semibold text-white tracking-[0.2em] transition-all duration-700 group-hover:opacity-60 group-hover:tracking-[0.35em] uppercase whitespace-nowrap">
               About Us
             </h2>
           </Link>
@@ -80,14 +80,16 @@ export default function Home() {
           <div className="h-6 w-[1px] bg-white/10"></div>
 
           <Link href="/initiative" className="group">
-            <h2 className="text-sm md:text-base xl:text-xl font-light text-white transition-all group-hover:opacity-70 uppercase whitespace-nowrap">              Initiative
+            <h2 className="text-base md:text-xl xl:text-2xl font-semibold text-white tracking-[0.2em] transition-all duration-700 group-hover:opacity-60 group-hover:tracking-[0.35em] uppercase whitespace-nowrap">
+              Initiative
             </h2>
           </Link>
 
           <div className="h-6 w-[1px] bg-white/10"></div>
 
           <Link href="/foundation" className="group">
-            <h2 className="text-sm md:text-base xl:text-xl font-light text-white transition-all group-hover:opacity-70 uppercase whitespace-nowrap">              Foundation
+            <h2 className="text-base md:text-xl xl:text-2xl font-semibold text-white tracking-[0.2em] transition-all duration-700 group-hover:opacity-60 group-hover:tracking-[0.35em] uppercase whitespace-nowrap">
+              Foundation
             </h2>
           </Link>
         </div>
@@ -98,8 +100,8 @@ export default function Home() {
           {/* Central Quote - Jarak tipis ke Signature */}
           <div className="text-center mb-15">
             {/* Teks "memciptakan" gue samain persis ketikannya kayak di screenshot Figma lu */}
-            <p className="text-[13px] md:text-sm font-serif italic tracking-[0.05em] text-zinc-300/90 leading-relaxed">
-              F. R. Zulfikar adalah seorang anak laki-laki yang ingin memciptakan <br className="hidden md:block" />
+            <p className="text-[13px] md:text-sm font-semibold italic tracking-[0.05em] text-zinc-300/90 leading-relaxed">
+              F. R. Zulfikar adalah seorang anak laki-laki yang ingin menciptakan <br className="hidden md:block" />
               landscape terindah di dunia.
             </p>
           </div>
@@ -117,9 +119,14 @@ export default function Home() {
                   className="object-contain brightness-0 invert opacity-70"
                 />
               </div>
-              {/* 2. Nama Teks - The Precise Baseline */}
-              <div className="relative z-10 w-full text-left">
-                <h3 className="text-lg font-light capitalized text-white leading-none whitespace-nowrap">
+              {/* Container Nama - Kita pake Translate buat presisi 1:1 */}
+              <div className="relative z-10 w-full text-start">
+                <h3 className="text-lg font-light capitalized text-white leading-none whitespace-nowrap 
+                 /* Trik Presisi Figma: */
+                 translate-x-[-12px]  /* Opsi 1: Geser kiri mentok (sesuaikan pixelnya) */
+                 translate-y-[8px]   /* Opsi 2: Turunin teks (sesuaikan pixelnya) */
+                 md:translate-x-[-15px] md:translate-y-[10px] /* Penyesuaian desktop */
+                ">
                   F. R. Zulfikar
                 </h3>
               </div>
