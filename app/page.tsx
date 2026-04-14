@@ -71,7 +71,7 @@ export default function Home() {
         {/* Karena section-nya items-center & justify-center, div ini otomatis ngunci persis di tengah layar */}
         <div className="relative z-10 flex items-center justify-center gap-x-12 md:gap-x-20">
           <Link href="/about" className="group">
-            <h2 className="text-sm md:text-base font-light text-white transition-all group-hover:opacity-70 uppercase whitespace-nowrap">
+            <h2 className="text-sm md:text-base xl:text-xl font-light text-white transition-all group-hover:opacity-70 uppercase whitespace-nowrap">
               About Us
             </h2>
           </Link>
@@ -80,26 +80,23 @@ export default function Home() {
           <div className="h-6 w-[1px] bg-white/10"></div>
 
           <Link href="/initiative" className="group">
-            <h2 className="text-sm md:text-base font-light text-white transition-all group-hover:opacity-70 uppercase whitespace-nowrap">
-              Initiative
+            <h2 className="text-sm md:text-base xl:text-xl font-light text-white transition-all group-hover:opacity-70 uppercase whitespace-nowrap">              Initiative
             </h2>
           </Link>
 
           <div className="h-6 w-[1px] bg-white/10"></div>
 
           <Link href="/foundation" className="group">
-            <h2 className="text-sm md:text-base font-light text-white transition-all group-hover:opacity-70 uppercase whitespace-nowrap">
-              Foundation
+            <h2 className="text-sm md:text-base xl:text-xl font-light text-white transition-all group-hover:opacity-70 uppercase whitespace-nowrap">              Foundation
             </h2>
           </Link>
         </div>
 
         {/* 2 & 3. QUOTE & SIGNATURE - ABSOLUTE BOTTOM */}
-        {/* Pakai absolute bottom-[15vh] biar dia selalu stay di area bawah tanpa narik/ngedorong Navigasi */}
-        <div className="absolute bottom-[10vh] md:bottom-[15vh] z-10 flex flex-col items-center w-full px-6">
+        <div className="absolute bottom-15 md:bottom-15 z-10 flex flex-col items-center w-full px-6">
 
           {/* Central Quote - Jarak tipis ke Signature */}
-          <div className="text-center mb-6">
+          <div className="text-center mb-15">
             {/* Teks "memciptakan" gue samain persis ketikannya kayak di screenshot Figma lu */}
             <p className="text-[13px] md:text-sm font-serif italic tracking-[0.05em] text-zinc-300/90 leading-relaxed">
               F. R. Zulfikar adalah seorang anak laki-laki yang ingin memciptakan <br className="hidden md:block" />
@@ -121,7 +118,7 @@ export default function Home() {
               </div>
               {/* 2. Nama Teks - The Precise Baseline */}
               <div className="relative z-10 w-full text-left">
-                <h3 className="text-xl font-light tracking-[0.3em] capitalized text-white leading-none whitespace-nowrap">
+                <h3 className="text-lg font-light capitalized text-white leading-none whitespace-nowrap">
                   F. R. Zulfikar
                 </h3>
               </div>
