@@ -113,6 +113,7 @@ export default function Home() {
                   src="/signature-1.png"
                   alt="Signature"
                   fill
+                  sizes="(max-width: 768px) 192px, 224px"
                   className="object-contain brightness-0 invert opacity-70"
                 />
               </div>
