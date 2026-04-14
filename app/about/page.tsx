@@ -182,7 +182,7 @@ export default function AboutPage() {
 
                             <div className="pt-0">
                                 {/* Ukuran font dibikin lebih kecil & tracking lebih jauh buat kesan premium */}
-                                <p className="text-[11px] md:text-[12px] sentence case text-zinc-700 font-semi-bold">
+                                <p className="text-xs md:text-[16px] sentence case text-zinc-700/90 font-light">
                                     Lahir di Bandung pada 8 April 1998.
                                 </p>
                             </div>
