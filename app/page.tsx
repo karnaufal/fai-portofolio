@@ -71,7 +71,7 @@ export default function Home() {
         {/* Karena section-nya items-center & justify-center, div ini otomatis ngunci persis di tengah layar */}
         <div className="relative z-10 flex items-center justify-center gap-x-12 md:gap-x-20">
           <Link href="/about" className="group">
-            <h2 className="text-base md:text-xl xl:text-2xl font-semibold text-white tracking-[0.1em] transition-all duration-700 group-hover:opacity-60 group-hover:tracking-[0.35em] uppercase whitespace-nowrap">
+            <h2 className="text-base md:text-xl xl:text-2xl font-semibold text-white tracking-[0.1em] transition-all duration-700 group-hover:opacity-60 group-hover:tracking-[0.2em] uppercase whitespace-nowrap">
               About Us
             </h2>
           </Link>
@@ -80,7 +80,7 @@ export default function Home() {
           <div className="h-6 w-[1px] bg-white/10"></div>
 
           <Link href="/initiative" className="group">
-            <h2 className="text-base md:text-xl xl:text-2xl font-semibold text-white tracking-[0.1em] transition-all duration-700 group-hover:opacity-60 group-hover:tracking-[0.35em] uppercase whitespace-nowrap">
+            <h2 className="text-base md:text-xl xl:text-2xl font-semibold text-white tracking-[0.1em] transition-all duration-700 group-hover:opacity-60 group-hover:tracking-[0.2em] uppercase whitespace-nowrap">
               Initiative
             </h2>
           </Link>
@@ -88,7 +88,7 @@ export default function Home() {
           <div className="h-6 w-[1px] bg-white/10"></div>
 
           <Link href="/foundation" className="group">
-            <h2 className="text-base md:text-xl xl:text-2xl font-semibold text-white tracking-[0.1em] transition-all duration-700 group-hover:opacity-60 group-hover:tracking-[0.35em] uppercase whitespace-nowrap">
+            <h2 className="text-base md:text-xl xl:text-2xl font-semibold text-white tracking-[0.1em] transition-all duration-700 group-hover:opacity-60 group-hover:tracking-[0.2em] uppercase whitespace-nowrap">
               Foundation
             </h2>
           </Link>
