@@ -186,7 +186,7 @@ export default function AboutPage() {
 
                     {/* 2. Bagian Quotes */}
                     <div className="w-full flex justify-end mt-32 md:mt-40 px-10 md:px-24">
-                        <div className="flex flex-col items-start text-left space-y-12 max-w-xl ml-auto"> 
+                        <div className="flex flex-col items-start text-left space-y-12 max-w-xl ml-auto">
                             <div className="italic text-zinc-500 font-light">
                                 <p className="text-base md:text-[17px] leading-[1.3] opacity-80">
                                     &quot;..bagi saya, ini bukan sekadar profesi;<br />
@@ -195,7 +195,7 @@ export default function AboutPage() {
                             </div>
 
                             {/* Signature & Name Section */}
-                            <div className="flex flex-col space-y-6"> 
+                            <div className="flex flex-col space-y-6">
                                 <div className="flex justify-start">
                                     <Image
                                         src="/signature.png"
@@ -226,27 +226,26 @@ export default function AboutPage() {
 
                                 {/* 1. Language Picker */}
                                 <div className="absolute left-0 flex items-center gap-2 group cursor-pointer">
-                                    <span className="text-sm grayscale group-hover:grayscale-0 transition-all duration-500">🌐</span>
-                                    <span className="capitalize text-zinc-500 group-hover:text-black transition-colors tracking-tight text-[10px] md:text-[11px]">
+                                    <span className="text-sm font-medium grayscale group-hover:grayscale-0 transition-all duration-500">🌐</span>
+                                    <span className="capitalize font-medium text-zinc-500 group-hover:text-black transition-colors tracking-tight text-[10px] md:text-[11px]">
                                         International: English
                                     </span>
                                 </div>
 
                                 {/* 2. Legal Links  */}
-                                <div className="flex items-center gap-x-3 text-zinc-400 text-[10px] md:text-[11px]">
-                                    <a href="#" className="hover:text-black tracking-[0.15em] uppercase transition-all duration-300">
+                                <div className="flex items-center gap-x-3 text-black text-[10px] md:text-[11px]">
+                                    <a href="#" className="font-medium tracking-[0.05em] capitalize hover:opacity-70 transition-all duration-300">
                                         Terms of use
                                     </a>
-                                    <span className="opacity-30">|</span>
-                                    <a href="#" className="hover:text-black tracking-[0.15em] uppercase transition-all duration-300">
-                                        Privacy
+                                    <span className="text-zinc-300">|</span>
+                                    <a href="#" className="font-medium tracking-[0.05em] capitalize hover:opacity-70 transition-all duration-300">
+                                        Privacy notice
                                     </a>
-                                    <span className="opacity-30">|</span>
-                                    <a href="#" className="hover:text-black tracking-[0.15em] uppercase transition-all duration-300">
+                                    <span className="text-zinc-300">|</span>
+                                    <a href="#" className="font-medium tracking-[0.05em] capitalize hover:opacity-70 transition-all duration-300">
                                         Cookies
                                     </a>
                                 </div>
-
                             </div>
                         </div>
                     </div>
