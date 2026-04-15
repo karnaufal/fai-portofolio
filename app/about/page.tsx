@@ -165,11 +165,11 @@ export default function AboutPage() {
                 </div>
 
                 {/* Container Utama */}
-                <div className="relative z-10 flex flex-col w-full py-20">
+                <div className="relative z-10 flex flex-col w-full py-20 pb-60">
 
                     {/* 1. Bagian Deskripsi - Elegant Reading Size */}
                     <div className="w-full max-w-7xl px-10 md:px-24">
-                        <div className="max-w-3xl space-y-10"> 
+                        <div className="max-w-3xl space-y-10">
                             <div className="text-xs md:text-[16px] font-light leading-[1.3] text-zinc-700/90 text-justify md:text-left">
                                 <p>
                                     &quot;Bagi orang lain, mimpinya adalah kemustahilan. Tetapi bagi <span className="font-medium text-black">F.R. Zulfikar</span>, itu adalah sebuah janji.
@@ -189,66 +189,65 @@ export default function AboutPage() {
                         </div>
                     </div>
 
-                    {/* 2. Bagian Quotes - Right Aligned Container with Left Aligned Content */}
+                    {/* 2. Bagian Quotes */}
                     <div className="w-full flex justify-end mt-32 md:mt-40 px-10 md:px-24">
-                        <div className="flex flex-col items-start text-left space-y-10 max-w-xl ml-auto">
+                        <div className="flex flex-col items-start text-left space-y-12 max-w-xl ml-auto"> {/* space-y digedein biar ttd ada jarak dari quote */}
                             <div className="italic text-zinc-500 font-light">
-                                {/* Quote size diturunin dikit biar lebih subtle & elegant */}
                                 <p className="text-base md:text-[17px] leading-[1.3] opacity-80">
                                     &quot;..bagi saya, ini bukan sekadar profesi;<br />
                                     ini adalah manifestasi dari sebuah visi yang sedang saya perjuangkan&quot;
                                 </p>
                             </div>
 
-                            {/* Signature - Ukuran digedein biar lebih bold */}
-                            <div className="flex justify-start">
-                                <Image
-                                    src="/signature.png"
-                                    alt="Signature"
-                                    width={220}
-                                    height={85}
-                                    style={{ width: 'auto', height: 'auto' }}
-                                    priority
-                                    className="grayscale opacity-90 object-contain -ml-3"
-                                />
-                            </div>
+                            {/* Signature & Name Section */}
+                            <div className="flex flex-col space-y-6"> {/* Kasih jarak antara TTD dan Nama */}
+                                <div className="flex justify-start">
+                                    <Image
+                                        src="/signature.png"
+                                        alt="Signature"
+                                        width={220}
+                                        height={85}
+                                        priority
+                                        className="grayscale opacity-90 object-contain -ml-3"
+                                    />
+                                </div>
 
-                            {/* Name & Title Section */}
-                            <div className="space-y-1.5">
-                                <p className="text-lg md:text-xl font-normal text-black tracking-tight">
-                                    F. R. Zulfikar
-                                </p>
-                                <p className="text-[10px] md:text-[11px] text-zinc-500 font-medium capitalized">
-                                    Founder and Chairman, Omaira Limited
-                                </p>
+                                <div className="space-y-1.5 mt-1">
+                                    <p className="text-lg md:text-xl font-normal text-black tracking-tight">
+                                        F. R. Zulfikar
+                                    </p>
+                                    <p className="text-[10px] md:text-[11px] text-zinc-500 font-medium uppercase tracking-wider">
+                                        Founder and Chairman, Omaira Limited
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    {/* 3. Formal Footer - Minimalist Fine Print (Gapless & Compact) */}
-                    <div className="w-full max-w-8xl mx-auto px-20 md:px-24 mt-40">
-                        <div className="pt-2 border-t border-zinc-200">
-                            <div className="flex flex-col gap-2 text-[10px] md:text-[11px] font-normal">
+                    {/* 3. Formal Footer - Hybrid Layout */}
+                    <div className="absolute bottom-6 w-full px-10 md:px-24">
+                        <div className="pt-2 border-t border-zinc-200/50">
+                            <div className="relative flex items-center justify-center min-h-[40px]">
 
-                                {/* 1. Language Picker */}
-                                <div className="flex items-center gap-3 group cursor-pointer w-fit">
-                                    <span className="text-base grayscale group-hover:grayscale-0 transition-all duration-500">🌐</span>
-                                    <span className="capitalized text-zinc-800 group-hover:text-black transition-colors">
+                                {/* 1. Language Picker - Tetap di Kiri Mentok */}
+                                <div className="absolute left-0 flex items-center gap-2 group cursor-pointer">
+                                    <span className="text-sm grayscale group-hover:grayscale-0 transition-all duration-500">🌐</span>
+                                    <span className="capitalize text-zinc-500 group-hover:text-black transition-colors tracking-tight text-[10px] md:text-[11px]">
                                         International: English
                                     </span>
                                 </div>
 
-                                {/* 2. Legal Links - Centered, Capitalized, Semi-bold */}
-                                <div className="flex flex-wrap justify-center items-center gap-x-2 md:gap-x-4 text-zinc-700">
-                                    <a href="#" className="hover:text-black tracking-widest capitalize font-semibold transition-all duration-300">
+                                {/* 2. Legal Links - Bener-bener di Center */}
+                                <div className="flex items-center gap-x-3 text-zinc-400 text-[10px] md:text-[11px]">
+                                    <a href="#" className="hover:text-black tracking-[0.15em] uppercase transition-all duration-300">
                                         Terms of use
                                     </a>
-                                    <span className="text-zinc-700 font-extralight">|</span>
-                                    <a href="#" className="hover:text-black tracking-widest capitalize font-semibold transition-all duration-300">
-                                        Privacy notice
+                                    <span className="opacity-30">|</span>
+                                    <a href="#" className="hover:text-black tracking-[0.15em] uppercase transition-all duration-300">
+                                        Privacy
                                     </a>
-                                    <span className="text-zinc-700 font-extralight">|</span>
-                                    <a href="#" className="hover:text-black tracking-widest capitalize font-semibold transition-all duration-300">
+                                    <span className="opacity-30">|</span>
+                                    <a href="#" className="hover:text-black tracking-[0.15em] uppercase transition-all duration-300">
                                         Cookies
                                     </a>
                                 </div>
