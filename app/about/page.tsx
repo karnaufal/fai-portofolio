@@ -107,13 +107,9 @@ export default function AboutPage() {
             {/* SECTION 2: Editorial Portrait Intro - Updated with Full Quote */}
             <section className="relative flex h-screen w-full items-center justify-center bg-white p-10 md:p-24 overflow-hidden border-b border-zinc-50">
                 <div className="flex flex-col items-center justify-center max-w-5xl text-center space-y-16">
-
-                    {/* Title: Lebih besar & italic */}
                     <h2 className="text-2xl md:text-5xl font-normal italic tracking-tight leading-[1.2] text-zinc-900">
                         Seorang anak yang ingin menciptakan <br className="hidden md:block" /> landscape terindah di dunia.
                     </h2>
-
-                    {/* Long Quote: Styling lebih halus & lebar */}
                     <div className="space-y-10">
                         <p className="text-zinc-500 font-semi-bold leading-relaxed text-base md:text-xl max-w-4xl mx-auto italic px-4">
                             &quot;Saya meyakini bahwa saat saya membidikkan busur visioner ke arah bintang dan membiarkan diri melayang di atas sayap mimpi menuju tujuan yang tak biasa—di situlah, dalam dahaga akan kesempurnaan dan pemberontakan terhadap banalitas, saya sedang mengalirkan sebuah mata air idealisme yang misterius.&quot;
@@ -150,7 +146,7 @@ export default function AboutPage() {
                 </div>
             </section>
 
-            {/* SECTION 4: Bio & Philosophy - The 'Piecita' Narrative */}
+            {/* SECTION 4: Bio & Philosophy */}
             <section className="relative min-h-screen w-full bg-white overflow-hidden flex flex-col">
 
                 {/* Full BG Person Container */}
@@ -167,7 +163,7 @@ export default function AboutPage() {
                 {/* Container Utama */}
                 <div className="relative z-10 flex flex-col w-full py-20 pb-60">
 
-                    {/* 1. Bagian Deskripsi - Elegant Reading Size */}
+                    {/* 1. Bagian Deskripsi */}
                     <div className="w-full max-w-7xl px-10 md:px-24">
                         <div className="max-w-3xl space-y-10">
                             <div className="text-xs md:text-[16px] font-light leading-[1.3] text-zinc-700/90 text-justify md:text-left">
@@ -181,7 +177,6 @@ export default function AboutPage() {
                             </div>
 
                             <div className="pt-0">
-                                {/* Ukuran font dibikin lebih kecil & tracking lebih jauh buat kesan premium */}
                                 <p className="text-xs md:text-[16px] sentence case text-zinc-700/90 font-light">
                                     Lahir di Bandung pada 8 April 1998.
                                 </p>
@@ -191,7 +186,7 @@ export default function AboutPage() {
 
                     {/* 2. Bagian Quotes */}
                     <div className="w-full flex justify-end mt-32 md:mt-40 px-10 md:px-24">
-                        <div className="flex flex-col items-start text-left space-y-12 max-w-xl ml-auto"> {/* space-y digedein biar ttd ada jarak dari quote */}
+                        <div className="flex flex-col items-start text-left space-y-12 max-w-xl ml-auto"> 
                             <div className="italic text-zinc-500 font-light">
                                 <p className="text-base md:text-[17px] leading-[1.3] opacity-80">
                                     &quot;..bagi saya, ini bukan sekadar profesi;<br />
@@ -200,7 +195,7 @@ export default function AboutPage() {
                             </div>
 
                             {/* Signature & Name Section */}
-                            <div className="flex flex-col space-y-6"> {/* Kasih jarak antara TTD dan Nama */}
+                            <div className="flex flex-col space-y-6"> 
                                 <div className="flex justify-start">
                                     <Image
                                         src="/signature.png"
@@ -229,7 +224,7 @@ export default function AboutPage() {
                         <div className="pt-2 border-t border-zinc-200/50">
                             <div className="relative flex items-center justify-center min-h-[40px]">
 
-                                {/* 1. Language Picker - Tetap di Kiri Mentok */}
+                                {/* 1. Language Picker */}
                                 <div className="absolute left-0 flex items-center gap-2 group cursor-pointer">
                                     <span className="text-sm grayscale group-hover:grayscale-0 transition-all duration-500">🌐</span>
                                     <span className="capitalize text-zinc-500 group-hover:text-black transition-colors tracking-tight text-[10px] md:text-[11px]">
@@ -237,7 +232,7 @@ export default function AboutPage() {
                                     </span>
                                 </div>
 
-                                {/* 2. Legal Links - Bener-bener di Center */}
+                                {/* 2. Legal Links  */}
                                 <div className="flex items-center gap-x-3 text-zinc-400 text-[10px] md:text-[11px]">
                                     <a href="#" className="hover:text-black tracking-[0.15em] uppercase transition-all duration-300">
                                         Terms of use
@@ -269,19 +264,16 @@ export default function AboutPage() {
                         priority
                         className="object-cover"
                     />
-                    {/* Overlay Rolex Style: Gradasi Gelap di Pinggir (Vignette) */}
+                    {/* Overlay Rolex Style */}
                     <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/40"></div>
                     <div className="absolute inset-0 bg-black/10"></div>
                 </div>
 
                 {/* Content Area */}
                 <div className="relative z-10 flex flex-col items-center space-y-6 px-6">
-                    {/* Font dibuat lebih rapat trackingnya tapi tetep clean */}
                     <h2 className="text-3xl md:text-5xl font-medium tracking-tight text-white drop-shadow-lg">
                         Discover our Perpetual Initiatives
                     </h2>
-
-                    {/* Link dengan styling yang lebih subtle */}
                     <a
                         href="https://discoveryomaira.com"
                         target="_blank"
