@@ -227,7 +227,7 @@ export default function AboutPage() {
                                 {/* 1. Language Picker */}
                                 <div className="absolute left-0 flex items-center gap-2 group cursor-pointer">
                                     <span className="text-sm font-medium grayscale group-hover:grayscale-0 transition-all duration-500">🌐</span>
-                                    <span className="capitalize font-medium text-zinc-500 group-hover:text-black transition-colors tracking-tight text-[10px] md:text-[11px]">
+                                    <span className="capitalize font-medium text-zinc-500 group-hover:text-black transition-colors tracking-tight text-[12px] md:text-[13px]">
                                         International: English
                                     </span>
                                 </div>
