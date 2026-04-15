@@ -147,7 +147,7 @@ export default function AboutPage() {
             </section>
 
             {/* SECTION 4: Bio & Philosophy */}
-            <section className="relative min-h-screen w-full bg-white overflow-hidden flex flex-col">
+            <section className="relative min-h-screen w-full bg-white overflow-hidden flex flex-col mt-40">
 
                 {/* Full BG Person Container */}
                 <div className="relative h-[85vh] w-full overflow-hidden">
