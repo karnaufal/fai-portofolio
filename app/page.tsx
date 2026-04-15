@@ -80,7 +80,7 @@ export default function Home() {
           <div className="h-6 w-[1px] bg-white/10"></div>
 
           <Link href="/initiative" className="group">
-            <h2 className="text-base md:text-xl xl:text-2xl font-semibold text-white tracking-[0.2em] transition-all duration-700 group-hover:opacity-60 group-hover:tracking-[0.35em] uppercase whitespace-nowrap">
+            <h2 className="text-base md:text-xl xl:text-2xl font-semibold text-white tracking-[0.1em] transition-all duration-700 group-hover:opacity-60 group-hover:tracking-[0.35em] uppercase whitespace-nowrap">
               Initiative
             </h2>
           </Link>
@@ -88,7 +88,7 @@ export default function Home() {
           <div className="h-6 w-[1px] bg-white/10"></div>
 
           <Link href="/foundation" className="group">
-            <h2 className="text-base md:text-xl xl:text-2xl font-semibold text-white tracking-[0.2em] transition-all duration-700 group-hover:opacity-60 group-hover:tracking-[0.35em] uppercase whitespace-nowrap">
+            <h2 className="text-base md:text-xl xl:text-2xl font-semibold text-white tracking-[0.1em] transition-all duration-700 group-hover:opacity-60 group-hover:tracking-[0.35em] uppercase whitespace-nowrap">
               Foundation
             </h2>
           </Link>
