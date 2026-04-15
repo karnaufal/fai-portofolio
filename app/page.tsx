@@ -71,7 +71,7 @@ export default function Home() {
         {/* Karena section-nya items-center & justify-center, div ini otomatis ngunci persis di tengah layar */}
         <div className="relative z-10 flex items-center justify-center gap-x-12 md:gap-x-20">
           <Link href="/about" className="group">
-            <h2 className="text-base md:text-xl xl:text-2xl font-semibold text-white tracking-[0.2em] transition-all duration-700 group-hover:opacity-60 group-hover:tracking-[0.35em] uppercase whitespace-nowrap">
+            <h2 className="text-base md:text-xl xl:text-2xl font-semibold text-white tracking-[0.1em] transition-all duration-700 group-hover:opacity-60 group-hover:tracking-[0.35em] uppercase whitespace-nowrap">
               About Us
             </h2>
           </Link>
@@ -122,10 +122,9 @@ export default function Home() {
               {/* Container Nama - Kita pake Translate buat presisi 1:1 */}
               <div className="relative z-10 w-full text-start">
                 <h3 className="text-lg font-light capitalized text-white leading-none whitespace-nowrap 
-                 /* Trik Presisi Figma: */
-                 translate-x-[-12px]  /* Opsi 1: Geser kiri mentok (sesuaikan pixelnya) */
-                 translate-y-[8px]   /* Opsi 2: Turunin teks (sesuaikan pixelnya) */
-                 md:translate-x-[-15px] md:translate-y-[10px] /* Penyesuaian desktop */
+                 translate-x-[-12px]  
+                 translate-y-[8px]  
+                 md:translate-x-[-15px] md:translate-y-[10px] 
                 ">
                   F. R. Zulfikar
                 </h3>
