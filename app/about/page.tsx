@@ -51,14 +51,14 @@ export default function AboutPage() {
                 </div>
 
                 {/* TOP NAVIGATION (Menu & Search) */}
-                <nav className="absolute top-0 inset-x-0 z-20 flex justify-between items-center px-8 py-8 text-white">
+                <nav className="absolute top-0 inset-x-0 z-20 flex justify-between items-center px-6 md:px-8 py-6 md:py-8    text-white">
                     <div className="flex items-center gap-3 cursor-pointer group">
                         <Menu size={20} className="stroke-1" />
                         <span className="text-xs capitalized tracking-[0.2em] font-light group-hover:opacity-70 transition-opacity">Menu</span>
                     </div>
 
                     {/* SIGNATURE TOP CENTER */}
-                    <div className="absolute left-1/2 -translate-x-1/2 top-8">
+                    <div className="absolute left-1/2 -translate-x-1/2 top-6 md:top-8">
                         <Image
                             src="/signature-frz-1.png"
                             alt="Fr. Zulfikar Signature"
@@ -94,11 +94,11 @@ export default function AboutPage() {
             {/* SECTION 2: Editorial Portrait Intro - Updated with Full Quote */}
             <section className="relative flex h-screen w-full items-center justify-center bg-[#F5F5F5] p-10 md:p-24 overflow-hidden border-b border-zinc-200/50">
                 <div className="flex flex-col items-center justify-center max-w-5xl text-center space-y-16">
-                    <h2 className="text-2xl md:text-5xl font-normal italic tracking-tight leading-[1.2] text-zinc-900">
+                    <h2 className="text-xl md:text-5xl font-normal italic tracking-tight leading-[1.2] text-zinc-900">
                         Seorang anak yang ingin menciptakan <br className="hidden md:block" /> landscape terindah di dunia.
                     </h2>
                     <div className="space-y-10">
-                        <p className="text-zinc-500 font-semi-bold leading-relaxed text-base md:text-xl max-w-4xl mx-auto italic px-4">
+                        <p className="text-zinc-500 font-semi-bold leading-relaxed text-sm md:text-xl max-w-4xl mx-auto italic px-4">
                             &quot;Saya meyakini bahwa saat saya membidikkan busur visioner ke arah bintang dan membiarkan diri melayang di atas sayap mimpi menuju tujuan yang tak biasa—di situlah, dalam dahaga akan kesempurnaan dan pemberontakan terhadap banalitas, saya sedang mengalirkan sebuah mata air idealisme yang misterius.&quot;
                         </p>
 
@@ -148,7 +148,7 @@ export default function AboutPage() {
                 </div>
 
                 {/* Container Utama */}
-                <div className="relative z-10 flex flex-col w-full py-20 pb-60">
+                <div className="relative z-10 flex flex-col w-full py-20 pb-32 md:pb-60">
 
                     {/* 1. Bagian Deskripsi */}
                     <div className="w-full max-w-7xl px-10 md:px-24">
@@ -183,15 +183,8 @@ export default function AboutPage() {
 
                             {/* Signature & Name Section */}
                             <div className="flex flex-col space-y-6">
-                                <div className="flex justify-start">
-                                    <Image
-                                        src="/signature.png"
-                                        alt="Signature"
-                                        width={220}
-                                        height={85}
-                                        priority
-                                        className="grayscale opacity-90 object-contain -ml-3"
-                                    />
+                                <div className="relative w-[160px] md:w-[220px] aspect-[220/85]">
+                                    <Image src="/signature.png" alt="Signature" fill className="object-contain -ml-2 md:-ml-3" />
                                 </div>
 
                                 <div className="space-y-1.5 mt-1">
@@ -206,21 +199,20 @@ export default function AboutPage() {
                         </div>
                     </div>
 
-                    {/* 3. Formal Footer - Hybrid Layout */}
-                    <div className="absolute bottom-6 w-full px-10 md:px-24">
-                        <div className="pt-2 border-t border-zinc-200/50">
-                            <div className="relative flex items-center justify-center min-h-[40px]">
+                    {/* 3. Formal Footer - Grid & Flex Hybrid Layout */}
+                    <div className="absolute bottom-6 w-full px-6 md:px-24">
+                        <div className="pt-4 border-t border-zinc-200/50">
 
-                                {/* 1. Language Picker */}
-                                <div className="absolute left-0 flex items-center gap-2 group cursor-pointer">
+                            <div className="flex flex-col md:grid md:grid-cols-3 items-center min-h-[40px] gap-y-6">
+
+                                <div className="flex items-center gap-2 group cursor-pointer md:justify-self-start">
                                     <span className="text-sm font-medium grayscale group-hover:grayscale-0 transition-all duration-500">🌐</span>
-                                    <span className="capitalize font-medium text-zinc-500 group-hover:text-black transition-colors tracking-tight text-[12px] md:text-[13px]">
+                                    <span className="capitalize font-medium text-zinc-500 group-hover:text-black transition-colors tracking-tight text-[11px] md:text-[13px]">
                                         International: English
                                     </span>
                                 </div>
 
-                                {/* 2. Legal Links  */}
-                                <div className="flex items-center gap-x-3 text-black text-[10px] md:text-[11px]">
+                                <div className="flex items-center justify-center gap-x-4 text-black text-[10px] md:text-[11px] md:justify-self-center">
                                     <a href="#" className="font-medium tracking-[0.05em] capitalize hover:opacity-70 transition-all duration-300">
                                         Terms of use
                                     </a>
@@ -233,6 +225,9 @@ export default function AboutPage() {
                                         Cookies
                                     </a>
                                 </div>
+
+                                <div className="hidden md:block"></div>
+
                             </div>
                         </div>
                     </div>
@@ -256,28 +251,31 @@ export default function AboutPage() {
                 </div>
 
                 {/* Content Area */}
-                <div className="relative z-10 flex flex-col items-center space-y-6 px-6">
-                    <h2 className="text-3xl md:text-5xl font-medium tracking-tight text-white drop-shadow-lg">
+                <div className="relative z-10 flex flex-col items-center space-y-8 px-8">
+
+                    <h2 className="text-xl md:text-5xl font-medium tracking-tight text-white drop-shadow-lg text-center leading-relaxed">
                         Discover our Perpetual Initiatives
                     </h2>
+
                     <a
                         href="https://discoveryomaira.com"
                         target="_blank"
-                        className="flex items-center gap-2.5 text-white/90 hover:text-white transition-all group"
+                        className="flex flex-row items-center justify-center gap-x-3 text-white/90 hover:text-white transition-all group"
                     >
-                        <span className="text-sm md:text-base font-light tracking-widest capitalized border-b border-transparent group-hover:border-white/50 pb-0.5 transition-all">
+                        <span className="text-[11px] md:text-base font-light tracking-[0.2em] sentence case border-b border-transparent group-hover:border-white/50 pb-1 transition-all">
                             Visit discoveryomaira.com
                         </span>
+
                         <svg
                             width="12"
                             height="12"
                             viewBox="0 0 24 24"
                             fill="none"
                             stroke="currentColor"
-                            strokeWidth="2.5"
+                            strokeWidth="2"
                             strokeLinecap="round"
                             strokeLinejoin="round"
-                            className="opacity-80 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300"
+                            className="opacity-70 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300"
                         >
                             <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
                             <polyline points="15 3 21 3 21 9" />
