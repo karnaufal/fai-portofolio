@@ -7,7 +7,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import { Search, Menu } from "lucide-react";
 
-// Registrasi plugin
 if (typeof window !== "undefined") {
     gsap.registerPlugin(ScrollTrigger, useGSAP);
 }
@@ -17,17 +16,38 @@ export default function AboutPage() {
 
     useGSAP(() => {
         const cards = gsap.utils.toArray(".parallax-card");
-        cards.forEach((card: any, i) => {
-            gsap.to(card, {
-                y: i === 0 ? -60 : i === 1 ? -40 : -120,
-                ease: "none",
-                scrollTrigger: {
-                    trigger: card,
-                    start: "top bottom",
-                    end: "bottom top",
-                    scrub: 1.5,
-                }
-            });
+
+        gsap.to(cards[0] as HTMLElement, {
+            y: -40,
+            ease: "none",
+            scrollTrigger: {
+                trigger: cards[0] as HTMLElement,
+                start: "top bottom",
+                end: "bottom top",
+                scrub: 1,
+            }
+        });
+
+        gsap.to(cards[1] as HTMLElement, {
+            y: -180,
+            ease: "none",
+            scrollTrigger: {
+                trigger: cards[1] as HTMLElement,
+                start: "top bottom",
+                end: "bottom top",
+                scrub: 1.5,
+            }
+        });
+
+        gsap.to(cards[2] as HTMLElement, {
+            y: -30,
+            ease: "none",
+            scrollTrigger: {
+                trigger: cards[2] as HTMLElement,
+                start: "top 95%",
+                end: "bottom top",
+                scrub: 0.5,
+            }
         });
     }, { scope: container });
 
@@ -111,25 +131,41 @@ export default function AboutPage() {
                 </div>
             </section>
 
-            {/* SECTION 3: Custom Overlap (Foto 2 & 3 Bertabrakan) */}
-            <section className="relative min-h-[160vh] w-full bg-[#F5F5F5] py-32 overflow-hidden">
-                <div className="relative w-full h-full max-w-[1400px] mx-auto">
+            {/* SECTION 3: The Spectre Editorial Flow - Full Bleed Edition */}
+            <section className="relative min-h-[150vh] md:min-h-[180vh] w-full bg-[#F5F5F5] py-10 pb-0 overflow-hidden">
 
-                    {/* Foto 1: Normal (Gak Overlapping) */}
-                    <div className="parallax-card relative z-10 w-[45%] aspect-[4/5] overflow-hidden bg-zinc-200 ml-10 md:ml-20 shadow-lg">
-                        <Image src="/person-1.png" alt="1" fill sizes="50vw" className="object-cover" />
+                {/* Inner Container: FULL WIDTH tanpa pembatas 1400px */}
+                <div className="relative w-full h-full">
+
+                    <div className="parallax-card relative z-10 w-[80%] md:w-[40%] aspect-[4/5] overflow-hidden shadow-sm s">
+                        <Image
+                            src="/person-1.png"
+                            alt="Visionary"
+                            fill
+                            className="object-cover"
+                            priority
+                        />
                     </div>
 
-                    {/* Foto 2: Mepet ke Luar (Right Bleed) */}
-                    <div className="parallax-card absolute right-[-5%] top-[25%] z-20 w-[60%] md:w-[50%] aspect-[16/10] overflow-hidden bg-zinc-300 shadow-2xl">
-                        <Image src="/person-2.png" alt="2" fill sizes="60vw" className="object-cover grayscale" />
+                    {/* 2. Gambar Kedua - THE FOREGROUND (Sekarang Overlapping Gambar 3) */}
+                    <div className="parallax-card absolute right-0 top-[45%] md:top-[25%] z-50 w-[75%] md:w-[50%] aspect-[16/10] md:aspect-[4/3] overflow-hidden shadow-2xl">
+                        <Image
+                            src="/person-2.png"
+                            alt="Detail Process"
+                            fill
+                            className="object-cover grayscale hover:grayscale-0 transition-all duration-700"
+                        />
                     </div>
 
-                    {/* Foto 3: Centered & Overlapping Foto 2 */}
-                    <div className="parallax-card absolute left-1/2 -translate-x-1/2 top-[55%] z-30 w-[50%] md:w-[40%] aspect-[3/4] overflow-hidden bg-zinc-400 shadow-2xl">
-                        <Image src="/person-3.png" alt="3" fill sizes="40vw" className="object-cover" />
+                    {/* 3. Gambar Ketiga - THE ANCHOR (Sekarang di Belakang Gambar 2) */}
+                    <div className="parallax-card relative z-10 left-1/2 -translate-x-1/2 w-[85%] md:w-[80%] aspect-[4/5] md:aspect-[21/9] overflow-hidden shadow-sm mb-[-5%] md:mb-[-10%]">
+                        <Image
+                            src="/person-3.png"
+                            alt="The Signature Shot"
+                            fill
+                            className="object-center object-cover"
+                        />
                     </div>
-
                 </div>
             </section>
 
@@ -150,7 +186,7 @@ export default function AboutPage() {
                 {/* Container Utama */}
                 <div className="relative z-10 flex flex-col w-full py-20 pb-32 md:pb-60">
 
-                    {/* 1. Bagian Deskripsi */}
+                    {/* 1. Bagian Deskripsi */}``
                     <div className="w-full max-w-7xl px-10 md:px-24">
                         <div className="max-w-3xl space-y-10">
                             <div className="text-xs md:text-[16px] font-light leading-[1.3] text-zinc-700/90 text-justify md:text-left">
