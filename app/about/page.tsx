@@ -75,28 +75,18 @@ export default function AboutPage() {
                     </div>
                 </nav>
 
-                {/* CENTER CONTENT: ART OF DETAIL - Clean Horizontal Layout */}
+                {/* CENTER CONTENT: ART OF DETAIL - Full PNG Version */}
                 <div className="relative z-10 select-none w-full px-4 flex justify-center">
-                    <div className="flex items-center gap-6 md:gap-10">
-
-                        {/* "ART OF" - Sans Serif Clean */}
-                        <h1 className="text-2xl md:text-5xl lg:text-6xl font-light uppercase text-white leading-none whitespace-nowrap">
-                            Art of
-                        </h1>
-
-                        {/* "Detail" PNG - Sejajar di Samping (No Overlap) */}
-                        <div className="flex-shrink-0">
-                            <Image
-                                src="/detail.png"
-                                alt="Detail Script"
-                                width={350}
-                                height={150}
-                                priority
-                                style={{ height: 'auto' }}
-                                className="object-contain brightness-0 invert opacity-95 w-auto"
-                            />
-                        </div>
-
+                    <div className="flex-shrink-0 max-w-[90vw] md:max-w-3xl">
+                        <Image
+                            src="/artofdetail.png"
+                            alt="Art of Detail"
+                            width={800}
+                            height={200}
+                            priority
+                            style={{ height: 'auto' }}
+                            className="object-contain brightness-0 invert opacity-95 w-full h-auto"
+                        />
                     </div>
                 </div>
 
