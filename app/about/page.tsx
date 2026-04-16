@@ -137,12 +137,12 @@ export default function AboutPage() {
             <section className="relative min-h-screen w-full bg-[#F5F5F5] overflow-hidden flex flex-col mt-40">
 
                 {/* Full BG Person Container */}
-                <div className="relative h-[85vh] w-full overflow-hidden">
+                <div className="relative h-[60vh] md:h-[85vh] w-full overflow-hidden">
                     <Image
                         src="/person-4.png"
                         alt="F. R. Zulfikar Portrait"
                         fill
-                        className="object-cover object-top"
+                        className="object-cover object-[50%_20%] md:object-top"
                         priority
                     />
                 </div>
