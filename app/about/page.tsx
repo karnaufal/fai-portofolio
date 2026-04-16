@@ -53,7 +53,7 @@ export default function AboutPage() {
             }
         });
     }, { scope: container });
-    
+
     return (
 
         <main ref={container} className="relative w-full bg-[#F5F5F5] font-sans text-black antialiased">
@@ -139,7 +139,7 @@ export default function AboutPage() {
                 <div className="relative w-full h-full">
 
                     {/* 1. Gambar Pertama - Kiri Atas */}
-                    <div className="parallax-card relative z-10 w-[80%] md:w-[40%] aspect-[4/5] overflow-hidden shadow-sm md:ml-20">
+                    <div className="parallax-card relative z-10 w-[80%] md:w-[40%] aspect-[4/5] overflow-hidden shadow-sm">
                         <Image
                             src="/person-1.png"
                             alt="Visionary"
