@@ -41,8 +41,8 @@ export default function Home() {
 
           {/* 2. CENTER AREA: The Headline */}
           <div className="flex-1 flex items-center justify-center w-full">
-            <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-light uppercase text-white/90 whitespace-nowrap tracking-normal">
-              Timeless Interpretation of Art and Masterpieces
+            <h1 className="text-[15px] text-center leading-[2] px-6 md:text-3xl lg:text-4xl md:leading-normal md:whitespace-nowrap font-light uppercase text-white/90">
+              Timeless Interpretation <br className="block md:hidden" /> of Art and Masterpieces
             </h1>
           </div>
 
@@ -67,42 +67,62 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/40 to-black/80"></div>
         </div>
 
-        {/* 1. MAIN NAVIGATION - DEAD CENTER LAYAR */}
-        {/* Karena section-nya items-center & justify-center, div ini otomatis ngunci persis di tengah layar */}
-        <div className="relative z-10 flex items-center justify-center gap-x-12 md:gap-x-20">
-          <Link href="/about" className="group">
-            <h2 className="text-base md:text-xl xl:text-2xl font-semibold text-white tracking-[0.1em] transition-all duration-700 group-hover:opacity-60 group-hover:tracking-[0.2em] uppercase whitespace-nowrap">
-              About Us
-            </h2>
-          </Link>
+        {/* 2. CENTER AREA: Navigasi Hub */}
+        <div className="flex-1 flex items-center justify-center w-full">
+          {/* flex-col di mobile, md:flex-row di desktop */}
+          <div className="relative z-10 flex flex-col md:flex-row items-center justify-center gap-y-12 md:gap-x-20">
 
-          {/* Divider - Sangat Tipis (Sesuai Figma) */}
-          <div className="h-6 w-[1px] bg-white/10"></div>
+            {/* ABOUT US */}
+            <Link href="/about" className="group">
+              <div className="flex flex-col items-center">
+                {/* Muncul cuma di mobile (block), ilang di desktop (md:hidden) */}
+                <span className="block md:hidden text-[10px] tracking-[0.15em] text-zinc-500 uppercase mb-2">
+                  Discover
+                </span>
+                <h2 className="text-xl md:text-2xl font-light tracking-[0.15em] uppercase text-white/90 group-hover:tracking-[0.2em] transition-all duration-500">
+                  About Us
+                </h2>
+              </div>
+            </Link>
 
-          <Link href="/initiative" className="group">
-            <h2 className="text-base md:text-xl xl:text-2xl font-semibold text-white tracking-[0.1em] transition-all duration-700 group-hover:opacity-60 group-hover:tracking-[0.2em] uppercase whitespace-nowrap">
-              Initiative
-            </h2>
-          </Link>
+            <div className="hidden md:block h-12 w-[1px] bg-white/10"></div>
 
-          <div className="h-6 w-[1px] bg-white/10"></div>
+            {/* INITIATIVE */}
+            <Link href="/initiative" className="group">
+              <div className="flex flex-col items-center">
+                <span className="block md:hidden text-[10px] tracking-[0.15em] text-zinc-500 uppercase mb-2">
+                  Our Vision
+                </span>
+                <h2 className="text-xl md:text-2xl font-light tracking-[0.15em] uppercase text-white/90 group-hover:tracking-[0.2em] transition-all duration-500">
+                  Initiative
+                </h2>
+              </div>
+            </Link>
 
-          <Link href="/foundation" className="group">
-            <h2 className="text-base md:text-xl xl:text-2xl font-semibold text-white tracking-[0.1em] transition-all duration-700 group-hover:opacity-60 group-hover:tracking-[0.2em] uppercase whitespace-nowrap">
-              Foundation
-            </h2>
-          </Link>
+            <div className="hidden md:block h-12 w-[1px] bg-white/10"></div>
+
+            {/* FOUNDATION */}
+            <Link href="/foundation" className="group">
+              <div className="flex flex-col items-center">
+                <span className="block md:hidden text-[10px] tracking-[0.15em] text-zinc-500 uppercase mb-2">
+                  Community
+                </span>
+                <h2 className="text-xl md:text-2xl font-light tracking-[0.15em] uppercase text-white/90 group-hover:tracking-[0.2em] transition-all duration-500">
+                  Foundation
+                </h2>
+              </div>
+            </Link>
+
+          </div>
         </div>
 
         {/* 2 & 3. QUOTE & SIGNATURE - ABSOLUTE BOTTOM */}
-        <div className="absolute bottom-15 md:bottom-15 z-10 flex flex-col items-center w-full px-6">
+        <div className="absolute bottom-20 md:bottom-24 z-10 flex flex-col items-center w-full px-8">
 
           {/* Central Quote - Jarak tipis ke Signature */}
-          <div className="text-center mb-15">
-            {/* Teks "memciptakan" gue samain persis ketikannya kayak di screenshot Figma lu */}
-            <p className="text-[13px] md:text-sm font-semibold italic tracking-[0.05em] text-zinc-300/90 leading-relaxed">
-              F. R. Zulfikar adalah seorang anak laki-laki yang ingin menciptakan <br className="hidden md:block" />
-              landscape terindah di dunia.
+          <div className="absolute bottom-20 md:bottom-20 z-10 flex flex-col items-center w-full px-10">
+            <p className="text-[11px] md:text-sm font-medium italic tracking-[0.1em] text-zinc-400 text-center leading-[1.8]">
+              F. R. Zulfikar adalah seorang anak laki-laki yang ingin menciptakan <br className="hidden md:block" /> landscape terindah di dunia.
             </p>
           </div>
 
@@ -121,11 +141,7 @@ export default function Home() {
               </div>
               {/* Container Nama - Kita pake Translate buat presisi 1:1 */}
               <div className="relative z-10 w-full text-start">
-                <h3 className="text-lg font-light capitalized text-white leading-none whitespace-nowrap 
-                 translate-x-[-12px]  
-                 translate-y-[8px]  
-                 md:translate-x-[-15px] md:translate-y-[10px] 
-                ">
+                <h3 className="text-sm md:text-lg font-light capitalized text-white leading-none whitespace-nowrap translate-x-[-8px] translate-y-[6px] md:translate-x-[-15px] md:translate-y-[10px]">
                   F. R. Zulfikar
                 </h3>
               </div>
