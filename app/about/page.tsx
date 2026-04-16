@@ -89,9 +89,6 @@ export default function AboutPage() {
                         />
                     </div>
                 </div>
-
-                {/* BOTTOM DECORATION  */}
-                <div className="absolute bottom-0 left-1/2 -translate-x-1/2 h-24 w-[1px] bg-white opacity-40"></div>
             </section>
 
             {/* SECTION 2: Editorial Portrait Intro - Updated with Full Quote */}
