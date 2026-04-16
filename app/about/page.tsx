@@ -33,7 +33,7 @@ export default function AboutPage() {
 
     return (
 
-        <main ref={container} className="relative w-full bg-white font-sans text-black antialiased">
+        <main ref={container} className="relative w-full bg-[#F5F5F5] font-sans text-black antialiased">
 
             {/* SECTION 1: Cinematic Hero */}
             <section className="relative h-screen w-full snap-start overflow-hidden flex items-center justify-center bg-black">
@@ -92,7 +92,7 @@ export default function AboutPage() {
             </section>
 
             {/* SECTION 2: Editorial Portrait Intro - Updated with Full Quote */}
-            <section className="relative flex h-screen w-full items-center justify-center bg-white p-10 md:p-24 overflow-hidden border-b border-zinc-50">
+            <section className="relative flex h-screen w-full items-center justify-center bg-[#F5F5F5] p-10 md:p-24 overflow-hidden border-b border-zinc-200/50">
                 <div className="flex flex-col items-center justify-center max-w-5xl text-center space-y-16">
                     <h2 className="text-2xl md:text-5xl font-normal italic tracking-tight leading-[1.2] text-zinc-900">
                         Seorang anak yang ingin menciptakan <br className="hidden md:block" /> landscape terindah di dunia.
@@ -134,7 +134,7 @@ export default function AboutPage() {
             </section>
 
             {/* SECTION 4: Bio & Philosophy */}
-            <section className="relative min-h-screen w-full bg-white overflow-hidden flex flex-col mt-40">
+            <section className="relative min-h-screen w-full bg-[#F5F5F5] overflow-hidden flex flex-col mt-40">
 
                 {/* Full BG Person Container */}
                 <div className="relative h-[85vh] w-full overflow-hidden">
