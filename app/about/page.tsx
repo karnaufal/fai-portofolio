@@ -76,7 +76,9 @@ export default function AboutPage() {
                 </div>
 
                 {/* CENTER CONTENT: ART OF DETAIL - Full PNG Version */}
-                <div className="relative z-10 select-none w-full px-4 flex justify-center">
+                {/* Tambahin flex-col dan items-center di sini */}
+                <div className="relative z-10 select-none w-full px-4 flex flex-col items-center justify-center">
+
                     <div className="flex-shrink-0 max-w-[90vw] md:max-w-3xl">
                         <Image
                             src="/artofdetail.png"
@@ -88,6 +90,13 @@ export default function AboutPage() {
                             className="object-contain brightness-0 invert opacity-95 w-full h-auto"
                         />
                     </div>
+
+                    {/* Button Discover Now */}
+                    {/* Margin top (mt-8) sekarang bakal berfungsi bener ngedorong button ini ke bawah gambar */}
+                    <button className="mt-8 px-8 md:px-10 py-3 md:py-4 bg-white text-black rounded-full text-[10px] md:text-xs font-semibold tracking-[0.2em] uppercase hover:bg-gray-200 hover:scale-105 transition-all duration-300 shadow-lg">
+                        Discover Now
+                    </button>
+
                 </div>
             </section>
 
