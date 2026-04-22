@@ -5,7 +5,7 @@ import Image from "next/image";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
-import { Search, Menu } from "lucide-react";
+import Navbar from "@/components/navbar";
 
 if (typeof window !== "undefined") {
     gsap.registerPlugin(ScrollTrigger, useGSAP);
@@ -58,6 +58,8 @@ export default function AboutPage() {
 
         <main ref={container} className="relative w-full bg-[#F5F5F5] font-sans text-black antialiased">
 
+            <Navbar />
+
             {/* SECTION 1: Cinematic Hero */}
             <section className="relative h-screen w-full snap-start overflow-hidden flex items-center justify-center bg-black">
 
@@ -72,31 +74,6 @@ export default function AboutPage() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/20"></div>
                 </div>
-
-                {/* TOP NAVIGATION (Menu & Search) */}
-                <nav className="absolute top-0 inset-x-0 z-20 flex justify-between items-center px-6 md:px-8 py-6 md:py-8    text-white">
-                    <div className="flex items-center gap-3 cursor-pointer group">
-                        <Menu size={20} className="stroke-1" />
-                        <span className="text-xs capitalized tracking-[0.2em] font-light group-hover:opacity-70 transition-opacity">Menu</span>
-                    </div>
-
-                    {/* SIGNATURE TOP CENTER */}
-                    <div className="absolute left-1/2 -translate-x-1/2 top-6 md:top-8">
-                        <Image
-                            src="/signature-frz-1.png"
-                            alt="Fr. Zulfikar Signature"
-                            width={70}
-                            height={30}
-                            style={{ width: '110px', height: 'auto' }}
-                            className="object-contain brightness-0 invert opacity-90"
-                        />
-                    </div>
-
-                    <div className="flex items-center gap-3 cursor-pointer group">
-                        <span className="text-xs capitalized tracking-[0.2em] font-light group-hover:opacity-70 transition-opacity">Search</span>
-                        <Search size={20} className="stroke-1" />
-                    </div>
-                </nav>
 
                 {/* CENTER CONTENT: ART OF DETAIL - Full PNG Version */}
                 <div className="relative z-10 select-none w-full px-4 flex justify-center">
