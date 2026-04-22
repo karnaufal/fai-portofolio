@@ -104,7 +104,7 @@ export default function AboutPage() {
                         <Image
                             src="/artofdetail.png"
                             alt="Art of Detail"
-                            width={800}
+                            width={500}
                             height={200}
                             priority
                             style={{ height: 'auto' }}
@@ -224,7 +224,13 @@ export default function AboutPage() {
                             {/* Signature & Name Section */}
                             <div className="flex flex-col space-y-6">
                                 <div className="relative w-[160px] md:w-[220px] aspect-[220/85]">
-                                    <Image src="/signature.png" alt="Signature" fill className="object-contain -ml-2 md:-ml-3" />
+                                    <Image
+                                        src="/signature.png"
+                                        alt="Signature"
+                                        fill
+                                        sizes="(max-width: 768px) 160px, 220px"
+                                        className="object-contain -ml-2 md:-ml-3"
+                                    />
                                 </div>
 
                                 <div className="space-y-1.5 mt-1">
