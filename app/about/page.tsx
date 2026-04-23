@@ -202,7 +202,7 @@ export default function AboutPage() {
                                     bahwa dari ruang yang paling sesak sekalipun, seseorang bisa melahirkan visi yang akan mengubah wajah dunia.&quot;
                                 </p>
                             </div>
-                            
+
                             <div className="pt-0">
                                 <p className="text-xs md:text-[16px] sentence case text-zinc-700/90 font-light">
                                     Lahir di Bandung pada 8 April 1998.
@@ -245,36 +245,87 @@ export default function AboutPage() {
                         </div>
                     </div>
 
-                    {/* 3. Formal Footer - Grid & Flex Hybrid Layout */}
+                    {/* 3. Formal Footer - 2 Row Layout (Sesuai Figma) */}
                     <div className="absolute bottom-6 w-full px-6 md:px-24">
-                        <div className="pt-4 border-t border-zinc-200/50">
+                        <div className="pt-4 border-t border-zinc-200/50 flex flex-col gap-y-6 md:gap-y-8">
 
-                            <div className="flex flex-col md:grid md:grid-cols-3 items-center min-h-[40px] gap-y-6">
+                            {/* BARIS ATAS: Language (Kiri) & Socials (Kanan) */}
+                            <div className="flex flex-col md:flex-row justify-between items-center gap-y-4">
 
-                                <div className="flex items-center gap-2 group cursor-pointer md:justify-self-start">
+                                {/* Kiri: Language */}
+                                <div className="flex items-center gap-2 group cursor-pointer">
                                     <span className="text-sm font-medium grayscale group-hover:grayscale-0 transition-all duration-500">🌐</span>
                                     <span className="capitalize font-medium text-zinc-500 group-hover:text-black transition-colors tracking-tight text-[11px] md:text-[13px]">
                                         International: English
                                     </span>
                                 </div>
 
-                                <div className="flex items-center justify-center gap-x-4 text-black text-[10px] md:text-[11px] md:justify-self-center">
-                                    <a href="#" className="font-medium tracking-[0.05em] capitalize hover:opacity-70 transition-all duration-300">
-                                        Terms of use
+                                {/* Kanan: Socials */}
+                                <div className="flex items-center gap-x-4 md:gap-x-5">
+                                    <span className="text-[11px] md:text-[13px] font-semibold text-zinc-800 tracking-tight mr-2">
+                                        Follow Us
+                                    </span>
+
+                                    {/* Icon Threads (AtSign) */}
+                                    <a href="#" className="text-black hover:text-zinc-500 hover:-translate-y-1 transition-all duration-300">
+                                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                                            <circle cx="12" cy="12" r="10" />
+                                            <path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-4 8" />
+                                            <path d="M12 16a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z" />
+                                        </svg>
                                     </a>
-                                    <span className="text-zinc-300">|</span>
-                                    <a href="#" className="font-medium tracking-[0.05em] capitalize hover:opacity-70 transition-all duration-300">
-                                        Privacy notice
+
+                                    {/* Icon X / Twitter */}
+                                    <a href="#" className="text-black hover:text-zinc-500 hover:-translate-y-1 transition-all duration-300">
+                                        <svg width="13" height="13" viewBox="0 0 1200 1227" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M714.163 519.284L1160.89 0H1055.03L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.866L515.491 750.218L842.672 1226.37H1200L714.137 519.284H714.163ZM569.165 687.828L521.697 619.934L144.011 79.6944H306.615L611.412 515.685L658.88 583.579L1055.08 1150.3H892.476L569.165 687.854V687.828Z" />
+                                        </svg>
                                     </a>
-                                    <span className="text-zinc-300">|</span>
-                                    <a href="#" className="font-medium tracking-[0.05em] capitalize hover:opacity-70 transition-all duration-300">
-                                        Cookies
+
+                                    {/* Icon LinkedIn */}
+                                    <a href="#" className="text-black hover:text-zinc-500 hover:-translate-y-1 transition-all duration-300">
+                                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                                            <rect width="4" height="12" x="2" y="9" />
+                                            <circle cx="4" cy="4" r="2" />
+                                        </svg>
+                                    </a>
+
+                                    {/* Icon Instagram */}
+                                    <a href="#" className="text-black hover:text-zinc-500 hover:-translate-y-1 transition-all duration-300">
+                                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                                            <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                                            <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+                                        </svg>
+                                    </a>
+
+                                    {/* Icon GitHub */}
+                                    <a href="https://github.com/karnaufal" target="_blank" rel="noopener noreferrer" className="text-black hover:text-zinc-500 hover:-translate-y-1 transition-all duration-300">
+                                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                                            <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.2c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+                                            <path d="M9 18c-4.51 2-5-2-7-2" />
+                                        </svg>
                                     </a>
                                 </div>
 
-                                <div className="hidden md:block"></div>
-
                             </div>
+
+                            {/* BARIS BAWAH: Legal Links */}
+                            <div className="flex items-center justify-center gap-x-3 text-black text-[10px] md:text-[11px]">
+                                <a href="#" className="font-medium tracking-[0.05em] capitalize hover:opacity-70 transition-all duration-300">
+                                    Terms of use
+                                </a>
+                                <span className="text-zinc-400">-</span>
+                                <a href="#" className="font-medium tracking-[0.05em] capitalize hover:opacity-70 transition-all duration-300">
+                                    Privacy notice
+                                </a>
+                                <span className="text-zinc-400">-</span>
+                                <a href="#" className="font-medium tracking-[0.05em] capitalize hover:opacity-70 transition-all duration-300">
+                                    Cookies
+                                </a>
+                            </div>
+
                         </div>
                     </div>
                 </div>
