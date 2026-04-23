@@ -39,7 +39,7 @@ export default function Navbar() {
             </div>
 
             {/* TIER 2: Sub-Navigation Links */}
-            <div className="hidden md:flex justify-center items-center gap-x-6 mt-6 text-[10px] tracking-[0.2em] font-medium text-white/70 uppercase">
+            <div className="hidden md:flex justify-center items-center gap-x-6 mt-6 text-[12.5px] tracking-[0.2em] font-medium text-white/70 uppercase">
                 <Link href="/about" className="hover:text-white transition-colors duration-300">About</Link>
                 <span className="text-white/30 font-light">|</span>
                 <Link href="#" className="hover:text-white transition-colors duration-300">Corporation</Link>
