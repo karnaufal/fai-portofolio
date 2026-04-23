@@ -31,7 +31,7 @@ export default function AboutPage() {
 
         // Gambar 2: Aggressive lift (The Overlapper)
         gsap.to(cards[1] as HTMLElement, {
-            y: -200, // Lebih tinggi agar efek 'menyalip' terasa
+            y: -200,
             ease: "power2.out",
             scrollTrigger: {
                 trigger: cards[1] as HTMLElement,
@@ -76,18 +76,17 @@ export default function AboutPage() {
                 </div>
 
                 {/* CENTER CONTENT: ART OF DETAIL - Full PNG Version */}
-                {/* Tambahin flex-col dan items-center di sini */}
                 <div className="relative z-10 select-none w-full px-4 flex flex-col items-center justify-center">
 
-                    <div className="flex-shrink-0 max-w-[90vw] md:max-w-3xl">
+                    <div className="flex-shrink-0 w-full max-w-[90vw] md:max-w-3xl">
                         <Image
                             src="/artofdetail.png"
                             alt="Art of Detail"
                             width={600}
                             height={200}
                             priority
-                            style={{ height: 'auto' }}
-                            className="object-contain brightness-0 invert opacity-95 w-full h-auto"
+                            sizes="100vw"
+                            className="w-full h-auto object-contain brightness-0 invert opacity-95"
                         />
                     </div>
 
@@ -178,10 +177,8 @@ export default function AboutPage() {
                     {/* 1. Bagian Deskripsi */}``
                     <div className="w-full max-w-7xl px-12 md:px-24">
                         <div className="max-w-3xl space-y-10">
-                            {/* leading-tight bikin jarak atas-bawah rapet. */}
                             <div className="text-[12px] md:text-[16px] font-light leading-tight md:leading-snug text-zinc-700/90 text-left flex flex-col w-full">
 
-                                {/* whitespace-normal di HP biar nge-wrap rapi, md:whitespace-nowrap di laptop biar bablas ke kanan 1 baris */}
                                 <p className="whitespace-normal md:whitespace-nowrap">
                                     &quot;Bagi orang lain, mimpinya adalah kemustahilan. Tetapi bagi <span className="font-medium text-black">F.R. Zulfikar</span>, itu adalah sebuah janji.
                                 </p>
