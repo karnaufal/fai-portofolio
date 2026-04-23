@@ -17,10 +17,9 @@ export default function AboutPage() {
     useGSAP(() => {
         const cards = gsap.utils.toArray(".parallax-card");
 
-        // cards[0] = Gambar Mobil (Kanan Atas)
         gsap.to(cards[0] as HTMLElement, {
-            y: -100,
-            ease: "power3.out",
+            y: -80,
+            ease: "none",
             scrollTrigger: {
                 trigger: cards[0] as HTMLElement,
                 start: "top bottom",
@@ -29,21 +28,19 @@ export default function AboutPage() {
             }
         });
 
-        // cards[1] = Gambar Bapak Botak (Kiri Tengah - Overlapper)
         gsap.to(cards[1] as HTMLElement, {
-            y: -220,
-            ease: "power3.out",
+            y: -160,
+            ease: "none",
             scrollTrigger: {
                 trigger: cards[1] as HTMLElement,
-                start: "top bottom",
+                start: "top 85%",
                 end: "bottom top",
-                scrub: 1.5,
+                scrub: 1.8,
             }
         });
 
-        // cards[2] = Gambar Anchor (Bawah)
         gsap.to(cards[2] as HTMLElement, {
-            y: -30,
+            y: -40,
             ease: "none",
             scrollTrigger: {
                 trigger: cards[2] as HTMLElement,
@@ -52,8 +49,9 @@ export default function AboutPage() {
                 scrub: 2.5,
             }
         });
+
     }, { scope: container });
-    
+
     return (
 
         <main ref={container} className="relative w-full bg-[#F5F5F5] font-sans text-black antialiased">
@@ -118,49 +116,50 @@ export default function AboutPage() {
                 </div>
             </section>
 
-            {/* SECTION 3: The Spectre Editorial Flow - Full Bleed Edition */}
-            <section className="relative min-h-[160vh] md:min-h-[200vh] w-full bg-[#F5F5F5] pt-0 overflow-hidden">
+            {/* SECTION 3: The Spectre Editorial Flow — Pixel-matched to Figma */}
+
+            <section className="relative h-[140vh] md:h-[200vh] w-full bg-[#F5F5F5] overflow-hidden">
                 <div className="relative w-full h-full">
 
-                    {/* 1. Gambar Mobil (person-2.png - 796 x 650) - POJOK KANAN ATAS */}
-                    <div className="parallax-card absolute right-0 top-0 z-10 w-[85%] md:w-[50%] aspect-[796/650] overflow-hidden shadow-2xl">
+                    {/* 1. Gambar Bentley (person-1.png) — Kanan Atas */}
+                    <div className="parallax-card absolute right-0 top-0 z-10 w-[75%] md:w-[46%] aspect-[796/650] overflow-hidden shadow-2xl">
                         <Image
                             src="/person-1.png"
                             alt="Bentley"
                             fill
-                            sizes="(max-width: 768px) 85vw, 50vw"
+                            sizes="(max-width: 768px) 75vw, 46vw"
                             className="object-cover grayscale hover:grayscale-0 transition-all duration-700"
                             priority
                         />
                     </div>
 
-                    {/* 2. Gambar Bapak Botak (person-1.png - 789 x 650) - KIRI (THE OVERLAPPER) */}
-                    <div className="parallax-card relative z-30 w-[85%] md:w-[50%] aspect-[789/650] overflow-hidden shadow-sm mt-[55%] md:mt-[30%]">
+                    {/* 2. Gambar Bapak Kacamata (person-2.png) — Kiri, THE OVERLAPPER */}
+                    <div className="parallax-card absolute left-0 z-30 top-[28%] md:top-[22%] w-[75%] md:w-[46%] aspect-[789/650] overflow-hidden shadow-sm">
                         <Image
                             src="/person-2.png"
                             alt="Visionary"
                             fill
-                            sizes="(max-width: 768px) 85vw, 50vw"
+                            sizes="(max-width: 768px) 75vw, 46vw"
                             className="object-cover grayscale hover:grayscale-0 transition-all duration-700"
                         />
                     </div>
 
-                    {/* 3. Gambar Anchor (person-3.png - 1363 x 763) - BAWAH */}
-                    <div className="parallax-card relative z-10 left-1/2 -translate-x-1/2 w-[95%] md:w-[85%] aspect-[1363/763] overflow-hidden shadow-sm -mt-[25%] md:-mt-[15%] mb-[-15%] md:mb-[-10%]">
+                    {/* 3. Gambar B&W Suit (person-3.png) — Center Bawah */}
+                    <div className="parallax-card absolute left-1/2 -translate-x-1/2 z-20 top-[52%] md:top-[43%] w-[92%] md:w-[65%] aspect-[1363/763] overflow-hidden shadow-sm">
                         <Image
                             src="/person-3.png"
                             alt="The Signature Shot"
                             fill
-                            sizes="(max-width: 768px) 95vw, 85vw"
-                            className="object-center object-cover"
+                            sizes="(max-width: 768px) 92vw, 65vw"
+                            className="object-cover object-center"
                         />
                     </div>
-
                 </div>
             </section>
 
+
             {/* SECTION 4: Bio & Philosophy */}
-            <section className="relative min-h-screen w-full bg-[#F5F5F5] overflow-hidden flex flex-col mt-20 md:mt-32">
+            <section className="relative min-h-screen w-full bg-[#F5F5F5] overflow-hidden flex flex-col">
                 {/* Full BG Person Container */}
                 <div className="relative h-[60vh] md:h-[85vh] w-full overflow-hidden">
                     <Image
