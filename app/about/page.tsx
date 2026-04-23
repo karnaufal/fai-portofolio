@@ -83,7 +83,7 @@ export default function AboutPage() {
                         <Image
                             src="/artofdetail.png"
                             alt="Art of Detail"
-                            width={500}
+                            width={600}
                             height={200}
                             priority
                             style={{ height: 'auto' }}
