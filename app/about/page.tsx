@@ -17,22 +17,22 @@ export default function AboutPage() {
     useGSAP(() => {
         const cards = gsap.utils.toArray(".parallax-card");
 
-        // Gambar 1: Subtle lift
+        // cards[0] = Gambar Mobil (Kanan Atas)
         gsap.to(cards[0] as HTMLElement, {
-            y: -50,
-            ease: "power1.out",
+            y: -100,
+            ease: "power3.out",
             scrollTrigger: {
                 trigger: cards[0] as HTMLElement,
                 start: "top bottom",
                 end: "bottom top",
-                scrub: 1,
+                scrub: 2,
             }
         });
 
-        // Gambar 2: Aggressive lift (The Overlapper)
+        // cards[1] = Gambar Bapak Botak (Kiri Tengah - Overlapper)
         gsap.to(cards[1] as HTMLElement, {
-            y: -200,
-            ease: "power2.out",
+            y: -220,
+            ease: "power3.out",
             scrollTrigger: {
                 trigger: cards[1] as HTMLElement,
                 start: "top bottom",
@@ -41,19 +41,19 @@ export default function AboutPage() {
             }
         });
 
-        // Gambar 3: Heavy Anchor
+        // cards[2] = Gambar Anchor (Bawah)
         gsap.to(cards[2] as HTMLElement, {
-            y: -40,
+            y: -30,
             ease: "none",
             scrollTrigger: {
                 trigger: cards[2] as HTMLElement,
                 start: "top 90%",
                 end: "bottom top",
-                scrub: 0.8,
+                scrub: 2.5,
             }
         });
     }, { scope: container });
-
+    
     return (
 
         <main ref={container} className="relative w-full bg-[#F5F5F5] font-sans text-black antialiased">
@@ -119,42 +119,43 @@ export default function AboutPage() {
             </section>
 
             {/* SECTION 3: The Spectre Editorial Flow - Full Bleed Edition */}
-            <section className="relative min-h-[160vh] md:min-h-[200vh] w-full bg-[#F5F5F5] py-10 pb-0 overflow-hidden">
+            <section className="relative min-h-[160vh] md:min-h-[200vh] w-full bg-[#F5F5F5] pt-0 overflow-hidden">
                 <div className="relative w-full h-full">
 
-                    {/* 1. Gambar Pertama - Kiri Atas */}
-                    <div className="parallax-card relative z-10 w-[80%] md:w-[40%] aspect-[4/5] overflow-hidden shadow-sm">
+                    {/* 1. Gambar Mobil (person-2.png - 796 x 650) - POJOK KANAN ATAS */}
+                    <div className="parallax-card absolute right-0 top-0 z-10 w-[85%] md:w-[50%] aspect-[796/650] overflow-hidden shadow-2xl">
                         <Image
                             src="/person-1.png"
-                            alt="Visionary"
+                            alt="Bentley"
                             fill
-                            sizes="(max-width: 768px) 80vw, 40vw"
-                            className="object-cover"
+                            sizes="(max-width: 768px) 85vw, 50vw"
+                            className="object-cover grayscale hover:grayscale-0 transition-all duration-700"
                             priority
                         />
                     </div>
 
-                    {/* 2. Gambar Kedua - THE FOREGROUND (Overlapping Gambar 3) */}
-                    <div className="parallax-card absolute right-0 top-[40%] md:top-[25%] z-50 w-[75%] md:w-[50%] aspect-[16/10] md:aspect-[4/3] overflow-hidden shadow-2xl">
+                    {/* 2. Gambar Bapak Botak (person-1.png - 789 x 650) - KIRI (THE OVERLAPPER) */}
+                    <div className="parallax-card relative z-30 w-[85%] md:w-[50%] aspect-[789/650] overflow-hidden shadow-sm mt-[55%] md:mt-[30%]">
                         <Image
                             src="/person-2.png"
-                            alt="Detail Process"
+                            alt="Visionary"
                             fill
-                            sizes="(max-width: 768px) 75vw, 50vw"
+                            sizes="(max-width: 768px) 85vw, 50vw"
                             className="object-cover grayscale hover:grayscale-0 transition-all duration-700"
                         />
                     </div>
 
-                    {/* 3. Gambar Ketiga - THE ANCHOR (Di Belakang Gambar 2) */}
-                    <div className="parallax-card relative z-10 left-1/2 -translate-x-1/2 w-[85%] md:w-[80%] aspect-[4/5] md:aspect-[21/9] overflow-hidden shadow-sm mb-[-15%] md:mb-[-10%]">
+                    {/* 3. Gambar Anchor (person-3.png - 1363 x 763) - BAWAH */}
+                    <div className="parallax-card relative z-10 left-1/2 -translate-x-1/2 w-[95%] md:w-[85%] aspect-[1363/763] overflow-hidden shadow-sm -mt-[25%] md:-mt-[15%] mb-[-15%] md:mb-[-10%]">
                         <Image
                             src="/person-3.png"
                             alt="The Signature Shot"
                             fill
-                            sizes="(max-width: 768px) 85vw, 80vw"
+                            sizes="(max-width: 768px) 95vw, 85vw"
                             className="object-center object-cover"
                         />
                     </div>
+
                 </div>
             </section>
 
