@@ -173,21 +173,36 @@ export default function AboutPage() {
                 </div>
 
                 {/* Container Utama */}
-                <div className="relative z-10 flex flex-col w-full py-20 pb-32 md:pb-60">
+                <div className="relative z-10 flex flex-col w-full py-10 pb-32 md:pb-60">
 
                     {/* 1. Bagian Deskripsi */}``
-                    <div className="w-full max-w-7xl px-10 md:px-24">
+                    <div className="w-full max-w-7xl px-12 md:px-24">
                         <div className="max-w-3xl space-y-10">
-                            <div className="text-xs md:text-[16px] font-light leading-[1.3] text-zinc-700/90 text-justify md:text-left">
-                                <p>
+                            {/* leading-tight bikin jarak atas-bawah rapet. */}
+                            <div className="text-[12px] md:text-[16px] font-light leading-tight md:leading-snug text-zinc-700/90 text-left flex flex-col w-full">
+
+                                {/* whitespace-normal di HP biar nge-wrap rapi, md:whitespace-nowrap di laptop biar bablas ke kanan 1 baris */}
+                                <p className="whitespace-normal md:whitespace-nowrap">
                                     &quot;Bagi orang lain, mimpinya adalah kemustahilan. Tetapi bagi <span className="font-medium text-black">F.R. Zulfikar</span>, itu adalah sebuah janji.
+                                </p>
+
+                                <p className="whitespace-normal md:whitespace-nowrap">
                                     Di &apos;Piecita&apos;, sebuah kamar kecilnya, ia merajut rencana besar untuk membangun kota ikonik yang belum pernah dibayangkan manusia.
+                                </p>
+
+                                <p className="whitespace-normal md:whitespace-nowrap">
                                     Di tengah kepungan dinding sempit, ia berteman dengan sepi, mengubah keterbatasan menjadi bahan bakar kreativitas.
+                                </p>
+
+                                <p className="whitespace-normal md:whitespace-nowrap">
                                     Dengan kayu balsa di tangannya, ia menyusun detail mahakarya yang menantang batas akal. Ia sedang menulis ulang sejarahnya sendiri:
+                                </p>
+
+                                <p className="whitespace-normal md:whitespace-nowrap">
                                     bahwa dari ruang yang paling sesak sekalipun, seseorang bisa melahirkan visi yang akan mengubah wajah dunia.&quot;
                                 </p>
                             </div>
-
+                            
                             <div className="pt-0">
                                 <p className="text-xs md:text-[16px] sentence case text-zinc-700/90 font-light">
                                     Lahir di Bandung pada 8 April 1998.
