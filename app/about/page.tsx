@@ -234,7 +234,7 @@ export default function AboutPage() {
                                     <p className="text-lg md:text-xl font-normal text-black tracking-tight">
                                         F. R. Zulfikar
                                     </p>
-                                    <p className="text-[10px] md:text-[11px] text-zinc-500 font-medium capitalize tracking-wider">
+                                    <p className="text-[12px] md:text-[13px] text-zinc-500 font-semibold sentence case tracking-wider">
                                         Founder and Chairman, Omaira Limited
                                     </p>
                                 </div>
