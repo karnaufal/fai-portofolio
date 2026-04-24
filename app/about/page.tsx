@@ -76,19 +76,20 @@ export default function AboutPage() {
                 {/* CENTER CONTENT: ART OF DETAIL - Full PNG Version */}
                 <div className="relative z-10 select-none w-full px-4 flex flex-col items-center justify-center">
 
-                    <div className="flex-shrink-0 w-full max-w-[90vw] md:max-w-3xl">
+                    {/* PERUBAHAN: max-w dikecilin biar gak terlalu mendominasi layar dan dapet luxury feel-nya */}
+                    <div className="flex-shrink-0 w-full max-w-[75vw] md:max-w-lg lg:max-w-xl">
                         <Image
                             src="/artofdetail.png"
                             alt="Art of Detail"
-                            width={600}
+                            width={500}
                             height={200}
                             priority
-                            sizes="100vw"
+                            sizes="(max-width: 768px) 75vw, 500px"
                             className="w-full h-auto object-contain brightness-0 invert opacity-95"
                         />
                     </div>
 
-                    {/* Button Discover Now */}
+                    {/* Button Discover Now (UNTOUCHABLE) */}
                     <button className="mt-8 px-8 md:px-12 py-2.5 md:py-3 bg-white text-black rounded-full text-[10px] md:text-xs font-semibold uppercase hover:bg-gray-200 hover:scale-105 transition-all duration-300 shadow-lg">
                         Discover Now
                     </button>
