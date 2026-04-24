@@ -4,12 +4,14 @@ import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Search, Menu } from "lucide-react";
+import { usePathname } from "next/navigation";
 
 export default function Navbar() {
     const [isTier1Hovered, setIsTier1Hovered] = useState(false);
     const [isVisible, setIsVisible] = useState(true);
     const [isAtTop, setIsAtTop] = useState(true);
     const lastScrollY = useRef(0);
+    const pathname = usePathname();
 
     useEffect(() => {
         const handleScroll = () => {
@@ -88,22 +90,34 @@ export default function Navbar() {
                 </div>
             </div>
 
-            <div className={`hidden md:flex justify-center items-center gap-x-6 pb-4 text-[12.5px] tracking-[0.2em] font-medium uppercase transition-colors duration-300
-                ${isWholeNavWhite ? "text-zinc-500" : "text-white/70"}
-            `}>
-                <Link href="/about">About</Link>
-                <span className={`font-light ${isWholeNavWhite ? "text-zinc-300" : "text-white/30"}`}>|</span>
-                <Link href="#">Corporation</Link>
-                <span className={`font-light ${isWholeNavWhite ? "text-zinc-300" : "text-white/30"}`}>|</span>
-                <Link href="#">Initiative</Link>
-                <span className={`font-light ${isWholeNavWhite ? "text-zinc-300" : "text-white/30"}`}>|</span>
-                <Link href="#">Philanthropy</Link>
-                <span className={`font-light ${isWholeNavWhite ? "text-zinc-300" : "text-white/30"}`}>|</span>
-                <Link href="#">Media</Link>
-                <span className={`font-light ${isWholeNavWhite ? "text-zinc-300" : "text-white/30"}`}>|</span>
-                <Link href="#">Rewards & Recognitions</Link>
+            <div className={`hidden md:flex justify-center items-center gap-x-6 pb-4 text-[12.5px] tracking-[0.2em] font-extralight uppercase transition-colors duration-300
+    ${isWholeNavWhite ? "text-zinc-500" : "text-white/70"}
+`}>
+                {[
+                    { name: "About", href: "/about" },
+                    { name: "Corporation", href: "/corporation" },
+                    { name: "Initiative", href: "/initiative" },
+                    { name: "Philanthropy", href: "/philanthropy" },
+                    { name: "Media", href: "/media" },
+                    { name: "Rewards & Recognitions", href: "/rewards" },
+                ].map((link, index, array) => (
+                    <div key={link.href} className="flex items-center gap-x-6">
+                        <Link
+                            href={link.href}
+                            className={`transition-all duration-300 
+                    ${pathname === link.href
+                                    ? `font-bold ${isWholeNavWhite ? "text-[#006039]" : "text-white"}`
+                                    : `${isWholeNavWhite ? "hover:text-[#006039]" : "hover:text-white"}`
+                                }`}
+                        >
+                            {link.name}
+                        </Link>
+                        {index < array.length - 1 && (
+                            <span className={`font-light ${isWholeNavWhite ? "text-zinc-300" : "text-white/30"}`}>|</span>
+                        )}
+                    </div>
+                ))}
             </div>
-
         </nav>
     );
 }
