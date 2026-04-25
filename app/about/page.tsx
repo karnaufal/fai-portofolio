@@ -144,13 +144,13 @@ export default function AboutPage() {
                         />
                     </div>
 
-                    {/* 3. Gambar B&W Suit (person-3.png) — Center Bawah */}
-                    <div className="parallax-card absolute left-1/2 -translate-x-1/2 z-20 top-[52%] md:top-[43%] w-[92%] md:w-[65%] aspect-[1363/763] overflow-hidden shadow-sm">
+                    {/* 3. Gambar B&W Suit (person-3.png) — Center Bawah (Wider Landscape) */}
+                    <div className="parallax-card absolute left-1/2 -translate-x-1/2 z-20 top-[52%] md:top-[43%] w-[92%] md:w-[75%] aspect-[1600/750] overflow-hidden shadow-sm">
                         <Image
                             src="/person-3.png"
                             alt="The Signature Shot"
                             fill
-                            sizes="(max-width: 768px) 92vw, 65vw"
+                            sizes="(max-width: 768px) 92vw, 75vw"
                             className="object-cover object-center"
                         />
                     </div>
