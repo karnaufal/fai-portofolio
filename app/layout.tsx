@@ -12,9 +12,15 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+
 export const metadata: Metadata = {
-  title: "F.R Zulfikar",
-  description: "F.R Zulfikar Portofolio",
+  title: "Fai Portofolio",
+  description: "Luxury Editorial Portfolio",
+  icons: {
+    icon: "/icon-tab.png",
+    shortcut: "/icon-tab.png",
+    apple: "/icon-tab.png",
+  },
 };
 
 export default function RootLayout({

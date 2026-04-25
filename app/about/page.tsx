@@ -76,7 +76,6 @@ export default function AboutPage() {
                 {/* CENTER CONTENT: ART OF DETAIL - Full PNG Version */}
                 <div className="relative z-10 select-none w-full px-4 flex flex-col items-center justify-center">
 
-                    {/* PERUBAHAN: max-w dikecilin biar gak terlalu mendominasi layar dan dapet luxury feel-nya */}
                     <div className="flex-shrink-0 w-full max-w-[75vw] md:max-w-lg lg:max-w-xl">
                         <Image
                             src="/artofdetail.png"
