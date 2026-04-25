@@ -68,15 +68,15 @@ export default function Navbar() {
                 {/* Center: FR Logo */}
                 <div className="flex justify-center justify-self-center">
                     <Image
-                        src="/signature-FR.png"
+                        src="/signature-fr-white.png"
                         alt="FR Logo"
                         width={60}
                         height={30}
                         className={`
-                            object-contain opacity-90 h-[25px] md:h-[35px] w-auto
-                            transition-all duration-300
-                            ${showWhiteBg ? "brightness-0" : "brightness-0 invert"}
-                        `}
+            object-contain opacity-90 h-[25px] md:h-[35px] w-auto
+            transition-all duration-300
+            ${showWhiteBg ? "brightness-0" : "brightness-0 invert"}
+        `}
                         priority
                     />
                 </div>
