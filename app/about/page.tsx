@@ -252,7 +252,13 @@ export default function AboutPage() {
 
                                 {/* Kiri: Language */}
                                 <div className="flex items-center gap-2 group cursor-pointer">
-                                    <span className="text-sm font-medium grayscale group-hover:grayscale-0 transition-all duration-500">🌐</span>
+                                    <Image
+                                        src="/icon-world.png"
+                                        alt="International"
+                                        width={16}
+                                        height={16}
+                                        className="object-contain grayscale group-hover:grayscale-0 transition-all duration-500"
+                                    />
                                     <span className="capitalize font-medium text-zinc-500 group-hover:text-black transition-colors tracking-tight text-[11px] md:text-[13px]">
                                         International: English
                                     </span>
