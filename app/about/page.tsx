@@ -13,6 +13,7 @@ if (typeof window !== "undefined") {
 
 export default function AboutPage() {
     const container = useRef(null);
+    const scrollIndicatorRef = useRef<HTMLDivElement>(null);
 
     useGSAP(() => {
         const cards = gsap.utils.toArray(".parallax-card");
@@ -51,6 +52,21 @@ export default function AboutPage() {
         });
 
     }, { scope: container });
+
+    // Di dalam useGSAP, ganti scroll indicator section dengan ini:
+    if (scrollIndicatorRef.current) {
+        gsap.set(scrollIndicatorRef.current, { y: 0, opacity: 1 });
+        gsap.to(scrollIndicatorRef.current, {
+            y: 12,
+            opacity: 0,
+            duration: 1.8,
+            ease: "power1.in",
+            repeat: -1,
+            repeatDelay: 1,
+            yoyo: false,
+            onRepeat: () => { gsap.set(scrollIndicatorRef.current!, { y: 0, opacity: 1 }); },
+        });
+    }
 
     return (
 
@@ -93,6 +109,22 @@ export default function AboutPage() {
                         Discover Now
                     </button>
 
+                </div>
+
+                {/* JSX — pastikan ini ada di SECTION 1, sebelum closing </section> */}
+                <div ref={scrollIndicatorRef} className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10">
+                    <svg
+                        width="32"
+                        height="32"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="white"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                    >
+                        <polyline points="6 9 12 15 18 9" />
+                    </svg>
                 </div>
             </section>
 
