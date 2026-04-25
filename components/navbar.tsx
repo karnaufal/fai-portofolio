@@ -90,7 +90,7 @@ export default function Navbar() {
                 </div>
             </div>
 
-            <div className={`hidden md:flex justify-center items-center gap-x-6 pb-4 text-[12.5px] tracking-[0.2em] font-extralight uppercase transition-colors duration-300
+            <div className={`hidden md:flex justify-center items-center gap-x-6 pb-4 text-[14px] tracking-[0.3em] font-extralight uppercase transition-colors duration-300
     ${isWholeNavWhite ? "text-zinc-500" : "text-white/70"}
 `}>
                 {[
@@ -113,7 +113,7 @@ export default function Navbar() {
                             {link.name}
                         </Link>
                         {index < array.length - 1 && (
-                            <span className={`font-light ${isWholeNavWhite ? "text-zinc-300" : "text-white/30"}`}>|</span>
+                            <span className={`font-extralight ${isWholeNavWhite ? "text-zinc-300" : "text-white/30"}`}>|</span>
                         )}
                     </div>
                 ))}
