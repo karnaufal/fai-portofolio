@@ -51,22 +51,22 @@ export default function AboutPage() {
             }
         });
 
-    }, { scope: container });
+        // Di dalam useGSAP, ganti scroll indicator section dengan ini:
+        if (scrollIndicatorRef.current) {
+            gsap.set(scrollIndicatorRef.current, { y: 0, opacity: 1 });
+            gsap.to(scrollIndicatorRef.current, {
+                y: 12,
+                opacity: 0,
+                duration: 1.8,
+                ease: "power1.in",
+                repeat: -1,
+                repeatDelay: 1,
+                yoyo: false,
+                onRepeat: () => { gsap.set(scrollIndicatorRef.current!, { y: 0, opacity: 1 }); },
+            });
+        }
 
-    // Di dalam useGSAP, ganti scroll indicator section dengan ini:
-    if (scrollIndicatorRef.current) {
-        gsap.set(scrollIndicatorRef.current, { y: 0, opacity: 1 });
-        gsap.to(scrollIndicatorRef.current, {
-            y: 12,
-            opacity: 0,
-            duration: 1.8,
-            ease: "power1.in",
-            repeat: -1,
-            repeatDelay: 1,
-            yoyo: false,
-            onRepeat: () => { gsap.set(scrollIndicatorRef.current!, { y: 0, opacity: 1 }); },
-        });
-    }
+    }, { scope: container });
 
     return (
 
