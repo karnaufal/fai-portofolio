@@ -51,7 +51,6 @@ export default function AboutPage() {
             }
         });
 
-        // Di dalam useGSAP, ganti scroll indicator section dengan ini:
         if (scrollIndicatorRef.current) {
             gsap.set(scrollIndicatorRef.current, { y: 0, opacity: 1 });
             gsap.to(scrollIndicatorRef.current, {
@@ -67,7 +66,7 @@ export default function AboutPage() {
         }
 
     }, { scope: container });
-
+    ``
     return (
 
         <main ref={container} className="relative w-full bg-[#F5F5F5] font-sans text-black antialiased">
@@ -111,7 +110,6 @@ export default function AboutPage() {
 
                 </div>
 
-                {/* JSX — pastikan ini ada di SECTION 1, sebelum closing </section> */}
                 <div ref={scrollIndicatorRef} className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10">
                     <svg
                         width="32"
@@ -387,7 +385,7 @@ export default function AboutPage() {
                 {/* Content Area */}
                 <div className="relative z-10 flex flex-col items-center space-y-8 px-8">
 
-                    <h2 className="text-xl md:text-5xl font-medium tracking-tight text-white drop-shadow-lg text-center leading-relaxed">
+                    <h2 className="text-xl md:text-5xl font-semibold tracking-tight text-white text-center leading-relaxed">
                         Discover our Perpetual Initiatives
                     </h2>
 
@@ -396,7 +394,7 @@ export default function AboutPage() {
                         target="_blank"
                         className="flex flex-row items-center justify-center gap-x-3 text-white/90 hover:text-white transition-all group"
                     >
-                        <span className="text-[11px] md:text-base font-light tracking-[0.2em] sentence case border-b border-transparent group-hover:border-white/50 pb-1 transition-all">
+                        <span className="text-[11px] md:text-base font-semibold tracking-[0.1em] sentence case border-b border-transparent group-hover:border-white/50 pb-1 transition-all">
                             Visit discoveryomaira.com
                         </span>
 
