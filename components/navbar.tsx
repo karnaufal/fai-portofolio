@@ -60,7 +60,7 @@ export default function Navbar() {
                 {/* Left: Menu */}
                 <div className={`flex items-center gap-3 cursor-pointer group justify-self-start transition-colors duration-300 ${showWhiteBg ? "text-black" : "text-white"}`}>
                     <Menu size={20} className="stroke-1" />
-                    <span className="hidden md:inline text-[11px] capitalize tracking-[0.2em] font-light group-hover:opacity-70 transition-opacity">
+                    <span className="hidden md:inline text-[13px] capitalize tracking-[0.2em] font-light group-hover:opacity-70 transition-opacity">
                         Menu
                     </span>
                 </div>
@@ -83,7 +83,7 @@ export default function Navbar() {
 
                 {/* Right: Search */}
                 <div className={`flex items-center gap-3 cursor-pointer group justify-self-end transition-colors duration-300 ${showWhiteBg ? "text-black" : "text-white"}`}>
-                    <span className="hidden md:inline text-[11px] capitalize tracking-[0.2em] font-light group-hover:opacity-70 transition-opacity">
+                    <span className="hidden md:inline text-[13px] capitalize tracking-[0.2em] font-light group-hover:opacity-70 transition-opacity">
                         Search
                     </span>
                     <Search size={20} className="stroke-1" />
