@@ -103,8 +103,8 @@ export default function AboutPage() {
                         />
                     </div>
 
-                    {/* Button Discover Now (UNTOUCHABLE) */}
-                    <button className="mt-8 px-8 md:px-12 py-2.5 md:py-3 bg-white text-black rounded-full text-[10px] md:text-xs font-semibold uppercase hover:bg-gray-200 hover:scale-105 transition-all duration-300 shadow-lg">
+                    {/* Button Discover Now (Adjusted for Elegance) */}
+                    <button className="mt-12 md:mt-16 px-10 md:px-14 py-3 md:py-3.5 bg-white text-black rounded-full text-[10px] md:text-xs font-semibold uppercase tracking-wider hover:bg-gray-200 hover:scale-105 transition-all duration-300 shadow-lg">
                         Discover Now
                     </button>
 
@@ -138,7 +138,7 @@ export default function AboutPage() {
                         </p>
 
                         {/* Author Attribution */}
-                        <p className="text-[10px] md:text-xs capitalized font-semibold text-zinc-800">
+                        <p className="text-[12px] md:text-sm capitalized font-semibold text-zinc-800">
                             — F. R. Zulfikar, Principal Indonesia.
                         </p>
                     </div>

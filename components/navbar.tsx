@@ -106,7 +106,6 @@ export default function Navbar() {
                             href={link.href}
                             className={`transition-all duration-300 
                     ${pathname === link.href
-                                    /* Adjustment: font-bold diganti jadi font-medium */
                                     ? `font-medium ${isWholeNavWhite ? "text-[#006039]" : "text-white"}`
                                     : `${isWholeNavWhite ? "hover:text-[#006039]" : "hover:text-white"}`
                                 }`}
