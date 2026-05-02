@@ -1,27 +1,18 @@
 "use client";
 
-import { useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import FadeUp from "@/components/fade-up";
-import ScrollLogo from "@/components/scroll-logo";
 import SectionCurtain from "@/components/section-curtain";
 import ScrollIndicatorLine from "@/components/scroll-indicator-line";
 
 export default function Home() {
-  const snapContainerRef = useRef<HTMLElement | null>(null);
-
   return (
     <>
-      <main
-        ref={snapContainerRef}
-        className="h-screen overflow-y-scroll snap-y snap-mandatory bg-black font-sans text-white antialiased"
-      >
+      <main className="h-screen overflow-y-scroll snap-y snap-mandatory [scroll-behavior:smooth] bg-black font-sans text-white antialiased">
 
         {/* ============================================================
                     SECTION 1: Masterpiece Header
-                    - SectionCurtain: tirai hitam slide up saat load (once)
-                    - FadeUp delay dimulai 0.8s biar curtain selesai dulu
                 ============================================================ */}
         <SectionCurtain
           className="relative flex h-screen w-full snap-start flex-col items-center bg-black"
@@ -41,9 +32,9 @@ export default function Home() {
           </div>
 
           {/* Content */}
-          <div className="relative z-10 flex flex-col items-center w-full h-full max-w-7xl px-12 md:px-20 pt-16 pb-10">
+          <div className="relative z-10 flex flex-col items-center w-full h-full px-12 md:px-20 pt-16 pb-10">
 
-            {/* Signature + horizontal line */}
+            {/* Signature */}
             <FadeUp delay={0.8} duration={1}>
               <div className="w-full flex flex-col items-center">
                 <div className="mb-6 opacity-95">
@@ -57,8 +48,12 @@ export default function Home() {
                     priority
                   />
                 </div>
-                <div className="h-[1px] w-full bg-white" />
               </div>
+            </FadeUp>
+
+            {/* Full-width horizontal line — break out dari padding container */}
+            <FadeUp delay={0.85} duration={1}>
+              <div className="w-screen h-[1px] bg-white -mx-[max(3rem,10vw)]" />
             </FadeUp>
 
             {/* Headline */}
@@ -75,8 +70,6 @@ export default function Home() {
 
         {/* ============================================================
                     SECTION 2: Navigation Hub
-                    - SectionCurtain: tirai muncul saat section ini di-snap
-                    - FadeUp delay 0.5s+ biar curtain hampir selesai dulu
                 ============================================================ */}
         <SectionCurtain
           className="relative flex h-screen w-full snap-start items-center justify-center bg-black overflow-hidden"
@@ -94,7 +87,7 @@ export default function Home() {
             <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/40 to-black/80" />
           </div>
 
-          {/* Nav Links — stagger tiap item */}
+          {/* Nav Links */}
           <div className="flex-1 flex items-center justify-center w-full">
             <div className="relative z-10 flex flex-col md:flex-row items-center justify-center gap-y-12 md:gap-x-20">
 
@@ -167,8 +160,7 @@ export default function Home() {
 
       </main>
 
-      {/* Fixed elements — di luar <main> biar nggak terkurung snap container */}
-      <ScrollLogo containerRef={snapContainerRef} />
+      {/* Fixed — di luar main biar nggak terkurung snap container */}
       <ScrollIndicatorLine />
     </>
   );

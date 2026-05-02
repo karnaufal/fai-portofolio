@@ -68,7 +68,6 @@ export default function AboutPage() {
     }, { scope: container });
     ``
     return (
-
         <main ref={container} className="relative w-full bg-[#F5F5F5] font-sans text-black antialiased">
 
             <Navbar />
@@ -365,7 +364,6 @@ export default function AboutPage() {
                     </div>
                 </div>
             </section>
-
         </main >
     );
 }
