@@ -16,9 +16,9 @@ export const metadata: Metadata = {
   title: "Fai Portofolio",
   description: "Luxury Editorial Portfolio",
   icons: {
-    icon: "/icon-tab.png",
-    shortcut: "/icon-tab.png",
-    apple: "/icon-tab.png",
+    icon: "/icon-tab-fix.png",
+    shortcut: "/icon-tab-fix.png",
+    apple: "/icon-tab-fix.png",
   },
 };
 
