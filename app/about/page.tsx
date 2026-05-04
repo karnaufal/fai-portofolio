@@ -211,27 +211,15 @@ export default function AboutPage() {
                             <div className="max-w-3xl space-y-10">
                                 <div className="text-[12px] md:text-[16px] font-light leading-tight md:leading-snug text-zinc-700/90 text-left flex flex-col w-full">
 
-                                    <p className="whitespace-normal md:whitespace-nowrap">
-                                        &quot;Bagi orang lain, mimpinya adalah kemustahilan. Tetapi bagi <span className="font-medium text-black">F.R. Zulfikar</span>, itu adalah sebuah janji.
+                                    <p className="whitespace-normal">
+                                        Kemustahilan hanyalah kata sifat bagi mereka yang berhenti berjanji. Di saat dunia sibuk dengan kebisingan, ia justru akrab dengan keasingan, dari studio kecilnya itulah, <span className="font-medium text-black">F. R. Zulfikar</span> menemukan suara terkuatnya. ia merakit detail demi detail mahakarya, serta mengalirkan mata air idealisme.
                                     </p>
 
-                                    <p className="whitespace-normal md:whitespace-nowrap">
-                                        Di &apos;Piecita&apos;, sebuah kamar kecilnya, ia merajut rencana besar untuk membangun kota ikonik yang belum pernah dibayangkan manusia.
+                                    <p className="whitespace-normal mt-4 md:mt-5">
+                                        Di tangannya, kertas dan pensil menjadi bukti bahwa sejarah tidak selalu ditulis oleh mereka yang memiliki segalanya, melainkan oleh mereka yang berani bermimpi besar. —Ia percaya, bahwa keterbatasan bukanlah akhir, melainkan rahim tempat lahirnya karya-karya yang kelak akan melahirkan ekosistem yang berkelanjutan.
                                     </p>
 
-                                    <p className="whitespace-normal md:whitespace-nowrap">
-                                        Di tengah kepungan dinding sempit, ia berteman dengan sepi, mengubah keterbatasan menjadi bahan bakar kreativitas.
-                                    </p>
-
-                                    <p className="whitespace-normal md:whitespace-nowrap">
-                                        Dengan kayu balsa di tangannya, ia menyusun detail mahakarya yang menantang batas akal. Ia sedang menulis ulang sejarahnya sendiri:
-                                    </p>
-
-                                    <p className="whitespace-normal md:whitespace-nowrap">
-                                        bahwa dari ruang yang paling sesak sekalipun, seseorang bisa melahirkan visi yang akan mengubah wajah dunia.&quot;
-                                    </p>
                                 </div>
-
                                 <div className="pt-0">
                                     <p className="text-xs md:text-[16px] sentence case text-zinc-700/90 font-light">
                                         Lahir di Bandung pada 8 April 1998.
@@ -373,7 +361,7 @@ export default function AboutPage() {
                 </section>
             </main >
             {/* Footer reveal — fixed z-0, kelihatan pas main habis di-scroll */}
-            <Footer />
+            < Footer />
         </>
     );
 }
