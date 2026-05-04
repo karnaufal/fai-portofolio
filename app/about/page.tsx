@@ -263,9 +263,13 @@ export default function AboutPage() {
                                     </div>
 
                                     <div className="space-y-1.5 mt-1">
-                                        <p className="text-lg md:text-xl font-normal text-black tracking-tight">
-                                            F. R. Zulfikar
-                                        </p>
+                                        <Image
+                                            src="/signature-frzulfikar.png"
+                                            alt="F. R. Zulfikar Signature"
+                                            width={150}
+                                            height={50}
+                                            className="w-28 md:w-36 h-auto object-contain"
+                                        />
                                         <p className="text-[12px] md:text-[13px] text-zinc-500 font-semibold sentence case tracking-wider">
                                             Founder and Chairman, Omaira Limited
                                         </p>
