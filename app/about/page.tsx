@@ -71,7 +71,7 @@ export default function AboutPage() {
     ``
     return (
         <>
-            <main ref={container} className="relative z-10 mb-[40vh] md:mb-[50vh] w-full bg-[#F5F5F5] font-sans text-black antialiased">
+            <main ref={container} className="relative z-10 mb-[40vh] md:mb-[50vh] w-full bg-[#F8F8F8] font-sans text-black antialiased">
 
                 <Navbar />
 
@@ -129,19 +129,19 @@ export default function AboutPage() {
                 </section>
 
                 {/* SECTION 2: Editorial Portrait Intro - Updated with Full Quote */}
-                <section className="relative flex h-screen w-full items-center justify-center bg-[#F5F5F5] p-10 md:p-24 overflow-hidden border-b border-zinc-200/50">
+                <section className="relative flex h-screen w-full items-center justify-center bg-[#F8F8F8] p-10 md:p-24 overflow-hidden border-b border-zinc-200/50">
                     <div className="flex flex-col items-center justify-center max-w-5xl text-center space-y-16">
-                        <h2 className="text-xl md:text-5xl font-normal italic tracking-tight leading-[1.2] text-zinc-900">
-                            Seorang anak yang ingin menciptakan <br className="hidden md:block" /> landscape terindah di dunia.
+                        <h2 className="text-xl md:text-5xl font-normal tracking-tight leading-[1.2] text-zinc-900">
+                            Mendedikasikan setiap detail rancangan untuk satu visi: Membuat lanskap terindah di dunia.
                         </h2>
                         <div className="space-y-10">
-                            <p className="text-zinc-500 font-semi-bold leading-relaxed text-sm md:text-xl max-w-4xl mx-auto italic px-4">
-                                &quot;Saya meyakini bahwa saat saya membidikkan busur visioner ke arah bintang dan membiarkan diri melayang di atas sayap mimpi menuju tujuan yang tak biasa—di situlah, dalam dahaga akan kesempurnaan dan pemberontakan terhadap banalitas, saya sedang mengalirkan sebuah mata air idealisme yang misterius.&quot;
+                            <p className="text-zinc-500 font-semi-bold leading-relaxed text-sm md:text-xl max-w-4xl mx-auto px-4">
+                                &quot;Dalam setiap proses kreatif, saya meyakini bahwa dedikasi terhadap detail dan seni akan bertemu dengan semangat inovasi—yang menjadikan idealisme bukan hanya sekadar konsep, melainkan energi utama untuk melahirkan karya-karya yang bermakna.&quot;
                             </p>
 
                             {/* Author Attribution */}
                             <p className="text-[12px] md:text-sm capitalized font-semibold text-zinc-800">
-                                — F. R. Zulfikar, Principal Indonesia.
+                                — F. R. Zulfikar
                             </p>
                         </div>
 
@@ -150,7 +150,7 @@ export default function AboutPage() {
 
                 {/* SECTION 3: The Spectre Editorial Flow — Pixel-matched to Figma */}
 
-                <section className="relative h-[140vh] md:h-[200vh] w-full bg-[#F5F5F5] overflow-hidden">
+                <section className="relative h-[140vh] md:h-[200vh] w-full bg-[#F8F8F8] overflow-hidden">
                     <div className="relative w-full h-full">
 
                         {/* 1. Gambar Bentley (person-1.png) — Kanan Atas */}
@@ -176,13 +176,13 @@ export default function AboutPage() {
                             />
                         </div>
 
-                        {/* 3. Gambar B&W Suit (person-3.png) — Center Bawah (Wider Landscape) */}
-                        <div className="parallax-card absolute left-1/2 -translate-x-1/2 z-20 top-[52%] md:top-[43%] w-[92%] md:w-[75%] aspect-[1600/750] overflow-hidden shadow-sm">
+                        {/* 3. Gambar B&W Cigarette Gesture (person-3.png) — Overlap Tengah-Kanan */}
+                        <div className="parallax-card absolute right-0 md:right-[6%] z-20 top-[46%] md:top-[38%] w-[79%] aspect-[1363/763] overflow-hidden shadow-sm">
                             <Image
                                 src="/person-3.png"
                                 alt="The Signature Shot"
                                 fill
-                                sizes="(max-width: 768px) 92vw, 75vw"
+                                sizes="(max-width: 768px) 79vw, 79vw"
                                 className="object-cover object-center"
                             />
                         </div>
@@ -191,7 +191,7 @@ export default function AboutPage() {
 
 
                 {/* SECTION 4: Bio & Philosophy */}
-                <section className="relative min-h-screen w-full bg-[#F5F5F5] overflow-hidden flex flex-col">
+                <section className="relative min-h-screen w-full bg-[#F8F8F8] overflow-hidden flex flex-col">
                     {/* Full BG Person Container */}
                     <div className="relative h-[60vh] md:h-[85vh] w-full overflow-hidden">
                         <Image
