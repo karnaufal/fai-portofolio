@@ -11,7 +11,7 @@ const CATEGORIES = [
     { name: "Architecture Concept", href: "/initiative/architecture-concept" },
     { name: "Science and Health", href: "/initiative/science-and-health" },
     { name: "Community", href: "/initiative/community" },
-    { name: "Contemporary Dance Art", href: undefined },
+    { name: "Contemporary Dance Art", href: "/initiative/contemporary-dance-art" },
     { name: "Videos", href: undefined },
 ] as const;
 

@@ -35,7 +35,7 @@ export default function InitiativePage() {
                         <Link href="/initiative/architecture-concept" className="hover:text-black transition-colors">Architecture Concept</Link>
                         <Link href="/initiative/science-and-health" className="hover:text-black transition-colors">Science and Health</Link>
                         <Link href="/initiative/community" className="hover:text-black transition-colors">Community</Link>
-                        <button className="hover:text-black transition-colors">Contemporary Dance Art</button>
+                        <Link href="/initiative/contemporary-dance-art" className="hover:text-black transition-colors">Contemporary Dance Art</Link>
                         <button className="hover:text-black transition-colors">Videos</button>
                     </div>
                 </nav>
