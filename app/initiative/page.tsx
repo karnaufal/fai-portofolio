@@ -31,7 +31,7 @@ export default function InitiativePage() {
                     <div className="flex gap-10">
                         <button className="hover:text-black transition-colors">About</button>
                         <Link href="/initiative/book" className="hover:text-black transition-colors">Book</Link>
-                        <button className="hover:text-black transition-colors">Music</button>
+                        <Link href="/initiative/music" className="hover:text-black transition-colors">Music</Link>
                         <button className="hover:text-black transition-colors">Architecture Concept</button>
                         <button className="hover:text-black transition-colors">Science and Health</button>
                         <button className="hover:text-black transition-colors">Community</button>

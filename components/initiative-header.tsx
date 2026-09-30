@@ -7,7 +7,7 @@ import { Search } from "lucide-react";
 const CATEGORIES = [
     { name: "About", href: undefined },
     { name: "Book", href: "/initiative/book" },
-    { name: "Music", href: undefined },
+    { name: "Music", href: "/initiative/music" },
     { name: "Architecture Concept", href: undefined },
     { name: "Science and Health", href: undefined },
     { name: "Community", href: undefined },
