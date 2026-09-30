@@ -22,8 +22,8 @@ export default function Home() {
           {/* Background */}
           <div className="absolute inset-0 z-0">
             <Image
-              src="/bg-flower-blur.png"
-              alt="Artistic flower background"
+              src="/bg-horse.png"
+              alt="Horse portrait background"
               fill
               className="object-cover opacity-60 blur"
               priority
