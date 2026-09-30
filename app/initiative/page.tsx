@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Search } from "lucide-react";
 
 export default function InitiativePage() {
     return (
@@ -9,42 +10,52 @@ export default function InitiativePage() {
                 {/* Top Row: Menu & Logo */}
                 <div className="flex items-center justify-between px-10 py-6 border-b border-zinc-100">
                     <span className="text-xs tracking-[0.3em] uppercase font-medium">Menu</span>
-                    <div className="flex items-center justify-center border border-black rounded-full px-8 py-1">
-                        <span className="font-bold text-lg italic">F</span>
+                    <Image
+                        src="/signature-fr-white.png"
+                        alt="FR Logo"
+                        width={60}
+                        height={30}
+                        className="object-contain opacity-90 h-[22px] w-auto brightness-0"
+                        priority
+                    />
+                    <div className="flex items-center gap-2 text-xs tracking-[0.3em] uppercase font-medium cursor-pointer group">
+                        <span className="group-hover:opacity-70 transition-opacity">Search</span>
+                        <Search size={16} className="stroke-1" />
                     </div>
-                    <div className="w-10"></div> {/* Spacer */}
                 </div>
 
                 {/* Sub-Nav Row: Categories */}
                 <nav className="flex items-center justify-between px-10 py-4 text-[10px] tracking-[0.2em] uppercase text-zinc-500">
                     <span className="text-black font-semibold italic">Initiative</span>
                     <div className="flex gap-10">
+                        <button className="hover:text-black transition-colors">About</button>
                         <button className="hover:text-black transition-colors">Book</button>
                         <button className="hover:text-black transition-colors">Music</button>
-                        <button className="hover:text-black transition-colors">Short</button>
-                        <button className="hover:text-black transition-colors">Concept Architecture</button>
+                        <button className="hover:text-black transition-colors">Architecture Concept</button>
+                        <button className="hover:text-black transition-colors">Science and Health</button>
+                        <button className="hover:text-black transition-colors">Community</button>
+                        <button className="hover:text-black transition-colors">Contemporary Dance Art</button>
+                        <button className="hover:text-black transition-colors">Videos</button>
                     </div>
                 </nav>
             </header>
 
             {/* SECTION 1: Hero Initiative (image_42e500.jpg) */}
             <section className="relative flex h-screen w-full snap-start items-center justify-center pt-24">
-                {/* Background Image Placeholder */}
+                {/* Background Image */}
                 <div className="absolute inset-0 z-0">
-                    <div className="h-full w-full bg-zinc-900">
-                        {/* <Image src="/bg-initiative.jpg" fill className="object-cover opacity-60" alt="Initiative Background" /> */}
-                    </div>
+                    <Image
+                        src="/bg-horse.png"
+                        alt="Initiative Background"
+                        fill
+                        className="object-cover opacity-60"
+                        priority
+                    />
                     <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/20"></div>
                 </div>
 
-                {/* Title Content */}
-                <div className="relative z-10 text-center">
-                    <h1 className="text-7xl md:text-[10rem] font-light tracking-[0.2em] text-white uppercase opacity-90">
-                        Initiative
-                    </h1>
-                    {/* Garis Vertikal Indikator Scroll */}
-                    <div className="absolute left-1/2 -bottom-40 h-24 w-[1px] bg-white/50 -translate-x-1/2"></div>
-                </div>
+                {/* Garis Vertikal Indikator Scroll */}
+                <div className="absolute left-1/2 bottom-10 h-24 w-[1px] bg-white/50 -translate-x-1/2"></div>
             </section>
 
             {/* SECTION 2: Next Content (Coming Soon) */}
