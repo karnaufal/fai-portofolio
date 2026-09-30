@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Search } from "lucide-react";
 
 export default function InitiativePage() {
@@ -29,7 +30,7 @@ export default function InitiativePage() {
                     <span className="text-black font-semibold italic">Initiative</span>
                     <div className="flex gap-10">
                         <button className="hover:text-black transition-colors">About</button>
-                        <button className="hover:text-black transition-colors">Book</button>
+                        <Link href="/initiative/book" className="hover:text-black transition-colors">Book</Link>
                         <button className="hover:text-black transition-colors">Music</button>
                         <button className="hover:text-black transition-colors">Architecture Concept</button>
                         <button className="hover:text-black transition-colors">Science and Health</button>
