@@ -12,7 +12,7 @@ const CATEGORIES = [
     { name: "Science and Health", href: "/initiative/science-and-health" },
     { name: "Community", href: "/initiative/community" },
     { name: "Contemporary Dance Art", href: "/initiative/contemporary-dance-art" },
-    { name: "Videos", href: undefined },
+    { name: "Videos", href: "/initiative/videos" },
 ] as const;
 
 interface InitiativeHeaderProps {
