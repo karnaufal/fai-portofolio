@@ -9,7 +9,7 @@ const CATEGORIES = [
     { name: "Book", href: "/initiative/book" },
     { name: "Music", href: "/initiative/music" },
     { name: "Architecture Concept", href: "/initiative/architecture-concept" },
-    { name: "Science and Health", href: undefined },
+    { name: "Science and Health", href: "/initiative/science-and-health" },
     { name: "Community", href: undefined },
     { name: "Contemporary Dance Art", href: undefined },
     { name: "Videos", href: undefined },
